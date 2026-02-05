@@ -343,11 +343,11 @@ def _reset_persisted_data() -> None:
 
 def _fetch_recent_activity_ids(
     token: str, per_page: int, limiter: Optional[RateLimiter]
-) -> List[str]:
+) -> Optional[List[str]]:
     try:
         activities = _fetch_page(token, min(per_page, 50), 1, 0, None, limiter)
     except Exception:
-        return []
+        return None
     activity_ids = []
     for activity in activities or []:
         activity_id = activity.get("id")
@@ -391,6 +391,10 @@ def _maybe_reset_for_new_athlete(
         return
 
     recent_ids = _fetch_recent_activity_ids(token, per_page, limiter)
+    if recent_ids is None:
+        print("Warning: unable to verify recent activity overlap; skipping reset")
+        return
+
     existing_ids = _load_existing_activity_ids()
     if recent_ids and any(activity_id in existing_ids for activity_id in recent_ids):
         _write_athlete_fingerprint(current_fingerprint)

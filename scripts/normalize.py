@@ -83,7 +83,7 @@ def normalize() -> List[Dict]:
     group_aliases = activities_cfg.get("group_aliases", {}) or {}
     featured_set = set(featured_types)
 
-    existing = _load_existing()
+    existing = _load_existing() if not os.path.exists(RAW_DIR) else {}
 
     if os.path.exists(RAW_DIR):
         for filename in sorted(os.listdir(RAW_DIR)):
