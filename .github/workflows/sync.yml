@@ -25,6 +25,23 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Validate required Strava secrets
+        env:
+          STRAVA_CLIENT_ID: ${{ secrets.STRAVA_CLIENT_ID }}
+          STRAVA_CLIENT_SECRET: ${{ secrets.STRAVA_CLIENT_SECRET }}
+          STRAVA_REFRESH_TOKEN: ${{ secrets.STRAVA_REFRESH_TOKEN }}
+        run: |
+          missing=()
+          [[ -n "$STRAVA_CLIENT_ID" ]] || missing+=("STRAVA_CLIENT_ID")
+          [[ -n "$STRAVA_CLIENT_SECRET" ]] || missing+=("STRAVA_CLIENT_SECRET")
+          [[ -n "$STRAVA_REFRESH_TOKEN" ]] || missing+=("STRAVA_REFRESH_TOKEN")
+
+          if [ ${#missing[@]} -gt 0 ]; then
+            echo "❌ Missing required repository secrets: ${missing[*]}"
+            echo "Add them in Settings -> Secrets and variables -> Actions, then re-run this workflow."
+            exit 1
+          fi
+
       - name: Write config.local.yaml
         run: |
           cat <<'CONFIG' > config.local.yaml
