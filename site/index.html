@@ -432,6 +432,11 @@
         color: var(--muted);
       }
 
+      .card-empty-year .year-empty-placeholder {
+        margin-left: calc(var(--heatmap-axis-col) + var(--axis-gap));
+        max-width: calc(100% - (var(--heatmap-axis-col) + var(--axis-gap)));
+      }
+
       .year-empty-ellipsis {
         font-family: "JetBrains Mono", monospace;
         font-size: 18px;
@@ -867,8 +872,8 @@
         }
 
         .card-empty-year .year-empty-placeholder {
-          margin-left: 88px;
-          max-width: calc(100% - 88px);
+          margin-left: calc(var(--heatmap-axis-col) + var(--axis-gap) - 10px);
+          max-width: calc(100% - (var(--heatmap-axis-col) + var(--axis-gap) - 10px));
         }
       }
 
@@ -1039,10 +1044,6 @@
         .labeled-card-row-frequency .labeled-card-title {
           line-height: 1.15;
           padding-bottom: 2px;
-        }
-        .card-empty-year .year-empty-placeholder {
-          margin-left: 56px;
-          max-width: calc(100% - 56px);
         }
         .heatmap-area {
           grid-template-columns: var(--heatmap-axis-col) max-content;
