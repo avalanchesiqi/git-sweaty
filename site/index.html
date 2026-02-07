@@ -283,15 +283,20 @@
       }
 
       .summary-type {
-        display: flex;
+        position: relative;
+        display: inline-flex;
         align-items: center;
-        justify-content: center;
         gap: 8px;
         font-size: 20px;
         font-weight: 600;
       }
 
       .summary-dot {
+        position: absolute;
+        right: 100%;
+        margin-right: 8px;
+        top: 50%;
+        transform: translateY(-50%);
         width: 10px;
         height: 10px;
         border-radius: 50%;
