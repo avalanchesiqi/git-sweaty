@@ -402,7 +402,6 @@
 
       .labeled-card-title {
         color: var(--text);
-        margin: 0 0 var(--labeled-card-title-gap);
       }
 
       .card {
@@ -424,6 +423,11 @@
         font-size: 16px;
         font-weight: 600;
         margin-bottom: 12px;
+      }
+
+      .card-title.labeled-card-title {
+        margin: 0 0 var(--labeled-card-title-gap);
+        line-height: 1;
       }
 
       .card-body {
@@ -542,7 +546,6 @@
       .more-stats > .labeled-card-title {
         grid-column: 1 / -1;
         grid-row: 1;
-        margin: 0 0 var(--labeled-card-title-gap);
       }
 
       .more-stats-body {
