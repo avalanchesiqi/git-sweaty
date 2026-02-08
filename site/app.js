@@ -246,8 +246,10 @@ function alignFrequencyGraphsToYearCardEdge() {
     frequencyCard.style.setProperty("--more-stats-third-col-shift", "0px");
     if (!desktop) return;
 
+    const firstGraph = frequencyCard.querySelector(".more-stats-grid > .more-stats-col:nth-child(1)");
+    const secondGraph = frequencyCard.querySelector(".more-stats-grid > .more-stats-col:nth-child(2)");
     const thirdGraph = frequencyCard.querySelector(".more-stats-grid > .more-stats-col:nth-child(3)");
-    if (!thirdGraph) return;
+    if (!firstGraph || !secondGraph || !thirdGraph) return;
 
     let referenceRow = row.nextElementSibling;
     while (referenceRow && !referenceRow.classList.contains("labeled-card-row-year")) {
@@ -262,12 +264,17 @@ function alignFrequencyGraphsToYearCardEdge() {
 
     let secondShift = Math.round(delta / 2);
     let thirdShift = delta;
+    const minGap = 4;
 
-    const cardOverflow = Math.ceil(frequencyCard.scrollWidth - frequencyCard.clientWidth);
-    if (cardOverflow > 0) {
-      secondShift -= Math.ceil(cardOverflow / 2);
-      thirdShift -= cardOverflow;
-    }
+    const firstRect = firstGraph.getBoundingClientRect();
+    const secondRect = secondGraph.getBoundingClientRect();
+    const thirdRect = thirdGraph.getBoundingClientRect();
+
+    const minSecondShift = Math.ceil((firstRect.right + minGap) - secondRect.left);
+    secondShift = Math.max(secondShift, minSecondShift);
+
+    const minThirdShift = Math.ceil((secondRect.right + secondShift + minGap) - thirdRect.left);
+    thirdShift = Math.max(thirdShift, minThirdShift);
 
     frequencyCard.style.setProperty("--more-stats-second-col-shift", `${secondShift}px`);
     frequencyCard.style.setProperty("--more-stats-third-col-shift", `${thirdShift}px`);
@@ -310,6 +317,7 @@ function alignFrequencyFactsToYearCardEdge() {
 
 function alignStackedStatsToYAxisLabels() {
   if (!heatmaps) return;
+  const useYearStackedOffset = window.matchMedia("(min-width: 901px)").matches;
   normalizeSummaryStatCardWidths();
   alignFrequencyTitleGapToYearGap();
   alignFrequencyGraphsToYearCardEdge();
@@ -320,6 +328,10 @@ function alignStackedStatsToYAxisLabels() {
     const statsColumn = card.querySelector(".card-stats.side-stats-column");
     const anchorLabel = card.querySelector(".day-col .day-label");
     if (!heatmapArea || !statsColumn || !anchorLabel) return;
+    if (!useYearStackedOffset) {
+      resetStackedStatsOffset(statsColumn);
+      return;
+    }
 
     const heatmapBottom = heatmapArea.getBoundingClientRect().bottom;
     const statsTop = statsColumn.getBoundingClientRect().top;
