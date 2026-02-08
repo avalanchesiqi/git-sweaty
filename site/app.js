@@ -241,8 +241,48 @@ function normalizeSummaryStatCardWidths() {
     card.style.width = "";
     card.style.maxWidth = "";
   });
-  // Keep stat-card sizing stable while desktop cards remain side-by-side.
-  // Stacking mode handles narrow layouts instead of progressive width shrinking.
+
+  if (!window.matchMedia("(min-width: 721px)").matches) {
+    return;
+  }
+
+  const maxWidth = cards.reduce((max, card) => {
+    const width = Math.ceil(card.getBoundingClientRect().width);
+    return Number.isFinite(width) ? Math.max(max, width) : max;
+  }, 0);
+  if (!maxWidth) return;
+
+  const desktopCards = Array.from(
+    heatmaps.querySelectorAll(".card.year-card, .card.more-stats"),
+  );
+
+  let targetWidth = maxWidth;
+  const minWidth = 128;
+
+  const applyWidth = (width) => {
+    cards.forEach((card) => {
+      card.style.width = `${width}px`;
+      card.style.maxWidth = `${width}px`;
+    });
+  };
+
+  for (let i = 0; i < 8; i += 1) {
+    applyWidth(targetWidth);
+    const overflow = desktopCards.reduce((max, card) => (
+      Math.max(max, Math.ceil(card.scrollWidth - card.clientWidth))
+    ), 0);
+    if (overflow <= 0) {
+      break;
+    }
+    const next = targetWidth - Math.ceil(overflow / 2);
+    if (next <= minWidth) {
+      targetWidth = minWidth;
+      break;
+    }
+    targetWidth = next;
+  }
+
+  applyWidth(targetWidth);
 }
 
 function alignFrequencyTitleGapToYearGap() {
@@ -453,15 +493,61 @@ function alignYearStatsToFrequencyEdge() {
   allYearStats.forEach((statsColumn) => {
     statsColumn.style.transform = "";
   });
+
+  const desktop = window.matchMedia("(min-width: 721px)").matches;
+  if (!desktop) return;
+
+  heatmaps.querySelectorAll(".type-list").forEach((list) => {
+    const frequencyCard = list.querySelector(".labeled-card-row-frequency .more-stats");
+    const frequencyFacts = list.querySelector(
+      ".labeled-card-row-frequency .more-stats .more-stats-facts.side-stats-column",
+    );
+    if (!frequencyCard || !frequencyFacts) return;
+
+    const frequencyStacked = frequencyCard.classList.contains("more-stats-stacked");
+    if (frequencyStacked) return;
+
+    const targetLeft = frequencyFacts.getBoundingClientRect().left;
+    if (!Number.isFinite(targetLeft)) return;
+
+    list.querySelectorAll(".labeled-card-row-year .year-card").forEach((yearCard) => {
+      const statsColumn = yearCard.querySelector(".card-stats.side-stats-column");
+      if (!statsColumn) return;
+      const yearStacked = yearCard.classList.contains("year-card-stacked");
+      if (yearStacked !== frequencyStacked) return;
+
+      const currentLeft = statsColumn.getBoundingClientRect().left;
+      if (!Number.isFinite(currentLeft)) return;
+
+      const shift = Math.round(targetLeft - currentLeft);
+      if (shift !== 0) {
+        statsColumn.style.transform = `translateX(${shift}px)`;
+      }
+    });
+  });
 }
 
 function applyDesktopStatsRightInset() {
   if (!heatmaps) return;
-  heatmaps.querySelectorAll(".year-card .card-stats.side-stats-column").forEach((statsColumn) => {
+  const desktop = window.matchMedia("(min-width: 721px)").matches;
+
+  heatmaps.querySelectorAll(".year-card").forEach((card) => {
+    const body = card.querySelector(".card-body");
+    const statsColumn = card.querySelector(".card-stats.side-stats-column");
+    const yLabels = Array.from(card.querySelectorAll(".heatmap-area .day-col .day-label"));
+    if (!body || !statsColumn) return;
     resetDesktopRightInset(statsColumn);
+    if (!desktop || card.classList.contains("year-card-stacked")) return;
+    balanceDesktopStatsRightInset(statsColumn, body, yLabels);
   });
-  heatmaps.querySelectorAll(".more-stats .more-stats-facts.side-stats-column").forEach((statsColumn) => {
+
+  heatmaps.querySelectorAll(".more-stats").forEach((card) => {
+    const statsColumn = card.querySelector(".more-stats-facts.side-stats-column");
+    const yLabels = Array.from(card.querySelectorAll(".more-stats-body .axis-day-col .axis-y-label"));
+    if (!statsColumn) return;
     resetDesktopRightInset(statsColumn);
+    if (!desktop || card.classList.contains("more-stats-stacked")) return;
+    balanceDesktopStatsRightInset(statsColumn, card, yLabels);
   });
 }
 
