@@ -368,6 +368,7 @@ function alignYearStatsToFrequencyEdge() {
     if (!frequencyCard || !frequencyFacts) return;
 
     const frequencyStacked = frequencyCard.classList.contains("more-stats-stacked");
+    if (frequencyStacked) return;
 
     const targetLeft = frequencyFacts.getBoundingClientRect().left;
     if (!Number.isFinite(targetLeft)) return;
