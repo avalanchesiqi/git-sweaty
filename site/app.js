@@ -82,6 +82,8 @@ function resetStackedStatsOffset(statsColumn) {
 
 let frequencyLastViewportWidth = window.innerWidth;
 let frequencyStackLocks = new Map();
+let yearLastViewportWidth = window.innerWidth;
+let yearStackLocks = new Map();
 
 function applyStackedStatsOffset(statsColumn, anchorElement) {
   if (!statsColumn || !anchorElement) return;
@@ -232,6 +234,42 @@ function syncFrequencyStackingMode() {
   frequencyLastViewportWidth = viewportWidth;
 }
 
+function syncYearStackingMode() {
+  if (!heatmaps) return;
+  const desktop = window.matchMedia("(min-width: 721px)").matches;
+  const viewportWidth = window.innerWidth;
+  const narrowing = viewportWidth <= yearLastViewportWidth;
+  const nextLocks = new Map();
+
+  const cards = Array.from(heatmaps.querySelectorAll(".year-card"));
+  cards.forEach((card, index) => {
+    const heatmapArea = card.querySelector(".heatmap-area");
+    const statsColumn = card.querySelector(".card-stats.side-stats-column");
+    if (!heatmapArea || !statsColumn) return;
+
+    card.classList.remove("year-card-stacked");
+    if (!desktop) {
+      return;
+    }
+
+    const sideGap = readCssVar("--stats-column-gap", 12, card);
+    const requiredWidth = Math.ceil(heatmapArea.scrollWidth + sideGap + statsColumn.scrollWidth);
+    const availableWidth = Math.floor(card.clientWidth);
+    const needsStack = requiredWidth > availableWidth;
+    const wasLocked = yearStackLocks.get(index) === true;
+    const keepLocked = wasLocked && narrowing;
+    const shouldStack = needsStack || keepLocked;
+
+    if (shouldStack) {
+      card.classList.add("year-card-stacked");
+      nextLocks.set(index, true);
+    }
+  });
+
+  yearStackLocks = nextLocks;
+  yearLastViewportWidth = viewportWidth;
+}
+
 function alignFrequencyGraphsToYearCardEdge() {
   if (!heatmaps) return;
   const desktop = window.matchMedia("(min-width: 721px)").matches;
@@ -316,15 +354,23 @@ function alignYearStatsToFrequencyEdge() {
   if (!desktop) return;
 
   heatmaps.querySelectorAll(".type-list").forEach((list) => {
+    const frequencyCard = list.querySelector(".labeled-card-row-frequency .more-stats");
     const frequencyFacts = list.querySelector(
       ".labeled-card-row-frequency .more-stats .more-stats-facts.side-stats-column",
     );
-    if (!frequencyFacts) return;
+    if (!frequencyCard || !frequencyFacts) return;
+
+    const frequencyStacked = frequencyCard.classList.contains("more-stats-stacked");
 
     const targetLeft = frequencyFacts.getBoundingClientRect().left;
     if (!Number.isFinite(targetLeft)) return;
 
-    list.querySelectorAll(".labeled-card-row-year .year-card .card-stats.side-stats-column").forEach((statsColumn) => {
+    list.querySelectorAll(".labeled-card-row-year .year-card").forEach((yearCard) => {
+      const statsColumn = yearCard.querySelector(".card-stats.side-stats-column");
+      if (!statsColumn) return;
+      const yearStacked = yearCard.classList.contains("year-card-stacked");
+      if (yearStacked !== frequencyStacked) return;
+
       const currentLeft = statsColumn.getBoundingClientRect().left;
       if (!Number.isFinite(currentLeft)) return;
 
@@ -341,10 +387,12 @@ function alignStackedStatsToYAxisLabels() {
   syncFrequencyStackingMode();
   normalizeSummaryStatCardWidths();
   syncFrequencyStackingMode();
+  syncYearStackingMode();
   alignFrequencyTitleGapToYearGap();
   alignFrequencyGraphsToYearCardEdge();
   alignFrequencyFactsToYearCardEdge();
   syncFrequencyStackingMode();
+  syncYearStackingMode();
 
   heatmaps.querySelectorAll(".year-card").forEach((card) => {
     const heatmapArea = card.querySelector(".heatmap-area");

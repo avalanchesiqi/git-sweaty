@@ -470,6 +470,33 @@
         white-space: nowrap;
       }
 
+      .year-card.year-card-stacked .card-body {
+        grid-template-columns: 1fr;
+      }
+
+      .year-card.year-card-stacked .card-stats.side-stats-column {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 8px;
+        width: max-content;
+        max-width: 100%;
+        margin-left: 0;
+        justify-self: start;
+        align-self: start;
+        align-content: flex-start;
+      }
+
+      .year-card.year-card-stacked .card-stats.side-stats-column .card-stat {
+        flex: 0 0 auto;
+        width: max-content;
+        max-width: 100%;
+      }
+
+      .year-card.year-card-stacked .card-stats.side-stats-column .card-stat-label,
+      .year-card.year-card-stacked .card-stats.side-stats-column .card-stat-value {
+        white-space: nowrap;
+      }
+
       .empty-year-inline {
         display: flex;
         align-items: center;
