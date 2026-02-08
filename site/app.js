@@ -221,13 +221,20 @@ let frequencyLastViewportWidth = window.innerWidth;
 let frequencyStackLocks = new Map();
 let yearLastViewportWidth = window.innerWidth;
 let yearStackLocks = new Map();
+let statsWidthLastViewportWidth = window.innerWidth;
+let statsWidthLock = 0;
 
 function normalizeSummaryStatCardWidths() {
   if (!heatmaps) return;
+  const viewportWidth = window.innerWidth;
+  const narrowing = viewportWidth <= statsWidthLastViewportWidth;
 
-  const yearCards = Array.from(
+  const allYearCards = Array.from(
     heatmaps.querySelectorAll(".year-card .card-stats.side-stats-column .card-stat"),
   );
+  const yearCards = allYearCards.filter((card) => (
+    !card.closest(".year-card")?.classList.contains("year-card-stacked")
+  ));
   const allFrequencyCards = Array.from(
     heatmaps.querySelectorAll(".more-stats-facts.side-stats-column .more-stats-fact-card"),
   );
@@ -235,14 +242,19 @@ function normalizeSummaryStatCardWidths() {
     !card.closest(".more-stats")?.classList.contains("more-stats-stacked")
   ));
   const cards = [...yearCards, ...frequencyCards];
-  if (!cards.length) return;
 
-  [...yearCards, ...allFrequencyCards].forEach((card) => {
+  [...allYearCards, ...allFrequencyCards].forEach((card) => {
     card.style.width = "";
     card.style.maxWidth = "";
   });
 
   if (!window.matchMedia("(min-width: 721px)").matches) {
+    statsWidthLock = 0;
+    statsWidthLastViewportWidth = viewportWidth;
+    return;
+  }
+  if (!cards.length) {
+    statsWidthLastViewportWidth = viewportWidth;
     return;
   }
 
@@ -250,39 +262,21 @@ function normalizeSummaryStatCardWidths() {
     const width = Math.ceil(card.getBoundingClientRect().width);
     return Number.isFinite(width) ? Math.max(max, width) : max;
   }, 0);
-  if (!maxWidth) return;
-
-  const desktopCards = Array.from(
-    heatmaps.querySelectorAll(".card.year-card, .card.more-stats"),
-  );
-
-  let targetWidth = maxWidth;
-  const minWidth = 128;
-
-  const applyWidth = (width) => {
-    cards.forEach((card) => {
-      card.style.width = `${width}px`;
-      card.style.maxWidth = `${width}px`;
-    });
-  };
-
-  for (let i = 0; i < 8; i += 1) {
-    applyWidth(targetWidth);
-    const overflow = desktopCards.reduce((max, card) => (
-      Math.max(max, Math.ceil(card.scrollWidth - card.clientWidth))
-    ), 0);
-    if (overflow <= 0) {
-      break;
-    }
-    const next = targetWidth - Math.ceil(overflow / 2);
-    if (next <= minWidth) {
-      targetWidth = minWidth;
-      break;
-    }
-    targetWidth = next;
+  if (!maxWidth) {
+    statsWidthLastViewportWidth = viewportWidth;
+    return;
   }
 
-  applyWidth(targetWidth);
+  const targetWidth = narrowing
+    ? Math.max(maxWidth, statsWidthLock || 0)
+    : maxWidth;
+
+  cards.forEach((card) => {
+    card.style.width = `${targetWidth}px`;
+    card.style.maxWidth = `${targetWidth}px`;
+  });
+  statsWidthLock = targetWidth;
+  statsWidthLastViewportWidth = viewportWidth;
 }
 
 function alignFrequencyTitleGapToYearGap() {
