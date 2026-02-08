@@ -132,6 +132,14 @@
         display: none;
       }
 
+      .filter-control-row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+      }
+
       .filter-menu {
         position: relative;
         min-width: 190px;
@@ -233,6 +241,29 @@
         font-size: 13px;
         text-align: center;
         cursor: pointer;
+      }
+
+      .filter-clear-button {
+        background: rgba(71, 85, 105, 0.2);
+        color: var(--text);
+        border: 1px solid rgba(148, 163, 184, 0.35);
+        border-radius: 10px;
+        padding: 8px 10px;
+        font-size: 13px;
+        min-width: 58px;
+        cursor: pointer;
+        flex: 0 0 auto;
+        transition: border-color 0.15s ease, color 0.15s ease, opacity 0.15s ease;
+      }
+
+      .filter-clear-button:hover:not(:disabled) {
+        border-color: rgba(148, 163, 184, 0.6);
+      }
+
+      .filter-clear-button:disabled {
+        color: rgba(148, 163, 184, 0.85);
+        opacity: 0.65;
+        cursor: not-allowed;
       }
 
       .repo-link {
@@ -913,12 +944,13 @@
           display: flex;
           flex-direction: column;
           width: min(360px, 100%);
-          align-items: stretch;
+          align-items: center;
           gap: 10px;
         }
         .filter-menu {
           min-width: 0;
-          width: 100%;
+          width: auto;
+          flex: 1 1 auto;
         }
         .filter-menu-options {
           position: static;
@@ -1003,12 +1035,13 @@
           display: flex;
           flex-direction: column;
           width: min(360px, 100%);
-          align-items: stretch;
+          align-items: center;
           gap: 10px;
         }
         .filter-menu {
           min-width: 0;
-          width: 100%;
+          width: auto;
+          flex: 1 1 auto;
         }
         .filter-menu-options {
           position: static;
@@ -1167,17 +1200,23 @@
           <div class="button-row" id="typeButtons"></div>
           <div class="button-row" id="yearButtons"></div>
           <div class="controls">
-            <div class="filter-menu" id="typeMenu">
-              <button type="button" class="filter-menu-button" id="typeMenuButton" aria-expanded="false">
-                <span id="typeMenuLabel">All Activities</span>
-              </button>
-              <div class="filter-menu-options" id="typeMenuOptions"></div>
+            <div class="filter-control-row">
+              <div class="filter-menu" id="typeMenu">
+                <button type="button" class="filter-menu-button" id="typeMenuButton" aria-expanded="false">
+                  <span id="typeMenuLabel">All Activities</span>
+                </button>
+                <div class="filter-menu-options" id="typeMenuOptions"></div>
+              </div>
+              <button type="button" class="filter-clear-button" id="typeClearButton" disabled>Clear</button>
             </div>
-            <div class="filter-menu" id="yearMenu">
-              <button type="button" class="filter-menu-button" id="yearMenuButton" aria-expanded="false">
-                <span id="yearMenuLabel">All Years</span>
-              </button>
-              <div class="filter-menu-options" id="yearMenuOptions"></div>
+            <div class="filter-control-row">
+              <div class="filter-menu" id="yearMenu">
+                <button type="button" class="filter-menu-button" id="yearMenuButton" aria-expanded="false">
+                  <span id="yearMenuLabel">All Years</span>
+                </button>
+                <div class="filter-menu-options" id="yearMenuOptions"></div>
+              </div>
+              <button type="button" class="filter-clear-button" id="yearClearButton" disabled>Clear</button>
             </div>
           </div>
           <a class="repo-link" href="https://github.com/aspain/git-sweaty">github.com/aspain/git-sweaty</a>
@@ -1190,6 +1229,6 @@
 
     <div id="tooltip" class="tooltip"></div>
 
-    <script src="app.js?v=26"></script>
+    <script src="app.js?v=27"></script>
   </body>
 </html>

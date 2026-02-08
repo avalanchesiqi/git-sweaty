@@ -15,6 +15,8 @@ const typeMenuButton = document.getElementById("typeMenuButton");
 const yearMenuButton = document.getElementById("yearMenuButton");
 const typeMenuLabel = document.getElementById("typeMenuLabel");
 const yearMenuLabel = document.getElementById("yearMenuLabel");
+const typeClearButton = document.getElementById("typeClearButton");
+const yearClearButton = document.getElementById("yearClearButton");
 const typeMenuOptions = document.getElementById("typeMenuOptions");
 const yearMenuOptions = document.getElementById("yearMenuOptions");
 const heatmaps = document.getElementById("heatmaps");
@@ -1653,6 +1655,12 @@ async function init() {
     updateButtonState(yearButtons, selectedYears, allYearsSelected, (v) => Number(v));
     setMenuLabel(typeMenuLabel, getTypeMenuText(types, allTypesSelected));
     setMenuLabel(yearMenuLabel, getYearMenuText(years, allYearsSelected));
+    if (typeClearButton) {
+      typeClearButton.disabled = areAllTypesSelected();
+    }
+    if (yearClearButton) {
+      yearClearButton.disabled = areAllYearsSelected();
+    }
     if (keepTypeMenuOpen) {
       setMenuOpen(typeMenu, typeMenuButton, true);
     }
@@ -1791,6 +1799,22 @@ async function init() {
       const open = !yearMenu?.classList.contains("open");
       setMenuOpen(yearMenu, yearMenuButton, open);
       setMenuOpen(typeMenu, typeMenuButton, false);
+    });
+  }
+  if (typeClearButton) {
+    typeClearButton.addEventListener("click", () => {
+      if (areAllTypesSelected()) return;
+      allTypesMode = true;
+      selectedTypes.clear();
+      update();
+    });
+  }
+  if (yearClearButton) {
+    yearClearButton.addEventListener("click", () => {
+      if (areAllYearsSelected()) return;
+      allYearsMode = true;
+      selectedYears.clear();
+      update();
     });
   }
 
