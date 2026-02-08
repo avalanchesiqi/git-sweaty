@@ -643,6 +643,10 @@
         box-sizing: border-box;
       }
 
+      .more-stats .more-stats-fact-card.fact-most-active-month .card-stat-value {
+        white-space: nowrap;
+      }
+
       .more-stats.more-stats-stacked {
         grid-template-columns: 1fr;
         grid-template-rows: auto auto auto;
@@ -987,6 +991,12 @@
           margin-top: 0;
           height: auto;
           justify-content: flex-start;
+        }
+
+        .more-stats:not(.more-stats-stacked) .more-stats-fact-card.fact-most-active-month .card-stat-value {
+          white-space: normal;
+          overflow-wrap: anywhere;
+          line-height: 1.15;
         }
 
         .card-empty-year .year-empty-placeholder {

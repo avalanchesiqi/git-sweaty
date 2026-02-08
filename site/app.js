@@ -89,6 +89,15 @@ function getContentBoxLeft(container) {
   return rect.left + borderLeft + paddingLeft;
 }
 
+function getContentBoxRight(container) {
+  if (!container) return null;
+  const rect = container.getBoundingClientRect();
+  const styles = getComputedStyle(container);
+  const borderRight = parseFloat(styles.borderRightWidth) || 0;
+  const paddingRight = parseFloat(styles.paddingRight) || 0;
+  return rect.right - borderRight - paddingRight;
+}
+
 let textMeasureContext = null;
 
 function measureLabelTextWidth(label, text, styles) {
@@ -158,6 +167,16 @@ function getLeftMostLabelOffset(container, labels) {
   return Math.max(0, Math.round(minLeft - containerLeft));
 }
 
+function getLeftMostLabelEdge(labels) {
+  if (!labels?.length) return null;
+  const minLeft = labels.reduce((currentMin, label) => {
+    const left = getLabelTextLeft(label);
+    if (!Number.isFinite(left)) return currentMin;
+    return Math.min(currentMin, left);
+  }, Number.POSITIVE_INFINITY);
+  return Number.isFinite(minLeft) ? minLeft : null;
+}
+
 function pinStackedStatsToLabelEdge(statsColumn, container, labels) {
   if (!statsColumn) return;
   const offset = getLeftMostLabelOffset(container, labels);
@@ -167,6 +186,35 @@ function pinStackedStatsToLabelEdge(statsColumn, container, labels) {
   }
   statsColumn.style.marginLeft = `${offset}px`;
   statsColumn.style.maxWidth = `calc(100% - ${offset}px)`;
+}
+
+function resetDesktopRightInset(statsColumn) {
+  if (!statsColumn) return;
+  statsColumn.style.marginRight = "";
+}
+
+function balanceDesktopStatsRightInset(statsColumn, container, labels) {
+  if (!statsColumn || !container || !labels?.length) return;
+
+  const containerLeft = getContentBoxLeft(container);
+  const containerRight = getContentBoxRight(container);
+  const labelLeft = getLeftMostLabelEdge(labels);
+  const statsRight = statsColumn.getBoundingClientRect().right;
+  if (
+    !Number.isFinite(containerLeft)
+    || !Number.isFinite(containerRight)
+    || !Number.isFinite(labelLeft)
+    || !Number.isFinite(statsRight)
+  ) {
+    return;
+  }
+
+  const leftGap = labelLeft - containerLeft;
+  const rightGap = containerRight - statsRight;
+  const inset = Math.max(0, Math.round(leftGap - rightGap));
+  if (inset > 0) {
+    statsColumn.style.marginRight = `${inset}px`;
+  }
 }
 
 let frequencyLastViewportWidth = window.innerWidth;
@@ -479,6 +527,30 @@ function alignYearStatsToFrequencyEdge() {
   });
 }
 
+function applyDesktopStatsRightInset() {
+  if (!heatmaps) return;
+  const desktop = window.matchMedia("(min-width: 721px)").matches;
+
+  heatmaps.querySelectorAll(".year-card").forEach((card) => {
+    const body = card.querySelector(".card-body");
+    const statsColumn = card.querySelector(".card-stats.side-stats-column");
+    const yLabels = Array.from(card.querySelectorAll(".heatmap-area .day-col .day-label"));
+    if (!body || !statsColumn) return;
+    resetDesktopRightInset(statsColumn);
+    if (!desktop || card.classList.contains("year-card-stacked")) return;
+    balanceDesktopStatsRightInset(statsColumn, body, yLabels);
+  });
+
+  heatmaps.querySelectorAll(".more-stats").forEach((card) => {
+    const statsColumn = card.querySelector(".more-stats-facts.side-stats-column");
+    const yLabels = Array.from(card.querySelectorAll(".more-stats-body .axis-day-col .axis-y-label"));
+    if (!statsColumn) return;
+    resetDesktopRightInset(statsColumn);
+    if (!desktop || card.classList.contains("more-stats-stacked")) return;
+    balanceDesktopStatsRightInset(statsColumn, card, yLabels);
+  });
+}
+
 function alignStackedStatsToYAxisLabels() {
   if (!heatmaps) return;
   syncFrequencyStackingMode();
@@ -531,6 +603,7 @@ function alignStackedStatsToYAxisLabels() {
   });
 
   alignYearStatsToFrequencyEdge();
+  applyDesktopStatsRightInset();
 }
 
 function sundayOnOrBefore(d) {
@@ -1446,15 +1519,18 @@ function buildStatsOverview(payload, types, years, color) {
   });
 
   const factItems = [
-    { label: "Most active day", value: bestDayLabel },
-    { label: "Most Active Month", value: bestMonthLabel },
-    { label: "Peak hour", value: bestHourLabel },
-    { label: "Most active week", value: bestWeekLabel },
+    { key: "most-active-day", label: "Most active day", value: bestDayLabel },
+    { key: "most-active-month", label: "Most Active Month", value: bestMonthLabel },
+    { key: "peak-hour", label: "Peak hour", value: bestHourLabel },
+    { key: "most-active-week", label: "Most active week", value: bestWeekLabel },
   ];
 
   factItems.forEach((item) => {
     const factCard = document.createElement("div");
     factCard.className = "card-stat more-stats-fact-card";
+    if (item.key) {
+      factCard.classList.add(`fact-${item.key}`);
+    }
     const label = document.createElement("div");
     label.className = "card-stat-label";
     label.textContent = item.label;
