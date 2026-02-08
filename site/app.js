@@ -228,6 +228,9 @@ let yearLastViewportWidth = window.innerWidth;
 let yearStackLocks = new Map();
 let statsWidthLastViewportWidth = window.innerWidth;
 let statsWidthLock = 0;
+let yearDesktopEdgeLastViewportWidth = window.innerWidth;
+let yearDesktopTransformLocks = new Map();
+let yearDesktopInsetLocks = new Map();
 
 function normalizeSummaryStatCardWidths() {
   if (!heatmaps) return;
@@ -483,8 +486,9 @@ function alignFrequencyFactsToYearCardEdge() {
   });
 }
 
-function alignYearStatsToFrequencyEdge() {
+function alignYearStatsToFrequencyEdge(narrowing = false) {
   if (!heatmaps) return;
+  const nextLocks = new Map();
 
   const allYearStats = Array.from(
     heatmaps.querySelectorAll(".labeled-card-row-year .year-card .card-stats.side-stats-column"),
@@ -495,10 +499,11 @@ function alignYearStatsToFrequencyEdge() {
 
   const desktop = window.matchMedia("(min-width: 721px)").matches;
   if (!desktop) {
+    yearDesktopTransformLocks = nextLocks;
     return;
   }
 
-  heatmaps.querySelectorAll(".type-list").forEach((list) => {
+  heatmaps.querySelectorAll(".type-list").forEach((list, listIndex) => {
     const frequencyCard = list.querySelector(".labeled-card-row-frequency .more-stats");
     const frequencyFacts = list.querySelector(
       ".labeled-card-row-frequency .more-stats .more-stats-facts.side-stats-column",
@@ -511,31 +516,41 @@ function alignYearStatsToFrequencyEdge() {
     const targetLeft = frequencyFacts.getBoundingClientRect().left;
     if (!Number.isFinite(targetLeft)) return;
 
-    list.querySelectorAll(".labeled-card-row-year .year-card").forEach((yearCard) => {
+    list.querySelectorAll(".labeled-card-row-year .year-card").forEach((yearCard, yearIndex) => {
       const statsColumn = yearCard.querySelector(".card-stats.side-stats-column");
       if (!statsColumn) return;
       const yearStacked = yearCard.classList.contains("year-card-stacked");
       if (yearStacked !== frequencyStacked) return;
       if (yearStacked) return;
 
-      const currentLeft = statsColumn.getBoundingClientRect().left;
-      if (!Number.isFinite(currentLeft)) return;
-      const shift = Math.round(targetLeft - currentLeft);
+      const lockKey = `${listIndex}:${yearIndex}`;
+      let shift = null;
+      if (narrowing && yearDesktopTransformLocks.has(lockKey)) {
+        shift = yearDesktopTransformLocks.get(lockKey);
+      } else {
+        const currentLeft = statsColumn.getBoundingClientRect().left;
+        if (!Number.isFinite(currentLeft)) return;
+        shift = Math.round(targetLeft - currentLeft);
+      }
       if (!Number.isFinite(shift)) return;
 
       if (shift !== 0) {
         statsColumn.style.transform = `translateX(${shift}px)`;
       }
+      nextLocks.set(lockKey, shift);
     });
   });
+
+  yearDesktopTransformLocks = nextLocks;
 }
 
-function applyDesktopStatsRightInset() {
+function applyDesktopStatsRightInset(narrowing = false) {
   if (!heatmaps) return;
   const desktop = window.matchMedia("(min-width: 721px)").matches;
+  const nextYearInsetLocks = new Map();
 
-  heatmaps.querySelectorAll(".type-list").forEach((list) => {
-    list.querySelectorAll(".labeled-card-row-year .year-card").forEach((card) => {
+  heatmaps.querySelectorAll(".type-list").forEach((list, listIndex) => {
+    list.querySelectorAll(".labeled-card-row-year .year-card").forEach((card, yearIndex) => {
       const body = card.querySelector(".card-body");
       const statsColumn = card.querySelector(".card-stats.side-stats-column");
       const yLabels = Array.from(card.querySelectorAll(".heatmap-area .day-col .day-label"));
@@ -545,14 +560,22 @@ function applyDesktopStatsRightInset() {
       const stacked = card.classList.contains("year-card-stacked");
       if (!desktop || stacked) return;
 
-      const inset = getDesktopStatsRightInset(statsColumn, body, yLabels);
+      const lockKey = `${listIndex}:${yearIndex}`;
+      let inset = null;
+      if (narrowing && yearDesktopInsetLocks.has(lockKey)) {
+        inset = yearDesktopInsetLocks.get(lockKey);
+      } else {
+        inset = getDesktopStatsRightInset(statsColumn, body, yLabels);
+      }
       if (!Number.isFinite(inset)) return;
 
       if (inset > 0) {
         statsColumn.style.marginRight = `${inset}px`;
       }
+      nextYearInsetLocks.set(lockKey, inset);
     });
   });
+  yearDesktopInsetLocks = nextYearInsetLocks;
 
   heatmaps.querySelectorAll(".more-stats").forEach((card) => {
     const statsColumn = card.querySelector(".more-stats-facts.side-stats-column");
@@ -566,6 +589,8 @@ function applyDesktopStatsRightInset() {
 
 function alignStackedStatsToYAxisLabels() {
   if (!heatmaps) return;
+  const viewportWidth = window.innerWidth;
+  const narrowing = viewportWidth < yearDesktopEdgeLastViewportWidth;
   syncFrequencyStackingMode();
   normalizeSummaryStatCardWidths();
   syncFrequencyStackingMode();
@@ -615,8 +640,9 @@ function alignStackedStatsToYAxisLabels() {
     resetStackedStatsOffset(statsColumn);
   });
 
-  alignYearStatsToFrequencyEdge();
-  applyDesktopStatsRightInset();
+  alignYearStatsToFrequencyEdge(narrowing);
+  applyDesktopStatsRightInset(narrowing);
+  yearDesktopEdgeLastViewportWidth = viewportWidth;
 }
 
 function sundayOnOrBefore(d) {
