@@ -568,7 +568,6 @@
         --more-stats-second-col-shift: 0px;
         --more-stats-third-col-shift: 0px;
         --more-stats-facts-shift: 0px;
-        --more-stats-desktop-inset: 0px;
         --axis-gap: 8px;
         --label-row-height: var(--heatmap-label-row-height);
         --label-gap: 0px;
@@ -634,7 +633,7 @@
         align-content: start;
         justify-content: start;
         justify-self: end;
-        transform: translateX(calc(var(--more-stats-facts-shift) + var(--more-stats-desktop-inset)));
+        transform: translateX(var(--more-stats-facts-shift));
       }
 
       .more-stats-fact-card {

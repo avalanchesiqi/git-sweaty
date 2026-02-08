@@ -177,33 +177,6 @@ function getLeftMostLabelEdge(labels) {
   return Number.isFinite(minLeft) ? minLeft : null;
 }
 
-function parseTranslateX(transformValue) {
-  if (!transformValue || transformValue === "none") return 0;
-  const match = transformValue.match(/translateX\(([-\d.]+)px\)/);
-  if (!match) return 0;
-  const value = parseFloat(match[1]);
-  return Number.isFinite(value) ? value : 0;
-}
-
-function getDesktopRightInset(container, labels, rightEdge) {
-  const containerLeft = getContentBoxLeft(container);
-  const containerRight = getContentBoxRight(container);
-  const labelLeft = getLeftMostLabelEdge(labels);
-  if (
-    !Number.isFinite(containerLeft)
-    || !Number.isFinite(containerRight)
-    || !Number.isFinite(labelLeft)
-    || !Number.isFinite(rightEdge)
-  ) {
-    return 0;
-  }
-
-  const leftGap = labelLeft - containerLeft;
-  const rightGap = containerRight - rightEdge;
-  if (!Number.isFinite(leftGap) || !Number.isFinite(rightGap)) return 0;
-  return Math.max(0, Math.round(leftGap - rightGap));
-}
-
 function pinStackedStatsToLabelEdge(statsColumn, container, labels) {
   if (!statsColumn) return;
   const offset = getLeftMostLabelOffset(container, labels);
@@ -213,6 +186,35 @@ function pinStackedStatsToLabelEdge(statsColumn, container, labels) {
   }
   statsColumn.style.marginLeft = `${offset}px`;
   statsColumn.style.maxWidth = `calc(100% - ${offset}px)`;
+}
+
+function resetDesktopRightInset(statsColumn) {
+  if (!statsColumn) return;
+  statsColumn.style.marginRight = "";
+}
+
+function balanceDesktopStatsRightInset(statsColumn, container, labels) {
+  if (!statsColumn || !container || !labels?.length) return;
+
+  const containerLeft = getContentBoxLeft(container);
+  const containerRight = getContentBoxRight(container);
+  const labelLeft = getLeftMostLabelEdge(labels);
+  const statsRight = statsColumn.getBoundingClientRect().right;
+  if (
+    !Number.isFinite(containerLeft)
+    || !Number.isFinite(containerRight)
+    || !Number.isFinite(labelLeft)
+    || !Number.isFinite(statsRight)
+  ) {
+    return;
+  }
+
+  const leftGap = labelLeft - containerLeft;
+  const rightGap = containerRight - statsRight;
+  const inset = Math.max(0, Math.round(leftGap - rightGap));
+  if (inset > 0) {
+    statsColumn.style.marginRight = `${inset}px`;
+  }
 }
 
 let frequencyLastViewportWidth = window.innerWidth;
@@ -534,33 +536,18 @@ function applyDesktopStatsRightInset() {
     const statsColumn = card.querySelector(".card-stats.side-stats-column");
     const yLabels = Array.from(card.querySelectorAll(".heatmap-area .day-col .day-label"));
     if (!body || !statsColumn) return;
+    resetDesktopRightInset(statsColumn);
     if (!desktop || card.classList.contains("year-card-stacked")) return;
-
-    const rightEdge = statsColumn.getBoundingClientRect().right;
-    const inset = getDesktopRightInset(body, yLabels, rightEdge);
-    if (inset <= 0) return;
-
-    const baseShift = parseTranslateX(statsColumn.style.transform);
-    const adjustedShift = baseShift - inset;
-    if (adjustedShift !== 0) {
-      statsColumn.style.transform = `translateX(${adjustedShift}px)`;
-    } else {
-      statsColumn.style.transform = "";
-    }
+    balanceDesktopStatsRightInset(statsColumn, body, yLabels);
   });
 
   heatmaps.querySelectorAll(".more-stats").forEach((card) => {
     const statsColumn = card.querySelector(".more-stats-facts.side-stats-column");
     const yLabels = Array.from(card.querySelectorAll(".more-stats-body .axis-day-col .axis-y-label"));
     if (!statsColumn) return;
-    card.style.setProperty("--more-stats-desktop-inset", "0px");
+    resetDesktopRightInset(statsColumn);
     if (!desktop || card.classList.contains("more-stats-stacked")) return;
-
-    const rightEdge = statsColumn.getBoundingClientRect().right;
-    const inset = getDesktopRightInset(card, yLabels, rightEdge);
-    if (inset > 0) {
-      card.style.setProperty("--more-stats-desktop-inset", `-${inset}px`);
-    }
+    balanceDesktopStatsRightInset(statsColumn, card, yLabels);
   });
 }
 
