@@ -146,27 +146,36 @@ function applyStackedStatsOffset(statsColumn, anchorLabel) {
   statsColumn.style.maxWidth = `calc(100% - ${offset}px)`;
 }
 
-function normalizeYearStatCardWidths() {
+function normalizeSummaryStatCardWidths() {
   if (!heatmaps) return;
-  heatmaps.querySelectorAll(".year-card .card-stats.side-stats-column").forEach((statsColumn) => {
-    const cards = Array.from(statsColumn.querySelectorAll(".card-stat"));
-    if (!cards.length) return;
 
-    cards.forEach((card) => {
-      card.style.width = "";
-      card.style.maxWidth = "";
-    });
+  const yearCards = Array.from(
+    heatmaps.querySelectorAll(".year-card .card-stats.side-stats-column .card-stat"),
+  );
+  const frequencyCards = Array.from(
+    heatmaps.querySelectorAll(".more-stats-facts.side-stats-column .more-stats-fact-card"),
+  );
+  const cards = [...yearCards, ...frequencyCards];
+  if (!cards.length) return;
 
-    const maxWidth = cards.reduce((max, card) => {
-      const width = Math.ceil(card.getBoundingClientRect().width);
-      return Number.isFinite(width) ? Math.max(max, width) : max;
-    }, 0);
-    if (!maxWidth) return;
+  cards.forEach((card) => {
+    card.style.width = "";
+    card.style.maxWidth = "";
+  });
 
-    cards.forEach((card) => {
-      card.style.width = `${maxWidth}px`;
-      card.style.maxWidth = `${maxWidth}px`;
-    });
+  if (!window.matchMedia("(min-width: 721px)").matches) {
+    return;
+  }
+
+  const maxWidth = cards.reduce((max, card) => {
+    const width = Math.ceil(card.getBoundingClientRect().width);
+    return Number.isFinite(width) ? Math.max(max, width) : max;
+  }, 0);
+  if (!maxWidth) return;
+
+  cards.forEach((card) => {
+    card.style.width = `${maxWidth}px`;
+    card.style.maxWidth = `${maxWidth}px`;
   });
 }
 
@@ -200,7 +209,7 @@ function alignFrequencyTitleGapToYearGap() {
 
 function alignStackedStatsToYAxisLabels() {
   if (!heatmaps) return;
-  normalizeYearStatCardWidths();
+  normalizeSummaryStatCardWidths();
   alignFrequencyTitleGapToYearGap();
 
   heatmaps.querySelectorAll(".year-card").forEach((card) => {
