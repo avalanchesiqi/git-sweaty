@@ -89,6 +89,15 @@ function getContentBoxLeft(container) {
   return rect.left + borderLeft + paddingLeft;
 }
 
+function getContentBoxRight(container) {
+  if (!container) return null;
+  const rect = container.getBoundingClientRect();
+  const styles = getComputedStyle(container);
+  const borderRight = parseFloat(styles.borderRightWidth) || 0;
+  const paddingRight = parseFloat(styles.paddingRight) || 0;
+  return rect.right - borderRight - paddingRight;
+}
+
 let textMeasureContext = null;
 
 function measureLabelTextWidth(label, text, styles) {
@@ -156,6 +165,38 @@ function getLeftMostLabelOffset(container, labels) {
 
   if (!Number.isFinite(minLeft)) return null;
   return Math.max(0, Math.round(minLeft - containerLeft));
+}
+
+function getLeftMostLabelEdge(labels) {
+  if (!labels?.length) return null;
+  const minLeft = labels.reduce((currentMin, label) => {
+    const left = getLabelTextLeft(label);
+    if (!Number.isFinite(left)) return currentMin;
+    return Math.min(currentMin, left);
+  }, Number.POSITIVE_INFINITY);
+  return Number.isFinite(minLeft) ? minLeft : null;
+}
+
+function getBalancedStackShift(container, labels, rightEdge) {
+  const containerLeft = getContentBoxLeft(container);
+  const containerRight = getContentBoxRight(container);
+  const labelLeft = getLeftMostLabelEdge(labels);
+  if (
+    !Number.isFinite(containerLeft)
+    || !Number.isFinite(containerRight)
+    || !Number.isFinite(labelLeft)
+    || !Number.isFinite(rightEdge)
+  ) {
+    return 0;
+  }
+
+  const leftGap = labelLeft - containerLeft;
+  const rightGap = containerRight - rightEdge;
+  if (!Number.isFinite(leftGap) || !Number.isFinite(rightGap)) return 0;
+
+  const neededShift = Math.round((leftGap - rightGap) / 2);
+  if (neededShift <= 0) return 0;
+  return Math.min(neededShift, Math.max(0, Math.round(leftGap)));
 }
 
 function pinStackedStatsToLabelEdge(statsColumn, container, labels) {
@@ -499,12 +540,18 @@ function alignStackedStatsToYAxisLabels() {
     const yLabels = Array.from(card.querySelectorAll(".heatmap-area .day-col .day-label"));
     const statsColumn = card.querySelector(".card-stats.side-stats-column");
     if (!body || !heatmapArea || !statsColumn) return;
+    body.style.transform = "";
 
     const heatmapBottom = heatmapArea.getBoundingClientRect().bottom;
     const statsTop = statsColumn.getBoundingClientRect().top;
     const isStacked = statsTop >= heatmapBottom - 1;
     if (isStacked) {
       pinStackedStatsToLabelEdge(statsColumn, body, yLabels);
+      const rightEdge = statsColumn.getBoundingClientRect().right;
+      const shift = getBalancedStackShift(body, yLabels, rightEdge);
+      if (shift > 0) {
+        body.style.transform = `translateX(-${shift}px)`;
+      }
       return;
     }
     resetStackedStatsOffset(statsColumn);
@@ -515,8 +562,17 @@ function alignStackedStatsToYAxisLabels() {
     const graphBody = card.querySelector(".more-stats-body");
     const statsColumn = card.querySelector(".more-stats-facts.side-stats-column");
     if (!graphBody || !statsColumn) return;
+    graphBody.style.transform = "";
+    statsColumn.style.transform = "";
     if (card.classList.contains("more-stats-stacked")) {
       pinStackedStatsToLabelEdge(statsColumn, card, yLabels);
+      const rightEdge = statsColumn.getBoundingClientRect().right;
+      const shift = getBalancedStackShift(card, yLabels, rightEdge);
+      if (shift > 0) {
+        const shiftValue = `translateX(-${shift}px)`;
+        graphBody.style.transform = shiftValue;
+        statsColumn.style.transform = shiftValue;
+      }
       return;
     }
 
@@ -525,6 +581,13 @@ function alignStackedStatsToYAxisLabels() {
     const isStacked = statsTop >= graphBottom - 1;
     if (isStacked) {
       pinStackedStatsToLabelEdge(statsColumn, card, yLabels);
+      const rightEdge = statsColumn.getBoundingClientRect().right;
+      const shift = getBalancedStackShift(card, yLabels, rightEdge);
+      if (shift > 0) {
+        const shiftValue = `translateX(-${shift}px)`;
+        graphBody.style.transform = shiftValue;
+        statsColumn.style.transform = shiftValue;
+      }
       return;
     }
     resetStackedStatsOffset(statsColumn);
@@ -1446,15 +1509,18 @@ function buildStatsOverview(payload, types, years, color) {
   });
 
   const factItems = [
-    { label: "Most active day", value: bestDayLabel },
-    { label: "Most Active Month", value: bestMonthLabel },
-    { label: "Peak hour", value: bestHourLabel },
-    { label: "Most active week", value: bestWeekLabel },
+    { key: "most-active-day", label: "Most active day", value: bestDayLabel },
+    { key: "most-active-month", label: "Most Active Month", value: bestMonthLabel },
+    { key: "peak-hour", label: "Peak hour", value: bestHourLabel },
+    { key: "most-active-week", label: "Most active week", value: bestWeekLabel },
   ];
 
   factItems.forEach((item) => {
     const factCard = document.createElement("div");
     factCard.className = "card-stat more-stats-fact-card";
+    if (item.key) {
+      factCard.classList.add(`fact-${item.key}`);
+    }
     const label = document.createElement("div");
     label.className = "card-stat-label";
     label.textContent = item.label;
