@@ -80,19 +80,46 @@ function resetStackedStatsOffset(statsColumn) {
   statsColumn.style.maxWidth = "";
 }
 
+function getContentBoxLeft(container) {
+  if (!container) return null;
+  const rect = container.getBoundingClientRect();
+  const styles = getComputedStyle(container);
+  const borderLeft = parseFloat(styles.borderLeftWidth) || 0;
+  const paddingLeft = parseFloat(styles.paddingLeft) || 0;
+  return rect.left + borderLeft + paddingLeft;
+}
+
+function getLabelTextLeft(label) {
+  if (!label) return null;
+  const text = (label.textContent || "").trim();
+  const labelRect = label.getBoundingClientRect();
+  if (!text) return Number.isFinite(labelRect.left) ? labelRect.left : null;
+
+  const range = document.createRange();
+  range.selectNodeContents(label);
+  const textRect = range.getBoundingClientRect();
+  if (Number.isFinite(textRect.left) && textRect.width > 0) {
+    return textRect.left;
+  }
+
+  if (!Number.isFinite(labelRect.left) || !Number.isFinite(labelRect.width)) return null;
+  const textWidth = Math.max(0, label.scrollWidth);
+  return labelRect.left + Math.max(0, labelRect.width - textWidth);
+}
+
 function getLeftMostLabelOffset(container, labels) {
   if (!container || !labels?.length) return null;
-  const containerRect = container.getBoundingClientRect();
-  if (!Number.isFinite(containerRect.left)) return null;
+  const containerLeft = getContentBoxLeft(container);
+  if (!Number.isFinite(containerLeft)) return null;
 
   const minLeft = labels.reduce((currentMin, label) => {
-    const { left } = label.getBoundingClientRect();
+    const left = getLabelTextLeft(label);
     if (!Number.isFinite(left)) return currentMin;
     return Math.min(currentMin, left);
   }, Number.POSITIVE_INFINITY);
 
   if (!Number.isFinite(minLeft)) return null;
-  return Math.max(0, Math.round(minLeft - containerRect.left));
+  return Math.max(0, Math.round(minLeft - containerLeft));
 }
 
 function pinStackedStatsToLabelEdge(statsColumn, container, labels) {
