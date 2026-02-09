@@ -1878,9 +1878,11 @@ function buildStatsOverview(payload, types, years, color) {
         renderFrequencyGraphs();
         requestAnimationFrame(alignStackedStatsToYAxisLabels);
       });
-      factCard.addEventListener("pointerleave", () => {
-        factCard.classList.remove("fact-glow-cleared");
-      });
+      if (!isTouch) {
+        factCard.addEventListener("pointerleave", () => {
+          factCard.classList.remove("fact-glow-cleared");
+        });
+      }
     }
     factButtons.set(item.key, factCard);
     facts.appendChild(factCard);
