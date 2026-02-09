@@ -2236,6 +2236,28 @@ async function init() {
 
   function toggleType(value) {
     if (value === "all") {
+      allTypesMode = true;
+      selectedTypes.clear();
+      return;
+    }
+    if (!payload.types.includes(value)) return;
+    if (allTypesMode) {
+      allTypesMode = false;
+      selectedTypes = new Set([value]);
+      return;
+    }
+    if (selectedTypes.has(value)) {
+      selectedTypes.delete(value);
+      if (!selectedTypes.size) {
+        allTypesMode = true;
+      }
+      return;
+    }
+    selectedTypes.add(value);
+  }
+
+  function toggleTypeMenu(value) {
+    if (value === "all") {
       if (allTypesMode) {
         allTypesMode = false;
         selectedTypes.clear();
@@ -2259,6 +2281,29 @@ async function init() {
   }
 
   function toggleYear(value) {
+    if (value === "all") {
+      allYearsMode = true;
+      selectedYears.clear();
+      return;
+    }
+    const year = Number(value);
+    if (!Number.isFinite(year) || !currentVisibleYears.includes(year)) return;
+    if (allYearsMode) {
+      allYearsMode = false;
+      selectedYears = new Set([year]);
+      return;
+    }
+    if (selectedYears.has(year)) {
+      selectedYears.delete(year);
+      if (!selectedYears.size) {
+        allYearsMode = true;
+      }
+      return;
+    }
+    selectedYears.add(year);
+  }
+
+  function toggleYearMenu(value) {
     if (value === "all") {
       if (allYearsMode) {
         allYearsMode = false;
@@ -2359,7 +2404,7 @@ async function init() {
       selectedTypes,
       allTypesSelected,
       (value) => {
-        toggleType(value);
+        toggleTypeMenu(value);
         update({ keepTypeMenuOpen: true });
       },
     );
@@ -2374,7 +2419,7 @@ async function init() {
       selectedYears,
       allYearsSelected,
       (value) => {
-        toggleYear(value);
+        toggleYearMenu(value);
         update({ keepYearMenuOpen: true });
       },
       (v) => Number(v),
