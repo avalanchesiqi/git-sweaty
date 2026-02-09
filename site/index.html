@@ -356,7 +356,8 @@
         transition: border-color 0.15s ease, box-shadow 0.15s ease;
       }
 
-      .summary-card-action:hover {
+      .summary-card-action:hover,
+      .summary-card-action.active {
         border-color: var(--accent);
         box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.4);
       }
@@ -1015,7 +1016,7 @@
 
       @media (min-width: 721px) {
         :root {
-          --stats-column-nudge: 10px;
+          --stats-column-nudge: 14px;
         }
         .labeled-card-row .card {
           margin: 0;
@@ -1026,7 +1027,7 @@
         }
 
         .year-card .heatmap-area {
-          transform: translateX(-10px);
+          transform: translateX(calc(-1 * var(--stats-column-nudge)));
         }
 
         .year-card .card-stats.side-stats-column {
@@ -1038,7 +1039,7 @@
         }
 
         .more-stats-body {
-          transform: translateX(-10px);
+          transform: translateX(calc(-1 * var(--stats-column-nudge)));
         }
 
         .more-stats.more-stats-stacked .more-stats-body {
@@ -1058,8 +1059,8 @@
         }
 
         .card-empty-year .year-empty-placeholder {
-          margin-left: calc(var(--heatmap-axis-col) + var(--axis-gap) - 10px);
-          max-width: calc(100% - (var(--heatmap-axis-col) + var(--axis-gap) - 10px));
+          margin-left: calc(var(--heatmap-axis-col) + var(--axis-gap) - var(--stats-column-nudge));
+          max-width: calc(100% - (var(--heatmap-axis-col) + var(--axis-gap) - var(--stats-column-nudge)));
         }
       }
 

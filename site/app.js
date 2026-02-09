@@ -976,7 +976,16 @@ function buildCombinedTypeLabelsByDate(payload, types, years) {
   return result;
 }
 
-function buildSummary(payload, types, years, showTypeBreakdown, showActiveDays, hideDistanceElevation, onTypeCardSelect) {
+function buildSummary(
+  payload,
+  types,
+  years,
+  showTypeBreakdown,
+  showActiveDays,
+  hideDistanceElevation,
+  activeTypeCard,
+  onTypeCardSelect,
+) {
   summary.innerHTML = "";
 
   const totals = {
@@ -1045,6 +1054,9 @@ function buildSummary(payload, types, years, showTypeBreakdown, showActiveDays, 
       const typeCard = document.createElement("button");
       typeCard.type = "button";
       typeCard.className = "summary-card summary-card-action";
+      const isActiveTypeCard = activeTypeCard === type;
+      typeCard.classList.toggle("active", isActiveTypeCard);
+      typeCard.setAttribute("aria-pressed", isActiveTypeCard ? "true" : "false");
       typeCard.title = `Filter: ${displayType(type)}`;
       const title = document.createElement("div");
       title.className = "summary-title";
@@ -2213,6 +2225,7 @@ async function init() {
 
   let allTypesMode = true;
   let selectedTypes = new Set();
+  let summaryTypeCardSelection = null;
   let allYearsMode = true;
   let selectedYears = new Set();
   let currentVisibleYears = payload.years.slice().sort((a, b) => b - a);
@@ -2255,9 +2268,11 @@ async function init() {
     if (value === "all") {
       allTypesMode = true;
       selectedTypes.clear();
+      summaryTypeCardSelection = null;
       return;
     }
     if (!payload.types.includes(value)) return;
+    summaryTypeCardSelection = null;
     if (allTypesMode) {
       allTypesMode = false;
       selectedTypes = new Set([value]);
@@ -2275,6 +2290,7 @@ async function init() {
 
   function toggleTypeMenu(value) {
     if (value === "all") {
+      summaryTypeCardSelection = null;
       if (allTypesMode) {
         allTypesMode = false;
         selectedTypes.clear();
@@ -2285,6 +2301,7 @@ async function init() {
       return;
     }
     if (!payload.types.includes(value)) return;
+    summaryTypeCardSelection = null;
     if (allTypesMode) {
       allTypesMode = false;
       selectedTypes = new Set(payload.types.filter((type) => type !== value));
@@ -2295,6 +2312,23 @@ async function init() {
       return;
     }
     selectedTypes.add(value);
+  }
+
+  function toggleTypeFromSummaryCard(type) {
+    if (!payload.types.includes(type)) return;
+    const isSummarySelectionActive = summaryTypeCardSelection === type
+      && !allTypesMode
+      && selectedTypes.size === 1
+      && selectedTypes.has(type);
+    if (isSummarySelectionActive) {
+      allTypesMode = true;
+      selectedTypes.clear();
+      summaryTypeCardSelection = null;
+      return;
+    }
+    allTypesMode = false;
+    selectedTypes = new Set([type]);
+    summaryTypeCardSelection = type;
   }
 
   function toggleYear(value) {
@@ -2452,6 +2486,12 @@ async function init() {
     const frequencyCardColor = getActivityFrequencyCardColor(types);
     const showCombinedTypes = types.length > 1;
     const allAvailableTypesSelected = types.length === payload.types.length;
+    const activeSummaryTypeCard = summaryTypeCardSelection
+      && !allTypesSelected
+      && types.length === 1
+      && types.includes(summaryTypeCardSelection)
+      ? summaryTypeCardSelection
+      : null;
 
     updateButtonState(typeButtons, selectedTypes, allTypesSelected);
     updateButtonState(yearButtons, selectedYears, allYearsSelected, (v) => Number(v));
@@ -2579,7 +2619,7 @@ async function init() {
 
     renderStats(payload, types, years, frequencyColor);
 
-    const showTypeBreakdown = types.length > 1;
+    const showTypeBreakdown = types.length > 0;
     const showActiveDays = types.length > 1 && Boolean(heatmaps);
     const hideDistanceElevation = shouldHideDistanceElevation(payload, types, years);
     buildSummary(
@@ -2589,8 +2629,9 @@ async function init() {
       showTypeBreakdown,
       showActiveDays,
       hideDistanceElevation,
+      activeSummaryTypeCard,
       (type) => {
-        toggleType(type);
+        toggleTypeFromSummaryCard(type);
         update();
       },
     );
@@ -2622,6 +2663,7 @@ async function init() {
       if (areAllTypesSelected()) return;
       allTypesMode = true;
       selectedTypes.clear();
+      summaryTypeCardSelection = null;
       update();
     });
   }
