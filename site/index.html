@@ -32,6 +32,7 @@
         --label-gap: 6px;
         --label-gap-rotated: 10px;
         --stats-column-gap: 12px;
+        --stats-column-nudge: 0px;
         --labeled-card-padding-top: 12px;
         --labeled-card-title-gap: 6px;
         --radius: 14px;
@@ -482,6 +483,7 @@
         grid-template-columns: repeat(2, max-content);
         width: max-content;
         max-width: 100%;
+        transform: translateX(calc(-1 * var(--stats-column-nudge)));
       }
 
       .year-card .card-stats.side-stats-column .card-stat {
@@ -507,6 +509,7 @@
         justify-self: start;
         align-self: start;
         align-content: flex-start;
+        transform: none;
       }
 
       .year-card.year-card-stacked .card-stats.side-stats-column .card-stat {
@@ -660,7 +663,7 @@
         align-content: start;
         justify-content: start;
         justify-self: end;
-        transform: translateX(var(--more-stats-facts-shift));
+        transform: translateX(calc(var(--more-stats-facts-shift) - var(--stats-column-nudge)));
       }
 
       .more-stats-fact-card {
@@ -1011,6 +1014,9 @@
       }
 
       @media (min-width: 721px) {
+        :root {
+          --stats-column-nudge: 10px;
+        }
         .labeled-card-row .card {
           margin: 0;
         }
