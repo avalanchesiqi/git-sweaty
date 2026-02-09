@@ -106,7 +106,6 @@ This is the fastest path, but it requires a local clone and GitHub CLI (`gh`) au
 6. Run [Sync Strava Heatmaps](../../actions/workflows/sync.yml):
    - If GitHub shows an **Enable workflows** button in [Actions](../../actions), click it first.
    - Go to [Actions](../../actions) → [Sync Strava Heatmaps](../../actions/workflows/sync.yml) → **Run workflow**.
-   - Keep **Update README dashboard URL in this fork** enabled on your first run so your README link is personalized automatically.
    - The same workflow is also scheduled in `.github/workflows/sync.yml` (daily at `15:00 UTC`).
 
 7. Open your live site at `https://<your-username>.github.io/<repo-name>/` after deploy finishes.
