@@ -2107,6 +2107,11 @@ async function init() {
 
   function toggleType(value) {
     if (value === "all") {
+      if (allTypesMode) {
+        allTypesMode = false;
+        selectedTypes.clear();
+        return;
+      }
       allTypesMode = true;
       selectedTypes.clear();
       return;
@@ -2119,9 +2124,6 @@ async function init() {
     }
     if (selectedTypes.has(value)) {
       selectedTypes.delete(value);
-      if (!selectedTypes.size) {
-        allTypesMode = true;
-      }
       return;
     }
     selectedTypes.add(value);
@@ -2129,6 +2131,11 @@ async function init() {
 
   function toggleYear(value) {
     if (value === "all") {
+      if (allYearsMode) {
+        allYearsMode = false;
+        selectedYears.clear();
+        return;
+      }
       allYearsMode = true;
       selectedYears.clear();
       return;
@@ -2142,9 +2149,6 @@ async function init() {
     }
     if (selectedYears.has(year)) {
       selectedYears.delete(year);
-      if (!selectedYears.size) {
-        allYearsMode = true;
-      }
       return;
     }
     selectedYears.add(year);
@@ -2167,13 +2171,13 @@ async function init() {
   function getTypeMenuText(types, allTypesSelected) {
     if (allTypesSelected) return "All Activities";
     if (types.length) return types.map((type) => displayType(type)).join(", ");
-    return "All Activities";
+    return "No Activities Selected";
   }
 
   function getYearMenuText(years, allYearsSelected) {
     if (allYearsSelected) return "All Years";
     if (years.length) return years.map((year) => String(year)).join(", ");
-    return "All Years";
+    return "No Years Selected";
   }
 
   function setMenuLabel(labelEl, text, fallbackText) {
@@ -2210,9 +2214,6 @@ async function init() {
           selectedYears.delete(year);
         }
       });
-      if (!selectedYears.size) {
-        allYearsMode = true;
-      }
     }
     const allYearsSelected = areAllYearsSelected();
     const yearOptions = [
@@ -2255,11 +2256,6 @@ async function init() {
       update();
     });
     const years = selectedYearsList(visibleYears);
-    if (!years.length) {
-      allYearsMode = true;
-      selectedYears.clear();
-      years.push(...visibleYears);
-    }
     years.sort((a, b) => b - a);
     const frequencyColor = getFrequencyColor(types, allYearsSelected);
     const showCombinedTypes = types.length > 1;
