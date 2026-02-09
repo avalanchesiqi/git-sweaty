@@ -667,6 +667,31 @@
         box-sizing: border-box;
       }
 
+      .more-stats-fact-button {
+        appearance: none;
+        font: inherit;
+        color: inherit;
+        text-align: center;
+        cursor: pointer;
+        transition: border-color 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+      }
+
+      .more-stats-fact-button:hover:not(:disabled),
+      .more-stats-fact-button.active,
+      .more-stats-fact-button:focus-visible {
+        border-color: var(--accent);
+        box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.4);
+      }
+
+      .more-stats-fact-button:focus-visible {
+        outline: none;
+      }
+
+      .more-stats-fact-button:disabled {
+        cursor: default;
+        opacity: 0.8;
+      }
+
       .more-stats .more-stats-fact-card.fact-most-active-month .card-stat-label,
       .more-stats .more-stats-fact-card.fact-most-active-month .card-stat-value {
         white-space: nowrap;
