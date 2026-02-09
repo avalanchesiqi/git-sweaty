@@ -2464,7 +2464,7 @@ async function init() {
 
     if (heatmaps) {
       heatmaps.innerHTML = "";
-      const showMoreStats = allYearsSelected;
+      const showMoreStats = window.matchMedia("(min-width: 721px)").matches || allYearsSelected;
       if (showCombinedTypes) {
         const section = document.createElement("div");
         section.className = "type-section";
