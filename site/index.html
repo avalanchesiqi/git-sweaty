@@ -156,28 +156,35 @@
         font-size: 14px;
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        gap: 10px;
-        text-align: left;
+        justify-content: center;
+        text-align: center;
         cursor: pointer;
+        position: relative;
       }
 
       .filter-menu-button > span {
+        width: 100%;
         min-width: 0;
+        padding: 0 20px;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
+        text-align: center;
       }
 
       .filter-menu-button::after {
         content: "▾";
         color: var(--muted);
-        flex: 0 0 auto;
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%) rotate(0deg);
         transition: transform 0.15s ease;
+        pointer-events: none;
       }
 
       .filter-menu.open .filter-menu-button::after {
-        transform: rotate(180deg);
+        transform: translateY(-50%) rotate(180deg);
       }
 
       .filter-menu-options {
@@ -210,10 +217,10 @@
         font-size: 13px;
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        gap: 10px;
-        text-align: left;
+        justify-content: center;
+        text-align: center;
         cursor: pointer;
+        position: relative;
       }
 
       .filter-menu-option.active {
@@ -222,12 +229,22 @@
       }
 
       .filter-menu-option-label {
+        width: 100%;
         min-width: 0;
+        padding: 0 20px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        text-align: center;
       }
 
       .filter-menu-check {
         accent-color: var(--accent);
         pointer-events: none;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
         flex: 0 0 auto;
       }
 

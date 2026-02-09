@@ -2068,21 +2068,26 @@ async function init() {
 
   function getTypeMenuText(types, allTypesSelected) {
     if (allTypesSelected) return "All Activities";
-    if (types.length > 1) return "Multiple Activities Selected";
-    if (types.length === 1) return `${displayType(types[0])} Activities`;
+    if (types.length) return types.map((type) => displayType(type)).join(", ");
     return "All Activities";
   }
 
   function getYearMenuText(years, allYearsSelected) {
     if (allYearsSelected) return "All Years";
-    if (years.length > 1) return "Multiple Years Selected";
-    if (years.length === 1) return String(years[0]);
+    if (years.length) return years.map((year) => String(year)).join(", ");
     return "All Years";
   }
 
-  function setMenuLabel(labelEl, text) {
+  function setMenuLabel(labelEl, text, fallbackText) {
     if (!labelEl) return;
     labelEl.textContent = text;
+    if (!fallbackText || fallbackText === text) return;
+    if (!window.matchMedia("(max-width: 900px)").matches) return;
+    const menuButton = labelEl.closest(".filter-menu-button");
+    if (!menuButton || menuButton.offsetParent === null) return;
+    if (labelEl.scrollWidth > labelEl.clientWidth) {
+      labelEl.textContent = fallbackText;
+    }
   }
 
   function setMenuOpen(menuEl, buttonEl, isOpen) {
@@ -2160,8 +2165,18 @@ async function init() {
 
     updateButtonState(typeButtons, selectedTypes, allTypesSelected);
     updateButtonState(yearButtons, selectedYears, allYearsSelected, (v) => Number(v));
-    setMenuLabel(typeMenuLabel, getTypeMenuText(types, allTypesSelected));
-    setMenuLabel(yearMenuLabel, getYearMenuText(years, allYearsSelected));
+    const typeMenuText = getTypeMenuText(types, allTypesSelected);
+    const yearMenuText = getYearMenuText(years, allYearsSelected);
+    setMenuLabel(
+      typeMenuLabel,
+      typeMenuText,
+      !allTypesSelected && types.length > 1 ? "Multiple Activities Selected" : "",
+    );
+    setMenuLabel(
+      yearMenuLabel,
+      yearMenuText,
+      !allYearsSelected && years.length > 1 ? "Multiple Years Selected" : "",
+    );
     if (typeClearButton) {
       typeClearButton.disabled = areAllTypesSelected();
     }
