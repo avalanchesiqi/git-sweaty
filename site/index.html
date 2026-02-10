@@ -538,7 +538,7 @@
         gap: var(--side-stat-gap);
         width: max-content;
         max-width: 100%;
-        margin-left: 0;
+        margin-left: calc(var(--heatmap-axis-col) + var(--axis-gap));
         justify-self: start;
         align-self: start;
         margin-top: 12px;
@@ -739,6 +739,7 @@
         grid-column: 1;
         grid-row: 3;
         gap: var(--side-stat-gap);
+        margin-left: calc(var(--axis-width) + var(--axis-gap));
         margin-top: 12px;
         align-self: start;
         justify-self: start;
