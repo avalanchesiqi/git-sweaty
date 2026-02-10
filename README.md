@@ -90,26 +90,25 @@ This is the fastest path, but it requires a local clone and GitHub CLI (`gh`) au
      -d grant_type=authorization_code
    ```
 
-   Copy the `refresh_token` from the response.
+   The response will contain several values. You'll need the `refresh_token`. For example if it shows `..."refresh_token":"ABC123"...`, copy the value `ABC123` for use in the next step.
 
-4. Add GitHub secrets (repo → [Settings → Secrets and variables → Actions](../../settings/secrets/actions)):
+5. Add GitHub secrets (repo → [Settings → Secrets and variables → Actions](../../settings/secrets/actions)):
    - Secret name: `STRAVA_CLIENT_ID`
       - Secret value: The `Client ID` value from step 2 above
    - Secret name: `STRAVA_CLIENT_SECRET`
       - Secret value: The `Client Secret` value from step 2 above
    - Secret name: `STRAVA_REFRESH_TOKEN` (
-      - Secret value: The `code` value from the step 3 OAuth exchange above)
+      - Secret value: The `refresh_token` value from the step 3 OAuth exchange above)
 
-5. Enable GitHub Pages (repo → [Settings → Pages](../../settings/pages)):
+6. Enable GitHub Pages (repo → [Settings → Pages](../../settings/pages)):
    - Under **Build and deployment**, set **Source** to **GitHub Actions**.
 
-6. Run [Sync Strava Heatmaps](../../actions/workflows/sync.yml):
+7. Run [Sync Strava Heatmaps](../../actions/workflows/sync.yml):
    - If GitHub shows an **Enable workflows** button in [Actions](../../actions), click it first.
    - Go to [Actions](../../actions) → [Sync Strava Heatmaps](../../actions/workflows/sync.yml) → **Run workflow**.
-   - Keep **Update README dashboard URL in this fork** enabled on your first run so your README link is personalized automatically.
    - The same workflow is also scheduled in `.github/workflows/sync.yml` (daily at `15:00 UTC`).
 
-7. Open your live site at `https://<your-username>.github.io/<repo-name>/` after deploy finishes.
+8. Open your live site at `https://<your-username>.github.io/<repo-name>/` after deploy finishes.
 
 Both options run the same workflow, which will:
 - restore persisted state from the `dashboard-data` branch (if present)

@@ -32,8 +32,18 @@
         --label-gap: 6px;
         --label-gap-rotated: 10px;
         --stats-column-gap: 12px;
+        --side-stat-gap: 8px;
+        --stack-overflow-tolerance-desktop: 24px;
+        --frequency-graph-gap-base: clamp(10px, 1.4vw, 14px);
         --labeled-card-padding-top: 12px;
         --labeled-card-title-gap: 6px;
+        --summary-card-max-width: 212px;
+        --summary-grid-gap: 15px;
+        --summary-desktop-columns: 5;
+        --dashboard-content-rail-width: calc(
+          (var(--summary-desktop-columns) * var(--summary-card-max-width)) +
+          ((var(--summary-desktop-columns) - 1) * var(--summary-grid-gap))
+        );
         --radius: 14px;
         --shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
       }
@@ -53,7 +63,7 @@
       }
 
       .app {
-        max-width: 1100px;
+        max-width: 1240px;
         margin: 0 auto;
         display: grid;
         gap: 24px;
@@ -77,6 +87,8 @@
         border-radius: var(--radius);
         padding: 24px;
         box-shadow: var(--shadow);
+        width: min(100%, var(--dashboard-content-rail-width));
+        margin-inline: auto;
       }
 
       .header-top {
@@ -156,28 +168,35 @@
         font-size: 14px;
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        gap: 10px;
-        text-align: left;
+        justify-content: center;
+        text-align: center;
         cursor: pointer;
+        position: relative;
       }
 
       .filter-menu-button > span {
+        width: 100%;
         min-width: 0;
+        padding: 0 20px;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
+        text-align: center;
       }
 
       .filter-menu-button::after {
         content: "▾";
         color: var(--muted);
-        flex: 0 0 auto;
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%) rotate(0deg);
         transition: transform 0.15s ease;
+        pointer-events: none;
       }
 
       .filter-menu.open .filter-menu-button::after {
-        transform: rotate(180deg);
+        transform: translateY(-50%) rotate(180deg);
       }
 
       .filter-menu-options {
@@ -210,24 +229,33 @@
         font-size: 13px;
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        gap: 10px;
-        text-align: left;
+        justify-content: center;
+        text-align: center;
         cursor: pointer;
+        position: relative;
       }
 
       .filter-menu-option.active {
-        border-color: var(--accent);
-        box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.35);
+        border-color: rgba(148, 163, 184, 0.25);
       }
 
       .filter-menu-option-label {
+        width: 100%;
         min-width: 0;
+        padding: 0 20px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        text-align: center;
       }
 
       .filter-menu-check {
         accent-color: var(--accent);
         pointer-events: none;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
         flex: 0 0 auto;
       }
 
@@ -312,8 +340,11 @@
 
       .summary {
         display: grid;
-        gap: 16px;
-        grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
+        gap: var(--summary-grid-gap);
+        grid-template-columns: repeat(auto-fit, minmax(min(194px, 100%), var(--summary-card-max-width)));
+        justify-content: center;
+        width: min(100%, var(--dashboard-content-rail-width));
+        margin-inline: auto;
       }
 
       .summary-card {
@@ -328,6 +359,7 @@
         grid-template-rows: auto 1fr;
         align-items: center;
         justify-items: center; /* prevents full-width stretch that moves the dot left */
+        width: 100%;
       }
 
       .summary-card-action {
@@ -339,15 +371,28 @@
         transition: border-color 0.15s ease, box-shadow 0.15s ease;
       }
 
-      .summary-card-action:hover {
+      .summary-card-action.active {
         border-color: var(--accent);
         box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.4);
+      }
+
+      @media (hover: hover) and (pointer: fine) {
+        .summary-card-action:hover {
+          border-color: var(--accent);
+          box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.4);
+        }
       }
 
       .summary-card-action:focus-visible {
         outline: none;
         border-color: var(--accent);
         box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.4);
+      }
+
+      .summary-card-action.summary-glow-cleared,
+      .summary-card-action.summary-glow-cleared:focus-visible {
+        border-color: rgba(148, 163, 184, 0.2);
+        box-shadow: none;
       }
 
       .summary-title {
@@ -390,6 +435,8 @@
       .type-section {
         display: grid;
         gap: 12px;
+        width: min(100%, var(--dashboard-content-rail-width));
+        margin-inline: auto;
       }
 
       .type-header {
@@ -422,6 +469,12 @@
       }
 
       .card-with-labeled-title {
+        --card-graph-rail-width: max-content;
+        --frequency-graph-gap: var(--frequency-graph-gap-base);
+        --frequency-grid-pad-right: 0px;
+        display: grid;
+        grid-template-rows: auto auto;
+        row-gap: var(--labeled-card-title-gap);
         padding-top: var(--labeled-card-padding-top);
       }
 
@@ -432,27 +485,26 @@
       }
 
       .card-title.labeled-card-title {
-        margin: 0 0 var(--labeled-card-title-gap);
+        margin: 0;
         line-height: 1;
-      }
-
-      .labeled-card-row-frequency .card-title.labeled-card-title {
-        margin-bottom: max(0px, calc(var(--labeled-card-title-gap) - 2px));
       }
 
       .card-body {
         display: grid;
-        grid-template-columns: max-content minmax(0, 1fr);
-        row-gap: 16px;
+        grid-template-columns: var(--card-graph-rail-width) max-content;
+        row-gap: 0;
         column-gap: var(--stats-column-gap);
-        align-items: start;
+        align-items: center;
+        justify-content: start;
       }
 
       .card-stats {
         display: grid;
-        gap: 8px;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--side-stat-gap);
+        grid-template-columns: repeat(2, max-content);
         align-content: start;
+        width: max-content;
+        max-width: 100%;
       }
 
       .year-card .side-stats-column,
@@ -460,16 +512,15 @@
         margin-left: 0;
         max-width: 100%;
         justify-self: end;
+        align-self: center;
       }
 
       .year-card .card-stats.side-stats-column {
-        grid-template-columns: repeat(2, max-content);
-        width: max-content;
-        max-width: 100%;
+        justify-content: start;
       }
 
-      .year-card .card-stats.side-stats-column .card-stat {
-        width: max-content;
+      .year-card .heatmap-area {
+        justify-self: start;
       }
 
       .year-card .card-stats.side-stats-column .card-stat-label,
@@ -484,18 +535,19 @@
       .year-card.year-card-stacked .card-stats.side-stats-column {
         display: flex;
         flex-wrap: nowrap;
-        gap: 8px;
+        gap: var(--side-stat-gap);
         width: max-content;
         max-width: 100%;
-        margin-left: 0;
+        margin-left: calc(var(--heatmap-axis-col) + var(--axis-gap));
         justify-self: start;
         align-self: start;
+        margin-top: 12px;
         align-content: flex-start;
       }
 
       .year-card.year-card-stacked .card-stats.side-stats-column .card-stat {
         flex: 0 0 auto;
-        width: max-content;
+        width: var(--side-stat-card-width, max-content);
         max-width: 100%;
       }
 
@@ -504,42 +556,29 @@
         white-space: nowrap;
       }
 
-      .empty-year-inline {
+      .card-empty-year {
+        --card-empty-body-height: calc(var(--side-stat-card-min-height, 56px) + 10px);
+      }
+
+      .card-empty-year-body {
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        gap: 10px;
+        min-height: var(--card-empty-body-height);
+        padding-left: calc(var(--heatmap-axis-col) + var(--axis-gap));
       }
 
-      .empty-year-title {
-        margin: 0;
+      .card-empty-year-stat {
+        width: var(--side-stat-card-width, max-content);
       }
 
-      .year-empty-placeholder {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        padding: 4px 8px;
-        border-radius: 10px;
-        border: 1px solid rgba(148, 163, 184, 0.2);
-        background: rgba(15, 23, 42, 0.45);
-        color: var(--muted);
+      .card-empty-year-stat .card-stat-label {
+        white-space: nowrap;
       }
 
-      .card-empty-year .year-empty-placeholder {
-        margin-left: calc(var(--heatmap-axis-col) + var(--axis-gap));
-        max-width: calc(100% - (var(--heatmap-axis-col) + var(--axis-gap)));
-      }
-
-      .year-empty-ellipsis {
-        font-family: "JetBrains Mono", monospace;
-        font-size: 18px;
-        line-height: 1;
-      }
-
-      .year-empty-message {
-        font-size: 11px;
-        letter-spacing: 0.02em;
+      .card-empty-year-stat .card-stat-value {
+        white-space: normal;
+        line-height: 1.2;
       }
 
       .card-stat {
@@ -548,6 +587,12 @@
         border-radius: 10px;
         padding: 8px 10px;
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: var(--side-stat-card-width, max-content);
+        min-height: var(--side-stat-card-min-height, 0px);
       }
 
       .card-stat-label {
@@ -569,21 +614,16 @@
       }
 
       .more-stats {
-        --more-stats-col-gap: clamp(10px, 1.4vw, 14px);
-        --more-stats-base-shift: 6px;
-        --more-stats-followup-shift: 0px;
-        --more-stats-second-col-shift: 0px;
-        --more-stats-third-col-shift: 0px;
-        --more-stats-facts-shift: 0px;
         --axis-gap: 8px;
         --label-row-height: var(--heatmap-label-row-height);
         --label-gap: 0px;
         --label-gap-rotated: 10px;
         display: grid;
-        grid-template-columns: max-content minmax(0, 1fr);
+        grid-template-columns: var(--card-graph-rail-width) max-content;
         column-gap: var(--stats-column-gap);
         row-gap: 0;
-        align-items: start;
+        align-items: center;
+        justify-content: start;
       }
 
       .more-stats > .labeled-card-title {
@@ -595,59 +635,80 @@
         display: block;
         grid-column: 1;
         grid-row: 2;
-        margin-top: 0;
+        width: max-content;
+        align-self: center;
       }
 
       .more-stats-grid {
         display: grid;
         grid-template-columns: repeat(3, max-content);
-        column-gap: var(--more-stats-col-gap);
+        column-gap: var(--frequency-graph-gap);
         row-gap: 12px;
         align-items: start;
         justify-content: start;
         width: max-content;
+        padding-right: var(--frequency-grid-pad-right);
       }
 
       .more-stats-col {
         display: grid;
         align-content: start;
-        justify-items: center;
+        justify-items: start;
         width: max-content;
-        transform: translateX(var(--more-stats-base-shift));
-      }
-
-      .more-stats-grid > .more-stats-col:nth-child(n + 2) {
-        transform: translateX(calc(var(--more-stats-base-shift) + var(--more-stats-followup-shift)));
-      }
-
-      .more-stats-grid > .more-stats-col:nth-child(2) {
-        margin-left: var(--more-stats-second-col-shift);
-      }
-
-      .more-stats-grid > .more-stats-col:nth-child(3) {
-        margin-left: var(--more-stats-third-col-shift);
       }
 
       .more-stats-facts {
         display: grid;
         grid-template-columns: repeat(2, max-content);
-        gap: 8px;
+        gap: var(--side-stat-gap);
         grid-column: 2;
         grid-row: 2;
         width: max-content;
         max-width: 100%;
-        align-self: start;
+        align-self: center;
         align-content: start;
         justify-content: start;
         justify-self: end;
-        transform: translateX(var(--more-stats-facts-shift));
       }
 
       .more-stats-fact-card {
-        width: max-content;
+        width: var(--side-stat-card-width, max-content);
+        min-height: var(--side-stat-card-min-height, 0px);
         min-width: 0;
         max-width: 100%;
         box-sizing: border-box;
+      }
+
+      .more-stats-fact-button {
+        appearance: none;
+        font: inherit;
+        color: inherit;
+        text-align: center;
+        cursor: pointer;
+        transition: border-color 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+      }
+
+      .more-stats-fact-button:hover:not(:disabled),
+      .more-stats-fact-button.active,
+      .more-stats-fact-button:focus-visible {
+        border-color: var(--accent);
+        box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.4);
+      }
+
+      .more-stats-fact-button:focus-visible {
+        outline: none;
+      }
+
+      .more-stats-fact-button.fact-glow-cleared,
+      .more-stats-fact-button.fact-glow-cleared:hover:not(:disabled),
+      .more-stats-fact-button.fact-glow-cleared:focus-visible {
+        border-color: rgba(148, 163, 184, 0.2);
+        box-shadow: none;
+      }
+
+      .more-stats-fact-button:disabled {
+        cursor: default;
+        opacity: 0.8;
       }
 
       .more-stats .more-stats-fact-card.fact-most-active-month .card-stat-label,
@@ -677,7 +738,8 @@
         flex-wrap: nowrap;
         grid-column: 1;
         grid-row: 3;
-        gap: 8px;
+        gap: var(--side-stat-gap);
+        margin-left: calc(var(--axis-width) + var(--axis-gap));
         margin-top: 12px;
         align-self: start;
         justify-self: start;
@@ -686,11 +748,10 @@
         align-content: flex-start;
         width: max-content;
         max-width: 100%;
-        transform: none;
       }
 
       .more-stats.more-stats-stacked .more-stats-fact-card {
-        width: fit-content;
+        width: var(--side-stat-card-width, max-content);
         max-width: 100%;
         flex: 0 0 auto;
       }
@@ -698,6 +759,25 @@
       .more-stats.more-stats-stacked .more-stats-fact-card .card-stat-label,
       .more-stats.more-stats-stacked .more-stats-fact-card .card-stat-value {
         white-space: nowrap;
+      }
+
+      @media (min-width: 901px) {
+        .year-card:not(.year-card-stacked) .card-body,
+        .more-stats:not(.more-stats-stacked) {
+          justify-content: center;
+        }
+      }
+
+      @media (min-width: 1200px) {
+        .summary.summary-center-three-types .summary-type-card:nth-last-child(3) {
+          grid-column: 2;
+        }
+        .summary.summary-center-three-types .summary-type-card:nth-last-child(2) {
+          grid-column: 3;
+        }
+        .summary.summary-center-three-types .summary-type-card:nth-last-child(1) {
+          grid-column: 4;
+        }
       }
 
       .heatmap-area {
@@ -965,52 +1045,15 @@
         transform: none;
       }
 
-      @media (min-width: 721px) {
-        .labeled-card-row .card {
-          margin: 0;
-        }
+        @media (min-width: 721px) {
+          .labeled-card-row .card {
+            margin: 0;
+          }
 
-        .labeled-card-title {
-          font-size: 14px;
+          .labeled-card-title {
+            font-size: 14px;
+          }
         }
-
-        .year-card .heatmap-area {
-          transform: translateX(-10px);
-        }
-
-        .year-card .card-stats.side-stats-column {
-          align-self: center;
-          justify-self: end;
-          margin-top: 0;
-          height: auto;
-          align-content: start;
-        }
-
-        .more-stats-body {
-          transform: translateX(-10px);
-        }
-
-        .more-stats.more-stats-stacked .more-stats-body {
-          transform: none;
-        }
-
-        .year-card.year-card-stacked .heatmap-area {
-          transform: none;
-        }
-
-        .more-stats .side-stats-column {
-          align-self: center;
-          justify-self: end;
-          margin-top: 0;
-          height: auto;
-          justify-content: flex-start;
-        }
-
-        .card-empty-year .year-empty-placeholder {
-          margin-left: calc(var(--heatmap-axis-col) + var(--axis-gap) - 10px);
-          max-width: calc(100% - (var(--heatmap-axis-col) + var(--axis-gap) - 10px));
-        }
-      }
 
       @media (max-width: 900px) {
         :root {
@@ -1172,47 +1215,11 @@
         .day-label {
           font-size: 9px;
         }
-        .card-body {
-          grid-template-columns: 1fr;
-        }
-        .card-stats {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 8px;
-          width: max-content;
-          max-width: 100%;
-          justify-content: flex-start;
-          align-content: flex-start;
-        }
-        .card-stats .card-stat {
-          width: fit-content;
-          max-width: 100%;
-          flex: 0 1 auto;
-        }
         .card-stats .card-stat-label {
           font-size: clamp(9px, 2.4vw, 10px);
         }
         .card-stats .card-stat-value {
           font-size: clamp(12px, 3.2vw, 14px);
-        }
-        .year-card .card-stats {
-          display: flex;
-          flex-wrap: nowrap;
-          width: max-content;
-          max-width: 100%;
-        }
-        .year-card .card-stats.side-stats-column {
-          justify-self: start;
-          margin-left: 0;
-        }
-        .year-card .card-stats .card-stat {
-          width: max-content;
-          max-width: 100%;
-          flex: 0 0 auto;
-        }
-        .year-card .card-stats .card-stat-label,
-        .year-card .card-stats .card-stat-value {
-          white-space: nowrap;
         }
         .summary {
           grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1237,41 +1244,10 @@
         .more-stats {
           --axis-width: 32px;
           --label-row-height: var(--heatmap-label-row-height);
-          --more-stats-base-shift: 6px;
-          --more-stats-followup-shift: 0px;
           --label-gap-rotated: 8px;
-          grid-template-columns: 1fr;
-          grid-template-rows: auto auto auto;
-          row-gap: 0;
-        }
-        .more-stats-body {
-          grid-column: 1;
-          grid-row: 2;
-          margin-top: 0;
-        }
-        .more-stats .more-stats-facts.side-stats-column {
-          display: flex;
-          flex-direction: row;
-          flex-wrap: nowrap;
-          grid-column: 1;
-          grid-row: 3;
-          gap: 8px;
-          margin-top: 12px;
-          align-self: start;
-          justify-self: start;
-          justify-content: flex-start;
-          align-items: start;
-          align-content: flex-start;
-          width: max-content;
-          max-width: 100%;
-          transform: none;
-          -webkit-text-size-adjust: 100%;
-          text-size-adjust: 100%;
         }
         .more-stats-fact-card {
-          width: fit-content;
           max-width: 100%;
-          flex: 0 0 auto;
         }
         .more-stats-fact-card .card-stat-label {
           font-size: clamp(9px, 2.4vw, 10px);
@@ -1281,7 +1257,7 @@
         }
       }
 
-      @media (max-width: 420px) {
+      @media (max-width: 375px) {
         :root {
           --cell: 9px;
           --gap: 2px;
@@ -1333,6 +1309,6 @@
 
     <div id="tooltip" class="tooltip"></div>
 
-    <script src="app.js?v=28"></script>
+    <script src="app.js?v=29"></script>
   </body>
 </html>
