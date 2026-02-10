@@ -77,585 +77,186 @@ function getLayout(scope) {
   };
 }
 
-function resetStackedStatsOffset(statsColumn) {
-  if (!statsColumn) return;
-  statsColumn.style.marginLeft = "";
-  statsColumn.style.maxWidth = "";
+function getElementBoxWidth(element) {
+  if (!element) return 0;
+  const width = element.getBoundingClientRect().width;
+  return Number.isFinite(width) ? width : 0;
 }
 
-function getContentBoxLeft(container) {
-  if (!container) return null;
-  const rect = container.getBoundingClientRect();
-  const styles = getComputedStyle(container);
-  const borderLeft = parseFloat(styles.borderLeftWidth) || 0;
-  const paddingLeft = parseFloat(styles.paddingLeft) || 0;
-  return rect.left + borderLeft + paddingLeft;
-}
-
-function getContentBoxRight(container) {
-  if (!container) return null;
-  const rect = container.getBoundingClientRect();
-  const styles = getComputedStyle(container);
-  const borderRight = parseFloat(styles.borderRightWidth) || 0;
-  const paddingRight = parseFloat(styles.paddingRight) || 0;
-  return rect.right - borderRight - paddingRight;
-}
-
-let textMeasureContext = null;
-
-function measureLabelTextWidth(label, text, styles) {
-  if (!text || !label) return 0;
-  if (!textMeasureContext) {
-    const canvas = document.createElement("canvas");
-    textMeasureContext = canvas.getContext("2d");
-  }
-  if (!textMeasureContext) return 0;
-
-  const font = styles.font && styles.font !== "normal"
-    ? styles.font
-    : `${styles.fontStyle} ${styles.fontVariant} ${styles.fontWeight} ${styles.fontSize} / ${styles.lineHeight} ${styles.fontFamily}`;
-  textMeasureContext.font = font;
-
-  let width = textMeasureContext.measureText(text).width;
-  const letterSpacing = parseFloat(styles.letterSpacing);
-  if (Number.isFinite(letterSpacing) && text.length > 1) {
-    width += letterSpacing * (text.length - 1);
-  }
-  return width;
-}
-
-function getLabelTextLeft(label) {
-  if (!label) return null;
-  const text = (label.textContent || "").trim();
-  const styles = getComputedStyle(label);
-  const labelRect = label.getBoundingClientRect();
-  if (!text) return Number.isFinite(labelRect.left) ? labelRect.left : null;
-
-  const borderLeft = parseFloat(styles.borderLeftWidth) || 0;
-  const borderRight = parseFloat(styles.borderRightWidth) || 0;
+function getElementContentWidth(element) {
+  if (!element) return 0;
+  const styles = getComputedStyle(element);
   const paddingLeft = parseFloat(styles.paddingLeft) || 0;
   const paddingRight = parseFloat(styles.paddingRight) || 0;
-  const contentLeft = labelRect.left + borderLeft + paddingLeft;
-  const contentRight = labelRect.right - borderRight - paddingRight;
-  const contentWidth = Math.max(0, contentRight - contentLeft);
-  const measuredWidth = Math.max(0, measureLabelTextWidth(label, text, styles));
-  const textWidth = Math.min(measuredWidth, contentWidth || measuredWidth);
-
-  const align = styles.textAlign;
-  if (align === "right" || align === "end") {
-    return contentRight - textWidth;
-  }
-  if (align === "center") {
-    return contentLeft + Math.max(0, (contentWidth - textWidth) / 2);
-  }
-  if (align === "left" || align === "start") {
-    return contentLeft;
-  }
-
-  return contentLeft;
+  return Math.max(0, element.clientWidth - paddingLeft - paddingRight);
 }
 
-function getLeftMostLabelOffset(container, labels) {
-  if (!container || !labels?.length) return null;
-  const containerLeft = getContentBoxLeft(container);
-  if (!Number.isFinite(containerLeft)) return null;
-
-  const minLeft = labels.reduce((currentMin, label) => {
-    const left = getLabelTextLeft(label);
-    if (!Number.isFinite(left)) return currentMin;
-    return Math.min(currentMin, left);
-  }, Number.POSITIVE_INFINITY);
-
-  if (!Number.isFinite(minLeft)) return null;
-  return Math.max(0, Math.round(minLeft - containerLeft));
-}
-
-function getLeftMostLabelEdge(labels) {
-  if (!labels?.length) return null;
-  const minLeft = labels.reduce((currentMin, label) => {
-    const left = getLabelTextLeft(label);
-    if (!Number.isFinite(left)) return currentMin;
-    return Math.min(currentMin, left);
-  }, Number.POSITIVE_INFINITY);
-  return Number.isFinite(minLeft) ? minLeft : null;
-}
-
-function pinStackedStatsToLabelEdge(statsColumn, container, labels) {
-  if (!statsColumn) return;
-  const offset = getLeftMostLabelOffset(container, labels);
-  if (!Number.isFinite(offset)) {
-    resetStackedStatsOffset(statsColumn);
-    return;
-  }
-  statsColumn.style.marginLeft = `${offset}px`;
-  statsColumn.style.maxWidth = `calc(100% - ${offset}px)`;
-}
-
-function resetDesktopRightInset(statsColumn) {
-  if (!statsColumn) return;
-  statsColumn.style.marginRight = "";
-}
-
-function getDesktopStatsRightInset(statsColumn, container, labels) {
-  if (!statsColumn || !container || !labels?.length) return;
-
-  const containerLeft = getContentBoxLeft(container);
-  const containerRight = getContentBoxRight(container);
-  const labelLeft = getLeftMostLabelEdge(labels);
-  const statsRight = statsColumn.getBoundingClientRect().right;
-  if (
-    !Number.isFinite(containerLeft)
-    || !Number.isFinite(containerRight)
-    || !Number.isFinite(labelLeft)
-    || !Number.isFinite(statsRight)
-  ) {
-    return;
-  }
-
-  const leftGap = labelLeft - containerLeft;
-  const rightGap = containerRight - statsRight;
-  return Math.max(0, Math.round(leftGap - rightGap));
-}
-
-function balanceDesktopStatsRightInset(statsColumn, container, labels) {
-  const inset = getDesktopStatsRightInset(statsColumn, container, labels);
-  if (!Number.isFinite(inset)) return;
-  if (inset > 0) {
-    statsColumn.style.marginRight = `${inset}px`;
-  }
-}
-
-let frequencyLastViewportWidth = window.innerWidth;
-let frequencyStackLocks = new Map();
-let yearLastViewportWidth = window.innerWidth;
-let yearStackLocks = new Map();
-let statsWidthLastViewportWidth = window.innerWidth;
-let statsWidthLock = 0;
-let yearDesktopEdgeLastViewportWidth = window.innerWidth;
-let yearDesktopTransformLocks = new Map();
-let yearDesktopInsetLocks = new Map();
-
-function normalizeSummaryStatCardWidths() {
+function resetCardLayoutState() {
   if (!heatmaps) return;
-  const viewportWidth = window.innerWidth;
-  const narrowing = viewportWidth <= statsWidthLastViewportWidth;
+  heatmaps.querySelectorAll(".more-stats").forEach((card) => {
+    card.classList.remove("more-stats-stacked");
+    card.style.removeProperty("--card-graph-rail-width");
+    card.style.removeProperty("--frequency-graph-gap");
+    card.style.removeProperty("--frequency-grid-pad-right");
+  });
+  heatmaps.querySelectorAll(".year-card").forEach((card) => {
+    card.classList.remove("year-card-stacked");
+    card.style.removeProperty("--card-graph-rail-width");
+  });
+}
 
-  const allYearCards = Array.from(
-    heatmaps.querySelectorAll(".year-card .card-stats.side-stats-column .card-stat"),
+function normalizeSideStatCardSize() {
+  if (!heatmaps) return;
+  const cards = Array.from(
+    heatmaps.querySelectorAll(
+      ".year-card .card-stats.side-stats-column .card-stat, .more-stats .more-stats-fact-card",
+    ),
   );
-  const yearCards = allYearCards.filter((card) => (
-    !card.closest(".year-card")?.classList.contains("year-card-stacked")
-  ));
-  const allFrequencyCards = Array.from(
-    heatmaps.querySelectorAll(".more-stats-facts.side-stats-column .more-stats-fact-card"),
-  );
-  const frequencyCards = allFrequencyCards.filter((card) => (
-    !card.closest(".more-stats")?.classList.contains("more-stats-stacked")
-  ));
-  const cards = [...yearCards, ...frequencyCards];
+  cards.forEach((card) => {
+    card.style.removeProperty("width");
+    card.style.removeProperty("maxWidth");
+    card.style.removeProperty("minHeight");
+  });
+  if (!cards.length) {
+    heatmaps.style.removeProperty("--side-stat-card-width");
+    heatmaps.style.removeProperty("--side-stat-card-min-height");
+    return;
+  }
 
-  [...allYearCards, ...allFrequencyCards].forEach((card) => {
-    card.style.width = "";
-    card.style.maxWidth = "";
+  const maxWidth = cards.reduce((acc, card) => Math.max(acc, Math.ceil(getElementBoxWidth(card))), 0);
+  const maxHeight = cards.reduce((acc, card) => Math.max(acc, Math.ceil(card.getBoundingClientRect().height || 0)), 0);
+
+  if (maxWidth > 0) {
+    heatmaps.style.setProperty("--side-stat-card-width", `${maxWidth}px`);
+  }
+  if (maxHeight > 0) {
+    heatmaps.style.setProperty("--side-stat-card-min-height", `${maxHeight}px`);
+  }
+}
+
+function buildSectionLayoutPlan(list) {
+  const frequencyCard = list.querySelector(".labeled-card-row-frequency .more-stats");
+  const yearCards = Array.from(list.querySelectorAll(".labeled-card-row-year .year-card"));
+  if (!frequencyCard && !yearCards.length) return null;
+
+  const yearGraphWidths = yearCards
+    .map((card) => getElementBoxWidth(card.querySelector(".heatmap-area")))
+    .filter((width) => width > 0);
+
+  let graphRailWidth = yearGraphWidths.length ? Math.ceil(Math.max(...yearGraphWidths)) : 0;
+  let frequencyGap = null;
+  let frequencyPadRight = null;
+
+  if (frequencyCard) {
+    const frequencyCols = Array.from(frequencyCard.querySelectorAll(".more-stats-grid > .more-stats-col"));
+    const columnWidths = frequencyCols
+      .map((col) => getElementBoxWidth(col))
+      .filter((width) => width > 0);
+    const graphCount = columnWidths.length;
+    const totalFrequencyGraphWidth = columnWidths.reduce((sum, width) => sum + width, 0);
+
+    if (!graphRailWidth && totalFrequencyGraphWidth > 0) {
+      const baseGap = readCssVar("--frequency-graph-gap-base", 12, frequencyCard);
+      graphRailWidth = Math.ceil(totalFrequencyGraphWidth + (Math.max(0, graphCount - 1) * baseGap));
+    }
+
+    if (graphRailWidth > 0 && totalFrequencyGraphWidth > 0 && graphCount > 1) {
+      const totalGap = Math.max(0, graphRailWidth - totalFrequencyGraphWidth);
+      frequencyGap = Math.floor(totalGap / (graphCount - 1));
+      frequencyPadRight = Math.max(0, totalGap - (frequencyGap * (graphCount - 1)));
+    }
+  }
+
+  const cards = [
+    ...(frequencyCard ? [frequencyCard] : []),
+    ...yearCards,
+  ];
+
+  let shouldStackSection = false;
+  cards.forEach((card) => {
+    const statsColumn = card.classList.contains("more-stats")
+      ? card.querySelector(".more-stats-facts.side-stats-column")
+      : card.querySelector(".card-stats.side-stats-column");
+    if (!statsColumn) return;
+
+    const measuredMain = card.classList.contains("more-stats")
+      ? getElementBoxWidth(card.querySelector(".more-stats-grid"))
+      : getElementBoxWidth(card.querySelector(".heatmap-area"));
+    const mainWidth = graphRailWidth > 0 ? graphRailWidth : measuredMain;
+    const statsWidth = Math.ceil(getElementBoxWidth(statsColumn));
+    const sideGap = readCssVar("--stats-column-gap", 12, card);
+    const requiredWidth = Math.ceil(mainWidth + sideGap + statsWidth);
+    const availableWidth = Math.floor(getElementContentWidth(card));
+    if (requiredWidth > availableWidth) {
+      shouldStackSection = true;
+    }
   });
 
-  if (!window.matchMedia("(min-width: 721px)").matches) {
-    statsWidthLock = 0;
-    statsWidthLastViewportWidth = viewportWidth;
-    return;
-  }
-  if (!cards.length) {
-    statsWidthLastViewportWidth = viewportWidth;
-    return;
-  }
+  return {
+    frequencyCard,
+    yearCards,
+    graphRailWidth,
+    frequencyGap,
+    frequencyPadRight,
+    shouldStackSection,
+  };
+}
 
-  const maxWidth = cards.reduce((max, card) => {
-    const width = Math.ceil(card.getBoundingClientRect().width);
-    return Number.isFinite(width) ? Math.max(max, width) : max;
-  }, 0);
-  if (!maxWidth) {
-    statsWidthLastViewportWidth = viewportWidth;
-    return;
-  }
-
-  const targetWidth = narrowing
-    ? Math.max(maxWidth, statsWidthLock || 0)
-    : maxWidth;
+function applySectionLayoutPlan(plan) {
+  const {
+    frequencyCard,
+    yearCards,
+    graphRailWidth,
+    frequencyGap,
+    frequencyPadRight,
+    shouldStackSection,
+  } = plan;
+  const cards = [
+    ...(frequencyCard ? [frequencyCard] : []),
+    ...yearCards,
+  ];
 
   cards.forEach((card) => {
-    card.style.width = `${targetWidth}px`;
-    card.style.maxWidth = `${targetWidth}px`;
-  });
-  statsWidthLock = targetWidth;
-  statsWidthLastViewportWidth = viewportWidth;
-}
-
-function alignFrequencyTitleGapToYearGap() {
-  if (!heatmaps) return;
-  const desktop = window.matchMedia("(min-width: 721px)").matches;
-
-  const referenceYearCard = heatmaps.querySelector(".year-card");
-  if (!referenceYearCard) return;
-
-  const yearTitle = referenceYearCard.querySelector(".card-title.labeled-card-title");
-  const yearFirstLabel = referenceYearCard.querySelector(".month-row .month-label");
-  if (!yearTitle || !yearFirstLabel) return;
-
-  const targetGap = yearFirstLabel.getBoundingClientRect().top - yearTitle.getBoundingClientRect().bottom;
-  if (!Number.isFinite(targetGap)) return;
-
-  heatmaps.querySelectorAll(".more-stats").forEach((frequencyCard) => {
-    const title = frequencyCard.querySelector(".card-title.labeled-card-title");
-    const firstLabel = frequencyCard.querySelector(".axis-month-row .month-label");
-    const body = frequencyCard.querySelector(".more-stats-body");
-    if (!title || !firstLabel || !body) return;
-
-    body.style.marginTop = "0px";
-    if (desktop && !frequencyCard.classList.contains("more-stats-stacked")) {
-      return;
-    }
-    const currentGap = firstLabel.getBoundingClientRect().top - title.getBoundingClientRect().bottom;
-    if (!Number.isFinite(currentGap)) return;
-
-    const correction = Math.round(currentGap - targetGap);
-    body.style.marginTop = `${-correction}px`;
-  });
-}
-
-function syncFrequencyStackingMode() {
-  if (!heatmaps) return;
-  const desktop = window.matchMedia("(min-width: 721px)").matches;
-  const viewportWidth = window.innerWidth;
-  const narrowing = viewportWidth <= frequencyLastViewportWidth;
-  const nextLocks = new Map();
-
-  const cards = Array.from(heatmaps.querySelectorAll(".more-stats"));
-  cards.forEach((card, index) => {
-    const body = card.querySelector(".more-stats-body");
-    const facts = card.querySelector(".more-stats-facts.side-stats-column");
-    if (!body || !facts) return;
-
-    card.style.setProperty("--more-stats-facts-shift", "0px");
-    card.style.setProperty("--more-stats-second-col-shift", "0px");
-    card.style.setProperty("--more-stats-third-col-shift", "0px");
-    facts.style.width = "";
-    facts.style.maxWidth = "";
-    card.classList.remove("more-stats-stacked");
-    if (!desktop) {
-      return;
-    }
-
-    const sideGap = readCssVar("--stats-column-gap", 12, card);
-    const requiredWidth = Math.ceil(body.scrollWidth + sideGap + facts.scrollWidth);
-    const availableWidth = Math.floor(card.clientWidth);
-    const needsStack = requiredWidth > availableWidth;
-    const wasLocked = frequencyStackLocks.get(index) === true;
-    const keepLocked = wasLocked && narrowing;
-    const shouldStack = needsStack || keepLocked;
-
-    if (shouldStack) {
-      card.classList.add("more-stats-stacked");
-      nextLocks.set(index, true);
+    if (graphRailWidth > 0) {
+      card.style.setProperty("--card-graph-rail-width", `${graphRailWidth}px`);
+    } else {
+      card.style.removeProperty("--card-graph-rail-width");
     }
   });
 
-  frequencyStackLocks = nextLocks;
-  frequencyLastViewportWidth = viewportWidth;
-}
-
-function syncYearStackingMode() {
-  if (!heatmaps) return;
-  const desktop = window.matchMedia("(min-width: 721px)").matches;
-  const viewportWidth = window.innerWidth;
-  const narrowing = viewportWidth <= yearLastViewportWidth;
-  const nextLocks = new Map();
-
-  const cards = Array.from(heatmaps.querySelectorAll(".year-card"));
-  cards.forEach((card, index) => {
-    const heatmapArea = card.querySelector(".heatmap-area");
-    const statsColumn = card.querySelector(".card-stats.side-stats-column");
-    if (!heatmapArea || !statsColumn) return;
-
-    card.classList.remove("year-card-stacked");
-    if (!desktop) {
-      return;
+  if (frequencyCard) {
+    if (Number.isFinite(frequencyGap)) {
+      frequencyCard.style.setProperty("--frequency-graph-gap", `${Math.max(0, frequencyGap)}px`);
+    } else {
+      frequencyCard.style.removeProperty("--frequency-graph-gap");
     }
-
-    const sideGap = readCssVar("--stats-column-gap", 12, card);
-    const requiredWidth = Math.ceil(heatmapArea.scrollWidth + sideGap + statsColumn.scrollWidth);
-    const availableWidth = Math.floor(card.clientWidth);
-    const needsStack = requiredWidth > availableWidth;
-    const wasLocked = yearStackLocks.get(index) === true;
-    const keepLocked = wasLocked && narrowing;
-    const shouldStack = needsStack || keepLocked;
-
-    if (shouldStack) {
-      card.classList.add("year-card-stacked");
-      nextLocks.set(index, true);
+    if (Number.isFinite(frequencyPadRight)) {
+      frequencyCard.style.setProperty("--frequency-grid-pad-right", `${Math.max(0, frequencyPadRight)}px`);
+    } else {
+      frequencyCard.style.removeProperty("--frequency-grid-pad-right");
     }
-  });
-
-  yearStackLocks = nextLocks;
-  yearLastViewportWidth = viewportWidth;
-}
-
-function syncSectionStackingMode() {
-  if (!heatmaps) return;
-  const desktop = window.matchMedia("(min-width: 721px)").matches;
-  if (!desktop) return;
-
-  heatmaps.querySelectorAll(".type-list").forEach((list) => {
-    const frequencyCard = list.querySelector(".labeled-card-row-frequency .more-stats");
-    const yearCards = Array.from(list.querySelectorAll(".labeled-card-row-year .year-card"));
-    if (!frequencyCard && !yearCards.length) return;
-
-    const shouldStack = Boolean(
-      frequencyCard?.classList.contains("more-stats-stacked")
-      || yearCards.some((card) => card.classList.contains("year-card-stacked")),
-    );
-
-    if (frequencyCard) {
-      frequencyCard.classList.toggle("more-stats-stacked", shouldStack);
-    }
-    yearCards.forEach((card) => {
-      card.classList.toggle("year-card-stacked", shouldStack);
-    });
-  });
-}
-
-function alignFrequencyGraphsToYearCardEdge() {
-  if (!heatmaps) return;
-  const desktop = window.matchMedia("(min-width: 721px)").matches;
-
-  heatmaps.querySelectorAll(".labeled-card-row-frequency").forEach((row) => {
-    const frequencyCard = row.querySelector(".more-stats");
-    if (!frequencyCard) return;
-    if (frequencyCard.classList.contains("more-stats-stacked")) return;
-
-    frequencyCard.style.setProperty("--more-stats-second-col-shift", "0px");
-    frequencyCard.style.setProperty("--more-stats-third-col-shift", "0px");
-    if (!desktop) return;
-
-    const thirdGraph = frequencyCard.querySelector(".more-stats-grid > .more-stats-col:nth-child(3)");
-    if (!thirdGraph) return;
-
-    let referenceRow = row.nextElementSibling;
-    while (referenceRow && !referenceRow.classList.contains("labeled-card-row-year")) {
-      referenceRow = referenceRow.nextElementSibling;
-    }
-    const referenceYearGraph = referenceRow?.querySelector(".card.year-card .heatmap-area");
-    if (!referenceYearGraph) return;
-
-    const thirdRight = thirdGraph.getBoundingClientRect().right;
-    const targetRight = referenceYearGraph.getBoundingClientRect().right;
-    const delta = Math.round(targetRight - thirdRight);
-
-    // Never shift columns left during resize transitions; allow horizontal scrolling instead.
-    const secondShift = Math.max(0, Math.round(delta / 2));
-    const thirdShift = Math.max(0, delta);
-
-    frequencyCard.style.setProperty("--more-stats-second-col-shift", `${secondShift}px`);
-    frequencyCard.style.setProperty("--more-stats-third-col-shift", `${thirdShift}px`);
-  });
-}
-
-function alignFrequencyFactsToYearCardEdge() {
-  if (!heatmaps) return;
-  const desktop = window.matchMedia("(min-width: 721px)").matches;
-
-  heatmaps.querySelectorAll(".labeled-card-row-frequency").forEach((row) => {
-    const frequencyCard = row.querySelector(".more-stats");
-    if (!frequencyCard) return;
-    const factsColumn = frequencyCard.querySelector(".more-stats-facts.side-stats-column");
-    if (!factsColumn) return;
-
-    factsColumn.style.width = "";
-    factsColumn.style.maxWidth = "";
-    frequencyCard.style.setProperty("--more-stats-facts-shift", "0px");
-
-    if (frequencyCard.classList.contains("more-stats-stacked")) {
-      return;
-    }
-    if (!desktop) return;
-
-    let referenceRow = row.nextElementSibling;
-    while (referenceRow && !referenceRow.classList.contains("labeled-card-row-year")) {
-      referenceRow = referenceRow.nextElementSibling;
-    }
-    const referenceStats = referenceRow?.querySelector(".card.year-card .card-stats.side-stats-column");
-    if (!referenceStats) return;
-
-    const targetWidth = Math.ceil(referenceStats.getBoundingClientRect().width);
-    if (targetWidth > 0) {
-      factsColumn.style.width = `${targetWidth}px`;
-      factsColumn.style.maxWidth = `${targetWidth}px`;
-    }
-  });
-}
-
-function alignYearStatsToFrequencyEdge(narrowing = false) {
-  if (!heatmaps) return;
-  const nextLocks = new Map();
-
-  const allYearStats = Array.from(
-    heatmaps.querySelectorAll(".labeled-card-row-year .year-card .card-stats.side-stats-column"),
-  );
-  allYearStats.forEach((statsColumn) => {
-    statsColumn.style.transform = "";
-  });
-
-  const desktop = window.matchMedia("(min-width: 721px)").matches;
-  if (!desktop) {
-    yearDesktopTransformLocks = nextLocks;
-    return;
   }
 
-  heatmaps.querySelectorAll(".type-list").forEach((list, listIndex) => {
-    const frequencyCard = list.querySelector(".labeled-card-row-frequency .more-stats");
-    const frequencyFacts = list.querySelector(
-      ".labeled-card-row-frequency .more-stats .more-stats-facts.side-stats-column",
-    );
-    if (!frequencyCard || !frequencyFacts) return;
-
-    const frequencyStacked = frequencyCard.classList.contains("more-stats-stacked");
-    if (frequencyStacked) return;
-
-    const targetLeft = frequencyFacts.getBoundingClientRect().left;
-    if (!Number.isFinite(targetLeft)) return;
-
-    list.querySelectorAll(".labeled-card-row-year .year-card").forEach((yearCard, yearIndex) => {
-      const statsColumn = yearCard.querySelector(".card-stats.side-stats-column");
-      if (!statsColumn) return;
-      const yearStacked = yearCard.classList.contains("year-card-stacked");
-      if (yearStacked !== frequencyStacked) return;
-      if (yearStacked) return;
-
-      const lockKey = `${listIndex}:${yearIndex}`;
-      let shift = null;
-      if (narrowing && yearDesktopTransformLocks.has(lockKey)) {
-        shift = yearDesktopTransformLocks.get(lockKey);
-      } else {
-        const currentLeft = statsColumn.getBoundingClientRect().left;
-        if (!Number.isFinite(currentLeft)) return;
-        shift = Math.round(targetLeft - currentLeft);
-      }
-      if (!Number.isFinite(shift)) return;
-
-      if (shift !== 0) {
-        statsColumn.style.transform = `translateX(${shift}px)`;
-      }
-      nextLocks.set(lockKey, shift);
-    });
-  });
-
-  yearDesktopTransformLocks = nextLocks;
-}
-
-function applyDesktopStatsRightInset(narrowing = false) {
-  if (!heatmaps) return;
-  const desktop = window.matchMedia("(min-width: 721px)").matches;
-  const nextYearInsetLocks = new Map();
-
-  heatmaps.querySelectorAll(".type-list").forEach((list, listIndex) => {
-    list.querySelectorAll(".labeled-card-row-year .year-card").forEach((card, yearIndex) => {
-      const body = card.querySelector(".card-body");
-      const statsColumn = card.querySelector(".card-stats.side-stats-column");
-      const yLabels = Array.from(card.querySelectorAll(".heatmap-area .day-col .day-label"));
-      if (!body || !statsColumn) return;
-      resetDesktopRightInset(statsColumn);
-
-      const stacked = card.classList.contains("year-card-stacked");
-      if (!desktop || stacked) return;
-
-      const lockKey = `${listIndex}:${yearIndex}`;
-      let inset = null;
-      if (narrowing && yearDesktopInsetLocks.has(lockKey)) {
-        inset = yearDesktopInsetLocks.get(lockKey);
-      } else {
-        inset = getDesktopStatsRightInset(statsColumn, body, yLabels);
-      }
-      if (!Number.isFinite(inset)) return;
-
-      if (inset > 0) {
-        statsColumn.style.marginRight = `${inset}px`;
-      }
-      nextYearInsetLocks.set(lockKey, inset);
-    });
-  });
-  yearDesktopInsetLocks = nextYearInsetLocks;
-
-  heatmaps.querySelectorAll(".more-stats").forEach((card) => {
-    const statsColumn = card.querySelector(".more-stats-facts.side-stats-column");
-    const yLabels = Array.from(card.querySelectorAll(".more-stats-body .axis-day-col .axis-y-label"));
-    if (!statsColumn) return;
-    resetDesktopRightInset(statsColumn);
-    if (!desktop || card.classList.contains("more-stats-stacked")) return;
-    balanceDesktopStatsRightInset(statsColumn, card, yLabels);
+  if (frequencyCard) {
+    frequencyCard.classList.toggle("more-stats-stacked", shouldStackSection);
+  }
+  yearCards.forEach((card) => {
+    card.classList.toggle("year-card-stacked", shouldStackSection);
   });
 }
 
 function alignStackedStatsToYAxisLabels() {
   if (!heatmaps) return;
-  const viewportWidth = window.innerWidth;
-  syncFrequencyStackingMode();
-  normalizeSummaryStatCardWidths();
-  syncFrequencyStackingMode();
-  syncYearStackingMode();
-  syncSectionStackingMode();
-  alignFrequencyTitleGapToYearGap();
-  syncFrequencyStackingMode();
-  syncYearStackingMode();
-  syncSectionStackingMode();
-  alignFrequencyGraphsToYearCardEdge();
-  alignFrequencyFactsToYearCardEdge();
+  resetCardLayoutState();
+  normalizeSideStatCardSize();
 
-  heatmaps.querySelectorAll(".year-card").forEach((card) => {
-    const body = card.querySelector(".card-body");
-    const heatmapArea = card.querySelector(".heatmap-area");
-    const yLabels = Array.from(card.querySelectorAll(".heatmap-area .day-col .day-label"));
-    const statsColumn = card.querySelector(".card-stats.side-stats-column");
-    if (!body || !heatmapArea || !statsColumn) return;
+  const plans = Array.from(heatmaps.querySelectorAll(".type-list"))
+    .map((list) => buildSectionLayoutPlan(list))
+    .filter(Boolean);
 
-    const heatmapBottom = heatmapArea.getBoundingClientRect().bottom;
-    const statsTop = statsColumn.getBoundingClientRect().top;
-    const isStacked = statsTop >= heatmapBottom - 1;
-    if (isStacked) {
-      pinStackedStatsToLabelEdge(statsColumn, body, yLabels);
-      return;
-    }
-    resetStackedStatsOffset(statsColumn);
+  plans.forEach((plan) => {
+    applySectionLayoutPlan(plan);
   });
-
-  heatmaps.querySelectorAll(".more-stats").forEach((card) => {
-    const yLabels = Array.from(card.querySelectorAll(".more-stats-body .axis-day-col .axis-y-label"));
-    const graphBody = card.querySelector(".more-stats-body");
-    const statsColumn = card.querySelector(".more-stats-facts.side-stats-column");
-    if (!graphBody || !statsColumn) return;
-    if (card.classList.contains("more-stats-stacked")) {
-      pinStackedStatsToLabelEdge(statsColumn, card, yLabels);
-      return;
-    }
-
-    const graphBottom = graphBody.getBoundingClientRect().bottom;
-    const statsTop = statsColumn.getBoundingClientRect().top;
-    const isStacked = statsTop >= graphBottom - 1;
-    if (isStacked) {
-      pinStackedStatsToLabelEdge(statsColumn, card, yLabels);
-      return;
-    }
-    resetStackedStatsOffset(statsColumn);
-  });
-
-  heatmaps.querySelectorAll(".labeled-card-row-year .year-card .card-stats.side-stats-column").forEach((statsColumn) => {
-    statsColumn.style.transform = "";
-    resetDesktopRightInset(statsColumn);
-  });
-  heatmaps.querySelectorAll(".more-stats .more-stats-facts.side-stats-column").forEach((statsColumn) => {
-    resetDesktopRightInset(statsColumn);
-  });
-  yearDesktopTransformLocks = new Map();
-  yearDesktopInsetLocks = new Map();
-  yearDesktopEdgeLastViewportWidth = viewportWidth;
 }
 
 function sundayOnOrBefore(d) {
@@ -1292,6 +893,56 @@ function buildHeatmapArea(aggregates, year, units, colors, type, layout, options
   return heatmapArea;
 }
 
+function buildSideStatCard(labelText, valueText, options = {}) {
+  const {
+    tagName = "div",
+    className = "card-stat",
+    extraClasses = [],
+    disabled = false,
+    ariaPressed = null,
+  } = options;
+
+  const card = document.createElement(tagName);
+  card.className = className;
+  extraClasses.forEach((name) => {
+    if (name) {
+      card.classList.add(name);
+    }
+  });
+
+  if (tagName.toLowerCase() === "button") {
+    card.type = "button";
+    card.disabled = Boolean(disabled);
+  }
+  if (ariaPressed !== null) {
+    card.setAttribute("aria-pressed", ariaPressed ? "true" : "false");
+  }
+
+  const label = document.createElement("div");
+  label.className = "card-stat-label";
+  label.textContent = labelText;
+  const value = document.createElement("div");
+  value.className = "card-stat-value";
+  value.textContent = valueText;
+  card.appendChild(label);
+  card.appendChild(value);
+  return card;
+}
+
+function buildSideStatColumn(items, options = {}) {
+  const column = document.createElement("div");
+  column.className = options.className || "card-stats side-stats-column";
+  (items || []).forEach((item) => {
+    if (!item) return;
+    const card = buildSideStatCard(item.label, item.value, item.cardOptions || {});
+    if (typeof item.enhance === "function") {
+      item.enhance(card);
+    }
+    column.appendChild(card);
+  });
+  return column;
+}
+
 function buildCard(type, year, aggregates, units, options = {}) {
   const card = document.createElement("div");
   card.className = "card year-card";
@@ -1304,8 +955,6 @@ function buildCard(type, year, aggregates, units, options = {}) {
   const heatmapArea = buildHeatmapArea(aggregates, year, units, colors, type, layout, options);
   body.appendChild(heatmapArea);
 
-  const stats = document.createElement("div");
-  stats.className = "card-stats side-stats-column";
   const totals = {
     count: 0,
     distance: 0,
@@ -1335,20 +984,7 @@ function buildCard(type, year, aggregates, units, options = {}) {
         : STAT_PLACEHOLDER,
     },
   ];
-
-  statItems.forEach((item) => {
-    const stat = document.createElement("div");
-    stat.className = "card-stat";
-    const label = document.createElement("div");
-    label.className = "card-stat-label";
-    label.textContent = item.label;
-    const value = document.createElement("div");
-    value.className = "card-stat-value";
-    value.textContent = item.value;
-    stat.appendChild(label);
-    stat.appendChild(value);
-    stats.appendChild(stat);
-  });
+  const stats = buildSideStatColumn(statItems, { className: "card-stats side-stats-column" });
 
   body.appendChild(stats);
   card.appendChild(body);
@@ -1358,22 +994,16 @@ function buildCard(type, year, aggregates, units, options = {}) {
 function buildEmptyYearCard(type, year, labelOverride) {
   const card = document.createElement("div");
   card.className = "card card-empty-year";
-
-  const placeholder = document.createElement("div");
-  placeholder.className = "year-empty-placeholder";
-
-  const ellipsis = document.createElement("span");
-  ellipsis.className = "year-empty-ellipsis";
-  ellipsis.textContent = "\u22ee";
-  placeholder.appendChild(ellipsis);
-
-  const message = document.createElement("span");
-  message.className = "year-empty-message";
+  const body = document.createElement("div");
+  body.className = "card-empty-year-body";
   const label = labelOverride || displayType(type);
-  message.textContent = `no ${String(label).toLowerCase()} activities`;
-  placeholder.appendChild(message);
+  const emptyMessage = `no ${String(label).toLowerCase()} activities`;
 
-  card.appendChild(placeholder);
+  const emptyStat = buildSideStatCard("No activity", emptyMessage, {
+    className: "card-stat card-empty-year-stat",
+  });
+  body.appendChild(emptyStat);
+  card.appendChild(body);
   return card;
 }
 
@@ -1582,8 +1212,7 @@ function buildStatsOverview(payload, types, years, color) {
 
   const graphs = document.createElement("div");
   graphs.className = "more-stats-grid";
-  const facts = document.createElement("div");
-  facts.className = "more-stats-facts side-stats-column";
+  const facts = buildSideStatColumn([], { className: "more-stats-facts side-stats-column" });
 
   const yearsDesc = years.slice().sort((a, b) => b - a);
   const emptyColor = DEFAULT_COLORS[0];
@@ -1860,22 +1489,13 @@ function buildStatsOverview(payload, types, years, color) {
   };
 
   factItems.forEach((item) => {
-    const factCard = document.createElement("button");
-    factCard.type = "button";
-    factCard.className = "card-stat more-stats-fact-card more-stats-fact-button";
-    if (item.key) {
-      factCard.classList.add(`fact-${item.key}`);
-    }
-    factCard.disabled = !item.filterable;
-    factCard.setAttribute("aria-pressed", "false");
-    const label = document.createElement("div");
-    label.className = "card-stat-label";
-    label.textContent = item.label;
-    const value = document.createElement("div");
-    value.className = "card-stat-value";
-    value.textContent = item.value;
-    factCard.appendChild(label);
-    factCard.appendChild(value);
+    const factCard = buildSideStatCard(item.label, item.value, {
+      tagName: "button",
+      className: "card-stat more-stats-fact-card more-stats-fact-button",
+      extraClasses: item.key ? [`fact-${item.key}`] : [],
+      disabled: !item.filterable,
+      ariaPressed: false,
+    });
     if (item.filterable) {
       factCard.addEventListener("click", () => {
         const clearing = activeFactKey === item.key;
