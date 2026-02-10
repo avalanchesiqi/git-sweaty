@@ -1,0 +1,1857 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="826" height="158" viewBox="0 0 826 158">
+<rect width="826" height="158" fill="#0f172a"/>
+<rect x="60" y="34" width="750" height="108" rx="12" ry="12" fill="rgba(15, 23, 42, 0.8)"/>
+<text x="16" y="32" font-size="12" fill="#e5e7eb" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace">2024</text>
+<text x="66" y="18" font-size="10" fill="#f1f5f9" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" dominant-baseline="hanging">Jan</text>
+<text x="122" y="18" font-size="10" fill="#f1f5f9" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" dominant-baseline="hanging">Feb</text>
+<text x="178" y="18" font-size="10" fill="#f1f5f9" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" dominant-baseline="hanging">Mar</text>
+<text x="248" y="18" font-size="10" fill="#f1f5f9" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" dominant-baseline="hanging">Apr</text>
+<text x="304" y="18" font-size="10" fill="#f1f5f9" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" dominant-baseline="hanging">May</text>
+<text x="360" y="18" font-size="10" fill="#f1f5f9" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" dominant-baseline="hanging">Jun</text>
+<text x="430" y="18" font-size="10" fill="#f1f5f9" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" dominant-baseline="hanging">Jul</text>
+<text x="486" y="18" font-size="10" fill="#f1f5f9" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" dominant-baseline="hanging">Aug</text>
+<text x="556" y="18" font-size="10" fill="#f1f5f9" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" dominant-baseline="hanging">Sep</text>
+<text x="612" y="18" font-size="10" fill="#f1f5f9" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" dominant-baseline="hanging">Oct</text>
+<text x="668" y="18" font-size="10" fill="#f1f5f9" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" dominant-baseline="hanging">Nov</text>
+<text x="738" y="18" font-size="10" fill="#f1f5f9" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" dominant-baseline="hanging">Dec</text>
+<text x="52" y="46.0" font-size="10" fill="#f1f5f9" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" text-anchor="end" dominant-baseline="middle">Sun</text>
+<text x="52" y="60.0" font-size="10" fill="#f1f5f9" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" text-anchor="end" dominant-baseline="middle">Mon</text>
+<text x="52" y="74.0" font-size="10" fill="#f1f5f9" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" text-anchor="end" dominant-baseline="middle">Tue</text>
+<text x="52" y="88.0" font-size="10" fill="#f1f5f9" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" text-anchor="end" dominant-baseline="middle">Wed</text>
+<text x="52" y="102.0" font-size="10" fill="#f1f5f9" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" text-anchor="end" dominant-baseline="middle">Thu</text>
+<text x="52" y="116.0" font-size="10" fill="#f1f5f9" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" text-anchor="end" dominant-baseline="middle">Fri</text>
+<text x="52" y="130.0" font-size="10" fill="#f1f5f9" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" text-anchor="end" dominant-baseline="middle">Sat</text>
+<g transform="translate(66,40)">
+<rect x="0" y="14" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-01-01"><title>2024-01-01
+1 workout
+Distance: 13.17 mi
+Duration: 1h 25m
+Elevation: 394 ft</title></rect>
+<rect x="0" y="28" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-01-02"><title>2024-01-02
+1 workout
+Distance: 8.30 mi
+Duration: 1h 15m
+Elevation: 1381 ft</title></rect>
+<rect x="0" y="42" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-01-03"><title>2024-01-03
+1 workout
+Distance: 7.91 mi
+Duration: 1h 5m
+Elevation: 853 ft</title></rect>
+<rect x="0" y="56" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-01-04"><title>2024-01-04
+1 workout
+Distance: 8.42 mi
+Duration: 1h 3m
+Elevation: 148 ft</title></rect>
+<rect x="0" y="70" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-01-05"><title>2024-01-05
+1 workout
+Distance: 8.07 mi
+Duration: 1h 14m
+Elevation: 1375 ft</title></rect>
+<rect x="0" y="84" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-01-06"><title>2024-01-06
+1 workout
+Distance: 10.33 mi
+Duration: 1h 37m
+Elevation: 1923 ft</title></rect>
+<rect x="14" y="0" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-01-07"><title>2024-01-07
+1 workout
+Distance: 7.49 mi
+Duration: 1h 7m
+Elevation: 948 ft</title></rect>
+<rect x="14" y="14" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-01-08"><title>2024-01-08
+1 workout
+Distance: 6.57 mi
+Duration: 57m
+Elevation: 899 ft</title></rect>
+<rect x="14" y="28" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-01-09"><title>2024-01-09
+1 workout
+Distance: 6.12 mi
+Duration: 49m
+Elevation: 246 ft</title></rect>
+<rect x="14" y="42" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-01-10"><title>2024-01-10
+1 workout
+Distance: 6.65 mi
+Duration: 57m
+Elevation: 889 ft</title></rect>
+<rect x="14" y="56" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-01-11"><title>2024-01-11
+1 workout
+Distance: 5.27 mi
+Duration: 40m
+Elevation: 246 ft</title></rect>
+<rect x="14" y="70" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-01-12"><title>2024-01-12
+1 workout
+Distance: 4.82 mi
+Duration: 34m
+Elevation: 190 ft</title></rect>
+<rect x="14" y="84" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-01-13"><title>2024-01-13
+1 workout
+Distance: 3.98 mi
+Duration: 38m
+Elevation: 197 ft</title></rect>
+<rect x="28" y="0" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-01-14"><title>2024-01-14
+1 workout
+Distance: 3.60 mi
+Duration: 36m
+Elevation: 164 ft</title></rect>
+<rect x="28" y="14" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-01-15"><title>2024-01-15
+1 workout
+Distance: 2.39 mi
+Duration: 27m
+Elevation: 49 ft</title></rect>
+<rect x="28" y="28" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-01-16"><title>2024-01-16
+1 workout
+Distance: 2.42 mi
+Duration: 23m
+Elevation: 151 ft</title></rect>
+<rect x="28" y="42" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-01-17"><title>2024-01-17
+1 workout
+Distance: 7.78 mi
+Duration: 1h 20m
+Elevation: 1296 ft</title></rect>
+<rect x="28" y="56" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-01-18"><title>2024-01-18
+2 workouts
+Distance: 10.44 mi
+Duration: 1h 53m
+Elevation: 1073 ft</title></rect>
+<rect x="28" y="70" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-01-19"><title>2024-01-19
+1 workout
+Distance: 8.23 mi
+Duration: 1h 5m
+Elevation: 361 ft</title></rect>
+<rect x="28" y="84" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-01-20"><title>2024-01-20
+1 workout
+Distance: 6.45 mi
+Duration: 55m
+Elevation: 643 ft</title></rect>
+<rect x="42" y="0" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-01-21"><title>2024-01-21
+1 workout
+Distance: 12.45 mi
+Duration: 1h 51m
+Elevation: 1716 ft</title></rect>
+<rect x="42" y="14" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-01-22"><title>2024-01-22
+1 workout
+Distance: 8.04 mi
+Duration: 1h 18m
+Elevation: 1266 ft</title></rect>
+<rect x="42" y="28" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-01-23"><title>2024-01-23
+1 workout
+Distance: 8.57 mi
+Duration: 1h 21m
+Elevation: 341 ft</title></rect>
+<rect x="42" y="42" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-01-24"><title>2024-01-24
+1 workout
+Distance: 9.67 mi
+Duration: 1h 28m
+Elevation: 459 ft</title></rect>
+<rect x="42" y="56" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-01-25"><title>2024-01-25
+1 workout
+Distance: 5.08 mi
+Duration: 45m
+Elevation: 236 ft</title></rect>
+<rect x="42" y="70" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-01-26"><title>2024-01-26
+1 workout
+Distance: 8.46 mi
+Duration: 1h 8m
+Elevation: 525 ft</title></rect>
+<rect x="42" y="84" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-01-27"><title>2024-01-27
+1 workout
+Distance: 8.05 mi
+Duration: 55m
+Elevation: 151 ft</title></rect>
+<rect x="56" y="0" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-01-28"><title>2024-01-28
+1 workout
+Distance: 15.31 mi
+Duration: 1h 52m
+Elevation: 466 ft</title></rect>
+<rect x="56" y="14" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-01-29"><title>2024-01-29
+1 workout
+Distance: 6.33 mi
+Duration: 52m
+Elevation: 614 ft</title></rect>
+<rect x="56" y="28" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-01-30"><title>2024-01-30
+1 workout
+Distance: 8.02 mi
+Duration: 1h 16m
+Elevation: 1214 ft</title></rect>
+<rect x="56" y="42" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-01-31"><title>2024-01-31
+1 workout
+Distance: 5.28 mi
+Duration: 41m
+Elevation: 236 ft</title></rect>
+<rect x="56" y="56" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-02-01"><title>2024-02-01
+1 workout
+Distance: 7.89 mi
+Duration: 56m
+Elevation: 473 ft</title></rect>
+<rect x="56" y="70" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-02-02"><title>2024-02-02
+1 workout
+Distance: 4.54 mi
+Duration: 33m
+Elevation: 230 ft</title></rect>
+<rect x="56" y="84" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-02-03"><title>2024-02-03
+1 workout
+Distance: 8.11 mi
+Duration: 58m
+Elevation: 184 ft</title></rect>
+<rect x="70" y="0" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-02-04"><title>2024-02-04
+1 workout
+Distance: 6.87 mi
+Duration: 57m
+Elevation: 531 ft</title></rect>
+<rect x="70" y="14" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-02-05"><title>2024-02-05
+1 workout
+Distance: 10.81 mi
+Duration: 1h 25m
+Elevation: 394 ft</title></rect>
+<rect x="70" y="28" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-02-06"><title>2024-02-06
+1 workout
+Distance: 12.05 mi
+Duration: 1h 59m
+Elevation: 2165 ft</title></rect>
+<rect x="70" y="42" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-02-07"><title>2024-02-07
+1 workout
+Distance: 6.47 mi
+Duration: 57m
+Elevation: 827 ft</title></rect>
+<rect x="70" y="56" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-02-08"><title>2024-02-08
+1 workout
+Distance: 6.74 mi
+Duration: 58m
+Elevation: 177 ft</title></rect>
+<rect x="70" y="70" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-02-09"><title>2024-02-09
+1 workout
+Distance: 5.65 mi
+Duration: 54m
+Elevation: 1070 ft</title></rect>
+<rect x="70" y="84" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-02-10"><title>2024-02-10
+1 workout
+Distance: 9.15 mi
+Duration: 1h 26m
+Elevation: 1463 ft</title></rect>
+<rect x="84" y="0" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-02-11"><title>2024-02-11
+1 workout
+Distance: 9.44 mi
+Duration: 1h 32m
+Elevation: 1539 ft</title></rect>
+<rect x="84" y="14" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-02-12"><title>2024-02-12
+1 workout
+Distance: 11.20 mi
+Duration: 1h 42m
+Elevation: 2103 ft</title></rect>
+<rect x="84" y="28" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-02-13"><title>2024-02-13
+1 workout
+Distance: 6.75 mi
+Duration: 1h 5m
+Elevation: 1099 ft</title></rect>
+<rect x="84" y="42" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-02-14"><title>2024-02-14
+1 workout
+Distance: 8.16 mi
+Duration: 1h 22m
+Elevation: 2457 ft</title></rect>
+<rect x="84" y="56" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-02-15"><title>2024-02-15
+1 workout
+Distance: 5.27 mi
+Duration: 41m
+Elevation: 246 ft</title></rect>
+<rect x="84" y="70" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-02-16"><title>2024-02-16
+1 workout
+Distance: 4.58 mi
+Duration: 34m
+Elevation: 33 ft</title></rect>
+<rect x="84" y="84" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-02-17"><title>2024-02-17
+1 workout
+Distance: 24.96 mi
+Duration: 6h 6m
+Elevation: 5738 ft</title></rect>
+<rect x="98" y="0" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-02-18"><title>2024-02-18
+1 workout
+Distance: 30.78 mi
+Duration: 6h 43m
+Elevation: 4951 ft</title></rect>
+<rect x="98" y="14" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-02-19"><title>2024-02-19
+1 workout
+Distance: 8.02 mi
+Duration: 1h 15m
+Elevation: 814 ft</title></rect>
+<rect x="98" y="28" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-02-20"><title>2024-02-20
+1 workout
+Distance: 8.77 mi
+Duration: 1h 16m
+Elevation: 1073 ft</title></rect>
+<rect x="98" y="42" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-02-21"><title>2024-02-21
+1 workout
+Distance: 10.40 mi
+Duration: 1h 19m
+Elevation: 394 ft</title></rect>
+<rect x="98" y="56" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-02-22"><title>2024-02-22
+1 workout
+Distance: 7.73 mi
+Duration: 1h 4m
+Elevation: 148 ft</title></rect>
+<rect x="98" y="70" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-02-23"><title>2024-02-23
+1 workout
+Distance: 6.28 mi
+Duration: 49m
+Elevation: 249 ft</title></rect>
+<rect x="98" y="84" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-02-24"><title>2024-02-24
+1 workout
+Distance: 12.37 mi
+Duration: 1h 56m
+Elevation: 2254 ft</title></rect>
+<rect x="112" y="0" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-02-25"><title>2024-02-25
+1 workout
+Distance: 15.44 mi
+Duration: 2h 31m
+Elevation: 2884 ft</title></rect>
+<rect x="112" y="14" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-02-26"><title>2024-02-26
+1 workout
+Distance: 9.61 mi
+Duration: 1h 31m
+Elevation: 1791 ft</title></rect>
+<rect x="112" y="28" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-02-27"><title>2024-02-27
+2 workouts
+Distance: 15.00 mi
+Duration: 2h 4m
+Elevation: 1152 ft</title></rect>
+<rect x="112" y="42" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-02-28"><title>2024-02-28
+1 workout
+Distance: 6.83 mi
+Duration: 1h 1m
+Elevation: 125 ft</title></rect>
+<rect x="112" y="56" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-02-29"><title>2024-02-29
+1 workout
+Distance: 8.38 mi
+Duration: 1h 3m
+Elevation: 157 ft</title></rect>
+<rect x="112" y="70" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-03-01"><title>2024-03-01
+1 workout
+Distance: 6.24 mi
+Duration: 49m
+Elevation: 194 ft</title></rect>
+<rect x="112" y="84" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-03-02"><title>2024-03-02
+1 workout
+Distance: 6.24 mi
+Duration: 1h 56m
+Elevation: 1886 ft</title></rect>
+<rect x="126" y="0" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-03-03"><title>2024-03-03
+1 workout
+Distance: 44.21 mi
+Duration: 11h 51m
+Elevation: 11345 ft</title></rect>
+<rect x="126" y="14" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-03-04"><title>2024-03-04
+2 workouts
+Distance: 12.60 mi
+Duration: 3h 10m
+Elevation: 1266 ft</title></rect>
+<rect x="126" y="28" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-03-05"><title>2024-03-05
+1 workout
+Distance: 11.91 mi
+Duration: 3h 14m
+Elevation: 1490 ft</title></rect>
+<rect x="126" y="42" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-03-06"><title>2024-03-06
+1 workout
+Distance: 7.63 mi
+Duration: 1h 0m
+Elevation: 240 ft</title></rect>
+<rect x="126" y="56" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-03-07"><title>2024-03-07
+1 workout
+Distance: 5.08 mi
+Duration: 44m
+Elevation: 174 ft</title></rect>
+<rect x="126" y="70" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-03-08"><title>2024-03-08
+1 workout
+Distance: 6.38 mi
+Duration: 50m
+Elevation: 187 ft</title></rect>
+<rect x="126" y="84" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-03-09"><title>2024-03-09
+1 workout
+Distance: 17.48 mi
+Duration: 2h 14m
+Elevation: 502 ft</title></rect>
+<rect x="140" y="0" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-03-10"><title>2024-03-10
+1 workout
+Distance: 9.33 mi
+Duration: 1h 23m
+Elevation: 1532 ft</title></rect>
+<rect x="140" y="14" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-03-11"><title>2024-03-11
+1 workout
+Distance: 9.65 mi
+Duration: 1h 18m
+Elevation: 174 ft</title></rect>
+<rect x="140" y="28" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-03-12"><title>2024-03-12
+1 workout
+Distance: 8.08 mi
+Duration: 1h 16m
+Elevation: 1381 ft</title></rect>
+<rect x="140" y="42" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-03-13"><title>2024-03-13
+1 workout
+Distance: 9.23 mi
+Duration: 1h 3m
+Elevation: 387 ft</title></rect>
+<rect x="140" y="56" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-03-14"><title>2024-03-14
+1 workout
+Distance: 5.01 mi
+Duration: 38m
+Elevation: 180 ft</title></rect>
+<rect x="140" y="70" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-03-15"><title>2024-03-15
+1 workout
+Distance: 7.09 mi
+Duration: 1h 4m
+Elevation: 1191 ft</title></rect>
+<rect x="140" y="84" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-03-16"><title>2024-03-16
+1 workout
+Distance: 2.35 mi
+Duration: 20m
+Elevation: 56 ft</title></rect>
+<rect x="154" y="0" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-03-17"><title>2024-03-17
+1 workout
+Distance: 13.38 mi
+Duration: 1h 20m
+Elevation: 505 ft</title></rect>
+<rect x="154" y="14" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-03-18"><title>2024-03-18
+1 workout
+Distance: 17.21 mi
+Duration: 2h 25m
+Elevation: 335 ft</title></rect>
+<rect x="154" y="28" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-03-19"><title>2024-03-19
+1 workout
+Distance: 9.45 mi
+Duration: 1h 26m
+Elevation: 1519 ft</title></rect>
+<rect x="154" y="42" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-03-20"><title>2024-03-20
+1 workout
+Distance: 5.08 mi
+Duration: 43m
+Elevation: 791 ft</title></rect>
+<rect x="154" y="56" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-03-21"><title>2024-03-21
+1 workout
+Distance: 7.57 mi
+Duration: 56m
+Elevation: 138 ft</title></rect>
+<rect x="154" y="70" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-03-22"><title>2024-03-22
+1 workout
+Distance: 6.07 mi
+Duration: 50m
+Elevation: 10 ft</title></rect>
+<rect x="154" y="84" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-03-23"><title>2024-03-23
+1 workout
+Distance: 31.01 mi
+Duration: 7h 40m
+Elevation: 4108 ft</title></rect>
+<rect x="168" y="0" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-03-24"><title>2024-03-24
+1 workout
+Distance: 5.73 mi
+Duration: 55m
+Elevation: 272 ft</title></rect>
+<rect x="168" y="14" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-03-25"><title>2024-03-25
+1 workout
+Distance: 6.70 mi
+Duration: 55m
+Elevation: 1030 ft</title></rect>
+<rect x="168" y="28" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-03-26"><title>2024-03-26
+1 workout
+Distance: 9.51 mi
+Duration: 1h 16m
+Elevation: 463 ft</title></rect>
+<rect x="168" y="42" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-03-27"><title>2024-03-27
+1 workout
+Distance: 9.41 mi
+Duration: 1h 20m
+Elevation: 1552 ft</title></rect>
+<rect x="168" y="56" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-03-28"><title>2024-03-28
+1 workout
+Distance: 10.61 mi
+Duration: 1h 20m
+Elevation: 171 ft</title></rect>
+<rect x="168" y="70" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-03-29"><title>2024-03-29
+1 workout
+Distance: 7.19 mi
+Duration: 59m
+Elevation: 843 ft</title></rect>
+<rect x="168" y="84" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-03-30"><title>2024-03-30
+1 workout
+Distance: 15.40 mi
+Duration: 1h 47m
+Elevation: 538 ft</title></rect>
+<rect x="182" y="0" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-03-31"><title>2024-03-31
+1 workout
+Distance: 10.25 mi
+Duration: 1h 13m
+Elevation: 115 ft</title></rect>
+<rect x="182" y="14" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-04-01"><title>2024-04-01
+1 workout
+Distance: 5.49 mi
+Duration: 40m
+Elevation: 174 ft</title></rect>
+<rect x="182" y="28" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-04-02"><title>2024-04-02
+1 workout
+Distance: 16.90 mi
+Duration: 2h 1m
+Elevation: 443 ft</title></rect>
+<rect x="182" y="42" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-04-03"><title>2024-04-03
+1 workout
+Distance: 6.49 mi
+Duration: 48m
+Elevation: 374 ft</title></rect>
+<rect x="182" y="56" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-04-04"><title>2024-04-04
+1 workout
+Distance: 6.27 mi
+Duration: 52m
+Elevation: 725 ft</title></rect>
+<rect x="182" y="70" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-04-05"><title>2024-04-05
+1 workout
+Distance: 5.51 mi
+Duration: 39m
+Elevation: 226 ft</title></rect>
+<rect x="182" y="84" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-04-06"><title>2024-04-06
+1 workout
+Distance: 5.62 mi
+Duration: 1h 20m
+Elevation: 1486 ft</title></rect>
+<rect x="196" y="0" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-04-07"><title>2024-04-07
+1 workout
+Distance: 43.61 mi
+Duration: 8h 55m
+Elevation: 11096 ft</title></rect>
+<rect x="196" y="14" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-04-08"><title>2024-04-08
+1 workout
+Distance: 6.12 mi
+Duration: 1h 13m
+Elevation: 377 ft</title></rect>
+<rect x="196" y="28" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-04-09"><title>2024-04-09
+1 workout
+Distance: 6.88 mi
+Duration: 52m
+Elevation: 171 ft</title></rect>
+<rect x="196" y="42" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-04-10"><title>2024-04-10
+1 workout
+Distance: 7.07 mi
+Duration: 55m
+Elevation: 174 ft</title></rect>
+<rect x="196" y="56" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-04-11"><title>2024-04-11
+1 workout
+Distance: 5.32 mi
+Duration: 41m
+Elevation: 217 ft</title></rect>
+<rect x="196" y="70" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-04-12"><title>2024-04-12
+1 workout
+Distance: 4.05 mi
+Duration: 33m
+Elevation: 151 ft</title></rect>
+<rect x="196" y="84" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-04-13"><title>2024-04-13
+1 workout
+Distance: 3.67 mi
+Duration: 29m
+Elevation: 10 ft</title></rect>
+<rect x="210" y="0" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-04-14"><title>2024-04-14
+1 workout
+Distance: 4.36 mi
+Duration: 42m
+Elevation: 36 ft</title></rect>
+<rect x="210" y="14" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-04-15"><title>2024-04-15
+1 workout
+Distance: 26.64 mi
+Duration: 2h 56m
+Elevation: 732 ft</title></rect>
+<rect x="210" y="28" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-04-16"><title>2024-04-16
+1 workout
+Distance: 13.77 mi
+Duration: 3h 31m
+Elevation: 3422 ft</title></rect>
+<rect x="210" y="42" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-04-17"><title>2024-04-17
+1 workout
+Distance: 5.74 mi
+Duration: 1h 30m
+Elevation: 1293 ft</title></rect>
+<rect x="210" y="56" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-04-18"><title>2024-04-18
+1 workout
+Distance: 5.48 mi
+Duration: 51m
+Elevation: 180 ft</title></rect>
+<rect x="210" y="70" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-04-19"><title>2024-04-19
+1 workout
+Distance: 7.91 mi
+Duration: 1h 10m
+Elevation: 1444 ft</title></rect>
+<rect x="210" y="84" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-04-20"><title>2024-04-20
+1 workout
+Distance: 23.73 mi
+Duration: 3h 33m
+Elevation: 2618 ft</title></rect>
+<rect x="224" y="0" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-04-21"><title>2024-04-21
+1 workout
+Distance: 7.28 mi
+Duration: 55m
+Elevation: 259 ft</title></rect>
+<rect x="224" y="14" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-04-22"><title>2024-04-22
+1 workout
+Distance: 9.43 mi
+Duration: 1h 21m
+Elevation: 1493 ft</title></rect>
+<rect x="224" y="28" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-04-23"><title>2024-04-23
+1 workout
+Distance: 7.86 mi
+Duration: 1h 2m
+Elevation: 167 ft</title></rect>
+<rect x="224" y="42" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-04-24"><title>2024-04-24
+1 workout
+Distance: 9.30 mi
+Duration: 1h 22m
+Elevation: 1509 ft</title></rect>
+<rect x="224" y="56" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-04-25"><title>2024-04-25
+2 workouts
+Distance: 9.53 mi
+Duration: 1h 16m
+Elevation: 157 ft</title></rect>
+<rect x="224" y="70" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-04-26"><title>2024-04-26
+1 workout
+Distance: 8.34 mi
+Duration: 1h 17m
+Elevation: 348 ft</title></rect>
+<rect x="224" y="84" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-04-27"><title>2024-04-27
+1 workout
+Distance: 6.76 mi
+Duration: 54m
+Elevation: 371 ft</title></rect>
+<rect x="238" y="0" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-04-28"><title>2024-04-28
+1 workout
+Distance: 8.75 mi
+Duration: 1h 13m
+Elevation: 387 ft</title></rect>
+<rect x="238" y="14" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-04-29"><title>2024-04-29
+1 workout
+Distance: 9.33 mi
+Duration: 1h 29m
+Elevation: 1444 ft</title></rect>
+<rect x="238" y="28" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-04-30"><title>2024-04-30
+1 workout
+Distance: 9.82 mi
+Duration: 1h 25m
+Elevation: 1558 ft</title></rect>
+<rect x="238" y="42" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-05-01"><title>2024-05-01
+1 workout
+Distance: 8.08 mi
+Duration: 1h 2m
+Elevation: 131 ft</title></rect>
+<rect x="238" y="56" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-05-02"><title>2024-05-02
+1 workout
+Distance: 5.02 mi
+Duration: 42m
+Elevation: 194 ft</title></rect>
+<rect x="238" y="70" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-05-03"><title>2024-05-03
+1 workout
+Distance: 10.77 mi
+Duration: 2h 23m
+Elevation: 3602 ft</title></rect>
+<rect x="238" y="84" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-05-04"><title>2024-05-04
+1 workout
+Distance: 26.00 mi
+Duration: 16h 7m
+Elevation: 0 ft</title></rect>
+<rect x="252" y="0" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-05-05"><title>2024-05-05
+2 workouts
+Distance: 15.03 mi
+Duration: 2h 59m
+Elevation: 3287 ft</title></rect>
+<rect x="252" y="14" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-05-06"><title>2024-05-06
+1 workout
+Distance: 4.50 mi
+Duration: 1h 18m
+Elevation: 2005 ft</title></rect>
+<rect x="252" y="28" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-05-07"><title>2024-05-07
+1 workout
+Distance: 5.13 mi
+Duration: 46m
+Elevation: 246 ft</title></rect>
+<rect x="252" y="42" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-05-08"><title>2024-05-08
+1 workout
+Distance: 5.31 mi
+Duration: 43m
+Elevation: 220 ft</title></rect>
+<rect x="252" y="56" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-05-09"><title>2024-05-09
+1 workout
+Distance: 4.58 mi
+Duration: 39m
+Elevation: 167 ft</title></rect>
+<rect x="252" y="70" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-05-10"><title>2024-05-10
+1 workout
+Distance: 8.36 mi
+Duration: 1h 5m
+Elevation: 256 ft</title></rect>
+<rect x="252" y="84" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-05-11"><title>2024-05-11
+1 workout
+Distance: 16.49 mi
+Duration: 2h 7m
+Elevation: 1575 ft</title></rect>
+<rect x="266" y="0" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-05-12"><title>2024-05-12
+1 workout
+Distance: 8.62 mi
+Duration: 1h 7m
+Elevation: 476 ft</title></rect>
+<rect x="266" y="14" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-05-13"><title>2024-05-13
+1 workout
+Distance: 4.21 mi
+Duration: 33m
+Elevation: 190 ft</title></rect>
+<rect x="266" y="28" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-05-14"><title>2024-05-14
+1 workout
+Distance: 3.12 mi
+Duration: 24m
+Elevation: 238 ft</title></rect>
+<rect x="266" y="42" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-05-15"><title>2024-05-15
+2 workouts
+Distance: 12.37 mi
+Duration: 1h 31m
+Elevation: 808 ft</title></rect>
+<rect x="266" y="56" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-05-16"><title>2024-05-16
+1 workout
+Distance: 6.59 mi
+Duration: 49m
+Elevation: 148 ft</title></rect>
+<rect x="266" y="70" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-05-17"><title>2024-05-17
+1 workout
+Distance: 3.35 mi
+Duration: 30m
+Elevation: 79 ft</title></rect>
+<rect x="266" y="84" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-05-18"><title>2024-05-18
+1 workout
+Distance: 13.34 mi
+Duration: 1h 17m
+Elevation: 230 ft</title></rect>
+<rect x="280" y="0" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-05-19"><title>2024-05-19
+1 workout
+Distance: 7.10 mi
+Duration: 1h 2m
+Elevation: 295 ft</title></rect>
+<rect x="280" y="14" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-05-20"><title>2024-05-20
+1 workout
+Distance: 5.63 mi
+Duration: 57m
+Elevation: 256 ft</title></rect>
+<rect x="280" y="28" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-05-21"><title>2024-05-21
+1 workout
+Distance: 9.22 mi
+Duration: 1h 20m
+Elevation: 659 ft</title></rect>
+<rect x="280" y="42" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-05-22"><title>2024-05-22
+2 workouts
+Distance: 13.05 mi
+Duration: 1h 44m
+Elevation: 407 ft</title></rect>
+<rect x="280" y="56" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-05-23"><title>2024-05-23
+1 workout
+Distance: 10.82 mi
+Duration: 1h 31m
+Elevation: 115 ft</title></rect>
+<rect x="280" y="70" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-05-24"><title>2024-05-24
+1 workout
+Distance: 6.76 mi
+Duration: 56m
+Elevation: 138 ft</title></rect>
+<rect x="280" y="84" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-05-25"><title>2024-05-25
+1 workout
+Distance: 17.15 mi
+Duration: 2h 0m
+Elevation: 443 ft</title></rect>
+<rect x="294" y="0" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-05-26"><title>2024-05-26
+1 workout
+Distance: 5.21 mi
+Duration: 42m
+Elevation: 308 ft</title></rect>
+<rect x="294" y="14" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-05-27"><title>2024-05-27
+1 workout
+Distance: 5.82 mi
+Duration: 50m
+Elevation: 741 ft</title></rect>
+<rect x="294" y="28" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-05-28"><title>2024-05-28
+1 workout
+Distance: 7.34 mi
+Duration: 56m
+Elevation: 289 ft</title></rect>
+<rect x="294" y="42" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-05-29"><title>2024-05-29
+1 workout
+Distance: 7.50 mi
+Duration: 1h 1m
+Elevation: 696 ft</title></rect>
+<rect x="294" y="56" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-05-30"><title>2024-05-30
+1 workout
+Distance: 4.61 mi
+Duration: 38m
+Elevation: 138 ft</title></rect>
+<rect x="294" y="70" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-05-31"><title>2024-05-31
+1 workout
+Distance: 2.75 mi
+Duration: 1h 11m
+Elevation: 505 ft</title></rect>
+<rect x="294" y="84" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-06-01"><title>2024-06-01
+1 workout
+Distance: 51.32 mi
+Duration: 8h 17m
+Elevation: 8675 ft</title></rect>
+<rect x="308" y="0" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-06-02"><title>2024-06-02
+1 workout
+Distance: 3.51 mi
+Duration: 40m
+Elevation: 633 ft</title></rect>
+<rect x="308" y="14" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-06-03"><title>2024-06-03
+1 workout
+Distance: 6.78 mi
+Duration: 54m
+Elevation: 115 ft</title></rect>
+<rect x="308" y="28" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-06-04"><title>2024-06-04
+1 workout
+Distance: 6.02 mi
+Duration: 58m
+Elevation: 95 ft</title></rect>
+<rect x="308" y="42" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-06-05"><title>2024-06-05
+1 workout
+Distance: 4.42 mi
+Duration: 35m
+Elevation: 95 ft</title></rect>
+<rect x="308" y="56" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-06-06"><title>2024-06-06
+1 workout
+Distance: 4.34 mi
+Duration: 33m
+Elevation: 66 ft</title></rect>
+<rect x="308" y="70" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-06-07"><title>2024-06-07
+1 workout
+Distance: 5.65 mi
+Duration: 45m
+Elevation: 128 ft</title></rect>
+<rect x="308" y="84" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-06-08"><title>2024-06-08
+1 workout
+Distance: 32.62 mi
+Duration: 5h 42m
+Elevation: 6270 ft</title></rect>
+<rect x="322" y="0" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-06-09"><title>2024-06-09
+1 workout
+Distance: 3.32 mi
+Duration: 46m
+Elevation: 95 ft</title></rect>
+<rect x="322" y="14" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-06-10"><title>2024-06-10
+1 workout
+Distance: 3.22 mi
+Duration: 44m
+Elevation: 66 ft</title></rect>
+<rect x="322" y="28" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-06-11"><title>2024-06-11
+1 workout
+Distance: 3.44 mi
+Duration: 47m
+Elevation: 197 ft</title></rect>
+<rect x="322" y="42" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-06-12"><title>2024-06-12
+1 workout
+Distance: 4.23 mi
+Duration: 56m
+Elevation: 187 ft</title></rect>
+<rect x="322" y="56" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-06-13"><title>2024-06-13
+1 workout
+Distance: 5.88 mi
+Duration: 45m
+Elevation: 223 ft</title></rect>
+<rect x="322" y="70" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-06-14"><title>2024-06-14
+1 workout
+Distance: 6.05 mi
+Duration: 52m
+Elevation: 174 ft</title></rect>
+<rect x="322" y="84" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-06-15"><title>2024-06-15
+1 workout
+Distance: 8.14 mi
+Duration: 1h 7m
+Elevation: 295 ft</title></rect>
+<rect x="336" y="0" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-06-16"><title>2024-06-16
+1 workout
+Distance: 7.11 mi
+Duration: 58m
+Elevation: 344 ft</title></rect>
+<rect x="336" y="14" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-06-17"><title>2024-06-17
+1 workout
+Distance: 7.16 mi
+Duration: 58m
+Elevation: 407 ft</title></rect>
+<rect x="336" y="28" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-06-18"><title>2024-06-18
+1 workout
+Distance: 7.29 mi
+Duration: 1h 6m
+Elevation: 325 ft</title></rect>
+<rect x="336" y="42" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-06-19"><title>2024-06-19
+2 workouts
+Distance: 8.48 mi
+Duration: 1h 35m
+Elevation: 184 ft</title></rect>
+<rect x="336" y="56" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-06-20"><title>2024-06-20
+2 workouts
+Distance: 19.84 mi
+Duration: 2h 58m
+Elevation: 554 ft</title></rect>
+<rect x="336" y="70" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-06-21"><title>2024-06-21
+2 workouts
+Distance: 18.24 mi
+Duration: 2h 49m
+Elevation: 135 ft</title></rect>
+<rect x="336" y="84" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-06-22"><title>2024-06-22
+2 workouts
+Distance: 9.80 mi
+Duration: 1h 37m
+Elevation: 715 ft</title></rect>
+<rect x="350" y="0" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-06-23"><title>2024-06-23
+1 workout
+Distance: 9.48 mi
+Duration: 1h 20m
+Elevation: 194 ft</title></rect>
+<rect x="350" y="14" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-06-24"><title>2024-06-24
+1 workout
+Distance: 2.08 mi
+Duration: 23m
+Elevation: 36 ft</title></rect>
+<rect x="350" y="28" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-06-25"><title>2024-06-25
+1 workout
+Distance: 8.24 mi
+Duration: 1h 7m
+Elevation: 102 ft</title></rect>
+<rect x="350" y="42" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-06-26"><title>2024-06-26
+2 workouts
+Distance: 11.09 mi
+Duration: 1h 28m
+Elevation: 262 ft</title></rect>
+<rect x="350" y="56" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-06-27"><title>2024-06-27
+1 workout
+Distance: 5.77 mi
+Duration: 55m
+Elevation: 959 ft</title></rect>
+<rect x="350" y="70" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-06-28"><title>2024-06-28
+1 workout
+Distance: 2.98 mi
+Duration: 58m
+Elevation: 1860 ft</title></rect>
+<rect x="350" y="84" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-06-29"><title>2024-06-29
+1 workout
+Distance: 22.54 mi
+Duration: 4h 9m
+Elevation: 3562 ft</title></rect>
+<rect x="364" y="0" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-06-30"><title>2024-06-30
+1 workout
+Distance: 3.17 mi
+Duration: 30m
+Elevation: 371 ft</title></rect>
+<rect x="364" y="14" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-07-01"><title>2024-07-01
+1 workout
+Distance: 7.09 mi
+Duration: 58m
+Elevation: 13 ft</title></rect>
+<rect x="364" y="28" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-07-02"><title>2024-07-02
+1 workout
+Distance: 6.77 mi
+Duration: 56m
+Elevation: 371 ft</title></rect>
+<rect x="364" y="42" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-07-03"><title>2024-07-03
+1 workout
+Distance: 3.27 mi
+Duration: 32m
+Elevation: 118 ft</title></rect>
+<rect x="364" y="56" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-07-04"><title>2024-07-04
+1 workout
+Distance: 6.36 mi
+Duration: 1h 9m
+Elevation: 817 ft</title></rect>
+<rect x="364" y="70" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-07-05"><title>2024-07-05
+1 workout
+Distance: 8.53 mi
+Duration: 1h 39m
+Elevation: 341 ft</title></rect>
+<rect x="364" y="84" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-07-06"><title>2024-07-06
+2 workouts
+Distance: 9.38 mi
+Duration: 2h 9m
+Elevation: 984 ft</title></rect>
+<rect x="378" y="0" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-07-07"><title>2024-07-07
+2 workouts
+Distance: 14.07 mi
+Duration: 2h 13m
+Elevation: 72 ft</title></rect>
+<rect x="378" y="14" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-07-08"><title>2024-07-08
+1 workout
+Distance: 4.11 mi
+Duration: 44m
+Elevation: 512 ft</title></rect>
+<rect x="378" y="28" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-07-09"><title>2024-07-09
+1 workout
+Distance: 3.31 mi
+Duration: 31m
+Elevation: 82 ft</title></rect>
+<rect x="378" y="42" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-07-10"><title>2024-07-10
+1 workout
+Distance: 5.05 mi
+Duration: 42m
+Elevation: 217 ft</title></rect>
+<rect x="378" y="56" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-07-11"><title>2024-07-11
+1 workout
+Distance: 6.86 mi
+Duration: 3h 52m
+Elevation: 3819 ft</title></rect>
+<rect x="378" y="70" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-07-12"><title>2024-07-12
+2 workouts
+Distance: 13.48 mi
+Duration: 3h 34m
+Elevation: 3110 ft</title></rect>
+<rect x="378" y="84" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-07-13"><title>2024-07-13
+1 workout
+Distance: 20.69 mi
+Duration: 10h 6m
+Elevation: 7021 ft</title></rect>
+<rect x="392" y="0" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-07-14"><title>2024-07-14
+2 workouts
+Distance: 16.38 mi
+Duration: 6h 8m
+Elevation: 1306 ft</title></rect>
+<rect x="392" y="14" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-07-15"><title>2024-07-15
+1 workout
+Distance: 20.29 mi
+Duration: 6h 22m
+Elevation: 6056 ft</title></rect>
+<rect x="392" y="28" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-07-16"><title>2024-07-16
+1 workout
+Distance: 9.27 mi
+Duration: 2h 29m
+Elevation: 4370 ft</title></rect>
+<rect x="392" y="42" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-07-17"><title>2024-07-17
+1 workout
+Distance: 7.31 mi
+Duration: 1h 15m
+Elevation: 1129 ft</title></rect>
+<rect x="392" y="56" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-07-18"><title>2024-07-18
+1 workout
+Distance: 7.33 mi
+Duration: 1h 30m
+Elevation: 541 ft</title></rect>
+<rect x="392" y="70" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-07-19"><title>2024-07-19
+1 workout
+Distance: 98.22 mi
+Duration: 24h 6m
+Elevation: 21730 ft</title></rect>
+<rect x="392" y="84" width="12" height="12" rx="3" ry="3" fill="#1f2937" data-date="2024-07-20"><title>2024-07-20
+0 workouts
+Distance: 0.00 mi
+Duration: 0m
+Elevation: 0 ft</title></rect>
+<rect x="406" y="0" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-07-21"><title>2024-07-21
+1 workout
+Distance: 4.16 mi
+Duration: 42m
+Elevation: 194 ft</title></rect>
+<rect x="406" y="14" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-07-22"><title>2024-07-22
+1 workout
+Distance: 6.81 mi
+Duration: 5h 17m
+Elevation: 3127 ft</title></rect>
+<rect x="406" y="28" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-07-23"><title>2024-07-23
+1 workout
+Distance: 4.04 mi
+Duration: 38m
+Elevation: 59 ft</title></rect>
+<rect x="406" y="42" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-07-24"><title>2024-07-24
+1 workout
+Distance: 6.32 mi
+Duration: 56m
+Elevation: 279 ft</title></rect>
+<rect x="406" y="56" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-07-25"><title>2024-07-25
+1 workout
+Distance: 6.01 mi
+Duration: 50m
+Elevation: 292 ft</title></rect>
+<rect x="406" y="70" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-07-26"><title>2024-07-26
+1 workout
+Distance: 6.31 mi
+Duration: 51m
+Elevation: 331 ft</title></rect>
+<rect x="406" y="84" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-07-27"><title>2024-07-27
+1 workout
+Distance: 8.88 mi
+Duration: 1h 24m
+Elevation: 390 ft</title></rect>
+<rect x="420" y="0" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-07-28"><title>2024-07-28
+1 workout
+Distance: 11.66 mi
+Duration: 1h 37m
+Elevation: 354 ft</title></rect>
+<rect x="420" y="14" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-07-29"><title>2024-07-29
+1 workout
+Distance: 4.29 mi
+Duration: 36m
+Elevation: 299 ft</title></rect>
+<rect x="420" y="28" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-07-30"><title>2024-07-30
+1 workout
+Distance: 2.52 mi
+Duration: 40m
+Elevation: 0 ft</title></rect>
+<rect x="420" y="42" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-07-31"><title>2024-07-31
+1 workout
+Distance: 11.77 mi
+Duration: 1h 39m
+Elevation: 49 ft</title></rect>
+<rect x="420" y="56" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-08-01"><title>2024-08-01
+2 workouts
+Distance: 12.68 mi
+Duration: 1h 40m
+Elevation: 692 ft</title></rect>
+<rect x="420" y="70" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-08-02"><title>2024-08-02
+1 workout
+Distance: 5.80 mi
+Duration: 46m
+Elevation: 266 ft</title></rect>
+<rect x="420" y="84" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-08-03"><title>2024-08-03
+2 workouts
+Distance: 14.44 mi
+Duration: 2h 13m
+Elevation: 1355 ft</title></rect>
+<rect x="434" y="0" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-08-04"><title>2024-08-04
+1 workout
+Distance: 18.64 mi
+Duration: 2h 50m
+Elevation: 1004 ft</title></rect>
+<rect x="434" y="14" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-08-05"><title>2024-08-05
+1 workout
+Distance: 6.24 mi
+Duration: 51m
+Elevation: 190 ft</title></rect>
+<rect x="434" y="28" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-08-06"><title>2024-08-06
+1 workout
+Distance: 7.24 mi
+Duration: 55m
+Elevation: 318 ft</title></rect>
+<rect x="434" y="42" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-08-07"><title>2024-08-07
+1 workout
+Distance: 7.41 mi
+Duration: 1h 5m
+Elevation: 253 ft</title></rect>
+<rect x="434" y="56" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-08-08"><title>2024-08-08
+1 workout
+Distance: 10.51 mi
+Duration: 1h 16m
+Elevation: 371 ft</title></rect>
+<rect x="434" y="70" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-08-09"><title>2024-08-09
+1 workout
+Distance: 8.28 mi
+Duration: 1h 8m
+Elevation: 220 ft</title></rect>
+<rect x="434" y="84" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-08-10"><title>2024-08-10
+1 workout
+Distance: 14.51 mi
+Duration: 2h 14m
+Elevation: 384 ft</title></rect>
+<rect x="448" y="0" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-08-11"><title>2024-08-11
+1 workout
+Distance: 18.02 mi
+Duration: 2h 42m
+Elevation: 381 ft</title></rect>
+<rect x="448" y="14" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-08-12"><title>2024-08-12
+1 workout
+Distance: 7.46 mi
+Duration: 59m
+Elevation: 318 ft</title></rect>
+<rect x="448" y="28" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-08-13"><title>2024-08-13
+1 workout
+Distance: 8.08 mi
+Duration: 1h 2m
+Elevation: 413 ft</title></rect>
+<rect x="448" y="42" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-08-14"><title>2024-08-14
+1 workout
+Distance: 10.38 mi
+Duration: 1h 24m
+Elevation: 563 ft</title></rect>
+<rect x="448" y="56" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-08-15"><title>2024-08-15
+1 workout
+Distance: 8.06 mi
+Duration: 58m
+Elevation: 374 ft</title></rect>
+<rect x="448" y="70" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-08-16"><title>2024-08-16
+1 workout
+Distance: 7.89 mi
+Duration: 1h 3m
+Elevation: 520 ft</title></rect>
+<rect x="448" y="84" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-08-17"><title>2024-08-17
+1 workout
+Distance: 19.58 mi
+Duration: 2h 48m
+Elevation: 974 ft</title></rect>
+<rect x="462" y="0" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-08-18"><title>2024-08-18
+1 workout
+Distance: 9.04 mi
+Duration: 1h 12m
+Elevation: 515 ft</title></rect>
+<rect x="462" y="14" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-08-19"><title>2024-08-19
+1 workout
+Distance: 8.41 mi
+Duration: 1h 5m
+Elevation: 505 ft</title></rect>
+<rect x="462" y="28" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-08-20"><title>2024-08-20
+1 workout
+Distance: 9.41 mi
+Duration: 1h 6m
+Elevation: 367 ft</title></rect>
+<rect x="462" y="42" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-08-21"><title>2024-08-21
+1 workout
+Distance: 10.49 mi
+Duration: 1h 24m
+Elevation: 571 ft</title></rect>
+<rect x="462" y="56" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-08-22"><title>2024-08-22
+1 workout
+Distance: 6.74 mi
+Duration: 1h 7m
+Elevation: 663 ft</title></rect>
+<rect x="462" y="70" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-08-23"><title>2024-08-23
+1 workout
+Distance: 6.24 mi
+Duration: 56m
+Elevation: 659 ft</title></rect>
+<rect x="462" y="84" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-08-24"><title>2024-08-24
+1 workout
+Distance: 13.94 mi
+Duration: 7h 44m
+Elevation: 4014 ft</title></rect>
+<rect x="476" y="0" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-08-25"><title>2024-08-25
+1 workout
+Distance: 27.30 mi
+Duration: 10h 53m
+Elevation: 7986 ft</title></rect>
+<rect x="476" y="14" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-08-26"><title>2024-08-26
+1 workout
+Distance: 4.42 mi
+Duration: 37m
+Elevation: 312 ft</title></rect>
+<rect x="476" y="28" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-08-27"><title>2024-08-27
+1 workout
+Distance: 5.11 mi
+Duration: 40m
+Elevation: 243 ft</title></rect>
+<rect x="476" y="42" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-08-28"><title>2024-08-28
+1 workout
+Distance: 5.70 mi
+Duration: 43m
+Elevation: 259 ft</title></rect>
+<rect x="476" y="56" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-08-29"><title>2024-08-29
+1 workout
+Distance: 6.90 mi
+Duration: 53m
+Elevation: 436 ft</title></rect>
+<rect x="476" y="70" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-08-30"><title>2024-08-30
+1 workout
+Distance: 4.22 mi
+Duration: 33m
+Elevation: 144 ft</title></rect>
+<rect x="476" y="84" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-08-31"><title>2024-08-31
+1 workout
+Distance: 71.38 mi
+Duration: 16h 38m
+Elevation: 13255 ft</title></rect>
+<rect x="490" y="0" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-09-01"><title>2024-09-01
+1 workout
+Distance: 3.42 mi
+Duration: 37m
+Elevation: 246 ft</title></rect>
+<rect x="490" y="14" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-09-02"><title>2024-09-02
+1 workout
+Distance: 4.14 mi
+Duration: 36m
+Elevation: 154 ft</title></rect>
+<rect x="490" y="28" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-09-03"><title>2024-09-03
+1 workout
+Distance: 7.82 mi
+Duration: 1h 6m
+Elevation: 476 ft</title></rect>
+<rect x="490" y="42" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-09-04"><title>2024-09-04
+1 workout
+Distance: 5.30 mi
+Duration: 44m
+Elevation: 184 ft</title></rect>
+<rect x="490" y="56" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-09-05"><title>2024-09-05
+1 workout
+Distance: 6.28 mi
+Duration: 52m
+Elevation: 436 ft</title></rect>
+<rect x="490" y="70" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-09-06"><title>2024-09-06
+1 workout
+Distance: 8.16 mi
+Duration: 1h 6m
+Elevation: 479 ft</title></rect>
+<rect x="490" y="84" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-09-07"><title>2024-09-07
+1 workout
+Distance: 11.73 mi
+Duration: 1h 59m
+Elevation: 1503 ft</title></rect>
+<rect x="504" y="0" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-09-08"><title>2024-09-08
+1 workout
+Distance: 14.61 mi
+Duration: 2h 17m
+Elevation: 1850 ft</title></rect>
+<rect x="504" y="14" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-09-09"><title>2024-09-09
+1 workout
+Distance: 6.72 mi
+Duration: 1h 5m
+Elevation: 643 ft</title></rect>
+<rect x="504" y="28" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-09-10"><title>2024-09-10
+1 workout
+Distance: 6.51 mi
+Duration: 51m
+Elevation: 348 ft</title></rect>
+<rect x="504" y="42" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-09-11"><title>2024-09-11
+1 workout
+Distance: 9.46 mi
+Duration: 1h 17m
+Elevation: 417 ft</title></rect>
+<rect x="504" y="56" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-09-12"><title>2024-09-12
+1 workout
+Distance: 5.54 mi
+Duration: 44m
+Elevation: 220 ft</title></rect>
+<rect x="504" y="70" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-09-13"><title>2024-09-13
+1 workout
+Distance: 3.51 mi
+Duration: 31m
+Elevation: 30 ft</title></rect>
+<rect x="504" y="84" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-09-14"><title>2024-09-14
+1 workout
+Distance: 15.95 mi
+Duration: 1h 57m
+Elevation: 643 ft</title></rect>
+<rect x="518" y="0" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-09-15"><title>2024-09-15
+2 workouts
+Distance: 20.95 mi
+Duration: 3h 10m
+Elevation: 751 ft</title></rect>
+<rect x="518" y="14" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-09-16"><title>2024-09-16
+1 workout
+Distance: 8.04 mi
+Duration: 1h 8m
+Elevation: 253 ft</title></rect>
+<rect x="518" y="28" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-09-17"><title>2024-09-17
+1 workout
+Distance: 7.21 mi
+Duration: 59m
+Elevation: 367 ft</title></rect>
+<rect x="518" y="42" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-09-18"><title>2024-09-18
+1 workout
+Distance: 6.48 mi
+Duration: 53m
+Elevation: 322 ft</title></rect>
+<rect x="518" y="56" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-09-19"><title>2024-09-19
+1 workout
+Distance: 7.01 mi
+Duration: 57m
+Elevation: 443 ft</title></rect>
+<rect x="518" y="70" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-09-20"><title>2024-09-20
+1 workout
+Distance: 5.11 mi
+Duration: 41m
+Elevation: 256 ft</title></rect>
+<rect x="518" y="84" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-09-21"><title>2024-09-21
+1 workout
+Distance: 12.20 mi
+Duration: 1h 39m
+Elevation: 656 ft</title></rect>
+<rect x="532" y="0" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-09-22"><title>2024-09-22
+1 workout
+Distance: 11.92 mi
+Duration: 2h 4m
+Elevation: 1670 ft</title></rect>
+<rect x="532" y="14" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-09-23"><title>2024-09-23
+1 workout
+Distance: 8.45 mi
+Duration: 1h 9m
+Elevation: 440 ft</title></rect>
+<rect x="532" y="28" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-09-24"><title>2024-09-24
+1 workout
+Distance: 6.00 mi
+Duration: 44m
+Elevation: 299 ft</title></rect>
+<rect x="532" y="42" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-09-25"><title>2024-09-25
+1 workout
+Distance: 11.42 mi
+Duration: 1h 25m
+Elevation: 907 ft</title></rect>
+<rect x="532" y="56" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-09-26"><title>2024-09-26
+1 workout
+Distance: 8.28 mi
+Duration: 1h 3m
+Elevation: 384 ft</title></rect>
+<rect x="532" y="70" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-09-27"><title>2024-09-27
+1 workout
+Distance: 5.04 mi
+Duration: 37m
+Elevation: 233 ft</title></rect>
+<rect x="532" y="84" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-09-28"><title>2024-09-28
+1 workout
+Distance: 14.17 mi
+Duration: 1h 54m
+Elevation: 784 ft</title></rect>
+<rect x="546" y="0" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-09-29"><title>2024-09-29
+1 workout
+Distance: 6.52 mi
+Duration: 55m
+Elevation: 351 ft</title></rect>
+<rect x="546" y="14" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-09-30"><title>2024-09-30
+2 workouts
+Distance: 12.45 mi
+Duration: 1h 23m
+Elevation: 456 ft</title></rect>
+<rect x="546" y="28" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-10-01"><title>2024-10-01
+1 workout
+Distance: 13.16 mi
+Duration: 1h 45m
+Elevation: 843 ft</title></rect>
+<rect x="546" y="42" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-10-02"><title>2024-10-02
+1 workout
+Distance: 4.85 mi
+Duration: 55m
+Elevation: 561 ft</title></rect>
+<rect x="546" y="56" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-10-03"><title>2024-10-03
+1 workout
+Distance: 6.81 mi
+Duration: 55m
+Elevation: 417 ft</title></rect>
+<rect x="546" y="70" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-10-04"><title>2024-10-04
+1 workout
+Distance: 5.55 mi
+Duration: 45m
+Elevation: 388 ft</title></rect>
+<rect x="546" y="84" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-10-05"><title>2024-10-05
+1 workout
+Distance: 3.33 mi
+Duration: 30m
+Elevation: 79 ft</title></rect>
+<rect x="560" y="0" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-10-06"><title>2024-10-06
+1 workout
+Distance: 5.05 mi
+Duration: 39m
+Elevation: 303 ft</title></rect>
+<rect x="560" y="14" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-10-07"><title>2024-10-07
+1 workout
+Distance: 5.10 mi
+Duration: 41m
+Elevation: 174 ft</title></rect>
+<rect x="560" y="28" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-10-08"><title>2024-10-08
+1 workout
+Distance: 6.75 mi
+Duration: 1h 3m
+Elevation: 656 ft</title></rect>
+<rect x="560" y="42" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-10-09"><title>2024-10-09
+1 workout
+Distance: 5.18 mi
+Duration: 41m
+Elevation: 220 ft</title></rect>
+<rect x="560" y="56" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-10-10"><title>2024-10-10
+1 workout
+Distance: 11.06 mi
+Duration: 1h 29m
+Elevation: 410 ft</title></rect>
+<rect x="560" y="70" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-10-11"><title>2024-10-11
+1 workout
+Distance: 5.12 mi
+Duration: 41m
+Elevation: 203 ft</title></rect>
+<rect x="560" y="84" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-10-12"><title>2024-10-12
+1 workout
+Distance: 11.91 mi
+Duration: 1h 41m
+Elevation: 577 ft</title></rect>
+<rect x="574" y="0" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-10-13"><title>2024-10-13
+1 workout
+Distance: 13.25 mi
+Duration: 1h 20m
+Elevation: 341 ft</title></rect>
+<rect x="574" y="14" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-10-14"><title>2024-10-14
+1 workout
+Distance: 6.30 mi
+Duration: 53m
+Elevation: 279 ft</title></rect>
+<rect x="574" y="28" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-10-15"><title>2024-10-15
+1 workout
+Distance: 10.30 mi
+Duration: 1h 32m
+Elevation: 1253 ft</title></rect>
+<rect x="574" y="42" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-10-16"><title>2024-10-16
+2 workouts
+Distance: 8.30 mi
+Duration: 1h 0m
+Elevation: 427 ft</title></rect>
+<rect x="574" y="56" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-10-17"><title>2024-10-17
+1 workout
+Distance: 6.87 mi
+Duration: 53m
+Elevation: 325 ft</title></rect>
+<rect x="574" y="70" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-10-18"><title>2024-10-18
+1 workout
+Distance: 7.31 mi
+Duration: 56m
+Elevation: 686 ft</title></rect>
+<rect x="574" y="84" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-10-19"><title>2024-10-19
+1 workout
+Distance: 20.50 mi
+Duration: 3h 19m
+Elevation: 2034 ft</title></rect>
+<rect x="588" y="0" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-10-20"><title>2024-10-20
+1 workout
+Distance: 12.03 mi
+Duration: 1h 53m
+Elevation: 1955 ft</title></rect>
+<rect x="588" y="14" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-10-21"><title>2024-10-21
+2 workouts
+Distance: 9.50 mi
+Duration: 1h 7m
+Elevation: 361 ft</title></rect>
+<rect x="588" y="28" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-10-22"><title>2024-10-22
+1 workout
+Distance: 8.62 mi
+Duration: 1h 18m
+Elevation: 801 ft</title></rect>
+<rect x="588" y="42" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-10-23"><title>2024-10-23
+1 workout
+Distance: 13.30 mi
+Duration: 1h 47m
+Elevation: 942 ft</title></rect>
+<rect x="588" y="56" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-10-24"><title>2024-10-24
+1 workout
+Distance: 3.87 mi
+Duration: 31m
+Elevation: 233 ft</title></rect>
+<rect x="588" y="70" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-10-25"><title>2024-10-25
+1 workout
+Distance: 4.19 mi
+Duration: 34m
+Elevation: 0 ft</title></rect>
+<rect x="588" y="84" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-10-26"><title>2024-10-26
+2 workouts
+Distance: 19.65 mi
+Duration: 2h 20m
+Elevation: 804 ft</title></rect>
+<rect x="602" y="0" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-10-27"><title>2024-10-27
+1 workout
+Distance: 11.04 mi
+Duration: 1h 51m
+Elevation: 794 ft</title></rect>
+<rect x="602" y="14" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-10-28"><title>2024-10-28
+1 workout
+Distance: 7.12 mi
+Duration: 1h 8m
+Elevation: 433 ft</title></rect>
+<rect x="602" y="28" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-10-29"><title>2024-10-29
+1 workout
+Distance: 8.30 mi
+Duration: 1h 6m
+Elevation: 443 ft</title></rect>
+<rect x="602" y="42" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-10-30"><title>2024-10-30
+1 workout
+Distance: 6.19 mi
+Duration: 56m
+Elevation: 561 ft</title></rect>
+<rect x="602" y="56" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-10-31"><title>2024-10-31
+1 workout
+Distance: 4.86 mi
+Duration: 39m
+Elevation: 299 ft</title></rect>
+<rect x="602" y="70" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-11-01"><title>2024-11-01
+1 workout
+Distance: 4.05 mi
+Duration: 32m
+Elevation: 177 ft</title></rect>
+<rect x="602" y="84" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-11-02"><title>2024-11-02
+1 workout
+Distance: 4.03 mi
+Duration: 36m
+Elevation: 174 ft</title></rect>
+<rect x="616" y="0" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-11-03"><title>2024-11-03
+1 workout
+Distance: 26.58 mi
+Duration: 2h 47m
+Elevation: 922 ft</title></rect>
+<rect x="616" y="14" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-11-04"><title>2024-11-04
+1 workout
+Distance: 3.93 mi
+Duration: 33m
+Elevation: 243 ft</title></rect>
+<rect x="616" y="28" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-11-05"><title>2024-11-05
+1 workout
+Distance: 3.71 mi
+Duration: 30m
+Elevation: 131 ft</title></rect>
+<rect x="616" y="42" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-11-06"><title>2024-11-06
+1 workout
+Distance: 4.81 mi
+Duration: 45m
+Elevation: 371 ft</title></rect>
+<rect x="616" y="56" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-11-07"><title>2024-11-07
+1 workout
+Distance: 7.01 mi
+Duration: 59m
+Elevation: 584 ft</title></rect>
+<rect x="616" y="70" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-11-08"><title>2024-11-08
+1 workout
+Distance: 3.69 mi
+Duration: 31m
+Elevation: 161 ft</title></rect>
+<rect x="616" y="84" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-11-09"><title>2024-11-09
+1 workout
+Distance: 26.40 mi
+Duration: 2h 49m
+Elevation: 210 ft</title></rect>
+<rect x="630" y="0" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-11-10"><title>2024-11-10
+1 workout
+Distance: 5.97 mi
+Duration: 1h 15m
+Elevation: 909 ft</title></rect>
+<rect x="630" y="14" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-11-11"><title>2024-11-11
+1 workout
+Distance: 4.11 mi
+Duration: 34m
+Elevation: 152 ft</title></rect>
+<rect x="630" y="28" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-11-12"><title>2024-11-12
+1 workout
+Distance: 7.35 mi
+Duration: 1h 3m
+Elevation: 534 ft</title></rect>
+<rect x="630" y="42" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-11-13"><title>2024-11-13
+1 workout
+Distance: 5.29 mi
+Duration: 49m
+Elevation: 518 ft</title></rect>
+<rect x="630" y="56" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-11-14"><title>2024-11-14
+1 workout
+Distance: 8.42 mi
+Duration: 1h 8m
+Elevation: 482 ft</title></rect>
+<rect x="630" y="70" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-11-15"><title>2024-11-15
+1 workout
+Distance: 5.51 mi
+Duration: 48m
+Elevation: 396 ft</title></rect>
+<rect x="630" y="84" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-11-16"><title>2024-11-16
+1 workout
+Distance: 11.93 mi
+Duration: 1h 39m
+Elevation: 764 ft</title></rect>
+<rect x="644" y="0" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-11-17"><title>2024-11-17
+1 workout
+Distance: 20.02 mi
+Duration: 2h 56m
+Elevation: 200 ft</title></rect>
+<rect x="644" y="14" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-11-18"><title>2024-11-18
+1 workout
+Distance: 7.09 mi
+Duration: 1h 12m
+Elevation: 696 ft</title></rect>
+<rect x="644" y="28" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-11-19"><title>2024-11-19
+1 workout
+Distance: 6.07 mi
+Duration: 1h 4m
+Elevation: 587 ft</title></rect>
+<rect x="644" y="42" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-11-20"><title>2024-11-20
+1 workout
+Distance: 4.71 mi
+Duration: 41m
+Elevation: 384 ft</title></rect>
+<rect x="644" y="56" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-11-21"><title>2024-11-21
+1 workout
+Distance: 5.23 mi
+Duration: 44m
+Elevation: 253 ft</title></rect>
+<rect x="644" y="70" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-11-22"><title>2024-11-22
+1 workout
+Distance: 10.01 mi
+Duration: 1h 35m
+Elevation: 1660 ft</title></rect>
+<rect x="644" y="84" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-11-23"><title>2024-11-23
+1 workout
+Distance: 14.46 mi
+Duration: 2h 4m
+Elevation: 1135 ft</title></rect>
+<rect x="658" y="0" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-11-24"><title>2024-11-24
+1 workout
+Distance: 12.70 mi
+Duration: 2h 11m
+Elevation: 2047 ft</title></rect>
+<rect x="658" y="14" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-11-25"><title>2024-11-25
+1 workout
+Distance: 11.16 mi
+Duration: 1h 28m
+Elevation: 696 ft</title></rect>
+<rect x="658" y="28" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-11-26"><title>2024-11-26
+1 workout
+Distance: 7.45 mi
+Duration: 1h 14m
+Elevation: 1325 ft</title></rect>
+<rect x="658" y="42" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-11-27"><title>2024-11-27
+1 workout
+Distance: 14.81 mi
+Duration: 2h 2m
+Elevation: 1122 ft</title></rect>
+<rect x="658" y="56" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-11-28"><title>2024-11-28
+1 workout
+Distance: 16.01 mi
+Duration: 2h 27m
+Elevation: 1818 ft</title></rect>
+<rect x="658" y="70" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-11-29"><title>2024-11-29
+1 workout
+Distance: 16.35 mi
+Duration: 2h 41m
+Elevation: 2247 ft</title></rect>
+<rect x="658" y="84" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-11-30"><title>2024-11-30
+1 workout
+Distance: 17.13 mi
+Duration: 2h 58m
+Elevation: 2008 ft</title></rect>
+<rect x="672" y="0" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-12-01"><title>2024-12-01
+1 workout
+Distance: 7.81 mi
+Duration: 1h 4m
+Elevation: 554 ft</title></rect>
+<rect x="672" y="14" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-12-02"><title>2024-12-02
+1 workout
+Distance: 12.05 mi
+Duration: 1h 38m
+Elevation: 686 ft</title></rect>
+<rect x="672" y="28" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-12-03"><title>2024-12-03
+1 workout
+Distance: 10.04 mi
+Duration: 1h 21m
+Elevation: 600 ft</title></rect>
+<rect x="672" y="42" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-12-04"><title>2024-12-04
+1 workout
+Distance: 9.06 mi
+Duration: 1h 11m
+Elevation: 505 ft</title></rect>
+<rect x="672" y="56" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-12-05"><title>2024-12-05
+1 workout
+Distance: 8.49 mi
+Duration: 1h 11m
+Elevation: 614 ft</title></rect>
+<rect x="672" y="70" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-12-06"><title>2024-12-06
+1 workout
+Distance: 5.96 mi
+Duration: 49m
+Elevation: 453 ft</title></rect>
+<rect x="672" y="84" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-12-07"><title>2024-12-07
+1 workout
+Distance: 4.05 mi
+Duration: 36m
+Elevation: 269 ft</title></rect>
+<rect x="686" y="0" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-12-08"><title>2024-12-08
+1 workout
+Distance: 44.53 mi
+Duration: 12h 35m
+Elevation: 11322 ft</title></rect>
+<rect x="686" y="14" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-12-09"><title>2024-12-09
+1 workout
+Distance: 4.62 mi
+Duration: 57m
+Elevation: 469 ft</title></rect>
+<rect x="686" y="28" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-12-10"><title>2024-12-10
+2 workouts
+Distance: 14.69 mi
+Duration: 5h 0m
+Elevation: 4232 ft</title></rect>
+<rect x="686" y="42" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-12-11"><title>2024-12-11
+1 workout
+Distance: 8.00 mi
+Duration: 5h 43m
+Elevation: 3924 ft</title></rect>
+<rect x="686" y="56" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-12-12"><title>2024-12-12
+1 workout
+Distance: 9.77 mi
+Duration: 1h 22m
+Elevation: 482 ft</title></rect>
+<rect x="686" y="70" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-12-13"><title>2024-12-13
+1 workout
+Distance: 6.73 mi
+Duration: 1h 2m
+Elevation: 758 ft</title></rect>
+<rect x="686" y="84" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-12-14"><title>2024-12-14
+1 workout
+Distance: 21.00 mi
+Duration: 3h 29m
+Elevation: 2283 ft</title></rect>
+<rect x="700" y="0" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-12-15"><title>2024-12-15
+1 workout
+Distance: 5.36 mi
+Duration: 40m
+Elevation: 285 ft</title></rect>
+<rect x="700" y="14" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-12-16"><title>2024-12-16
+1 workout
+Distance: 7.01 mi
+Duration: 57m
+Elevation: 440 ft</title></rect>
+<rect x="700" y="28" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-12-17"><title>2024-12-17
+2 workouts
+Distance: 10.36 mi
+Duration: 1h 16m
+Elevation: 594 ft</title></rect>
+<rect x="700" y="42" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-12-18"><title>2024-12-18
+1 workout
+Distance: 5.74 mi
+Duration: 56m
+Elevation: 1060 ft</title></rect>
+<rect x="700" y="56" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-12-19"><title>2024-12-19
+1 workout
+Distance: 7.06 mi
+Duration: 1h 16m
+Elevation: 1982 ft</title></rect>
+<rect x="700" y="70" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-12-20"><title>2024-12-20
+1 workout
+Distance: 10.82 mi
+Duration: 2h 11m
+Elevation: 3045 ft</title></rect>
+<rect x="700" y="84" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-12-21"><title>2024-12-21
+1 workout
+Distance: 50.33 mi
+Duration: 9h 8m
+Elevation: 8035 ft</title></rect>
+<rect x="714" y="0" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-12-22"><title>2024-12-22
+1 workout
+Distance: 7.36 mi
+Duration: 1h 4m
+Elevation: 128 ft</title></rect>
+<rect x="714" y="14" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-12-23"><title>2024-12-23
+1 workout
+Distance: 5.32 mi
+Duration: 45m
+Elevation: 476 ft</title></rect>
+<rect x="714" y="28" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-12-24"><title>2024-12-24
+1 workout
+Distance: 7.23 mi
+Duration: 1h 13m
+Elevation: 755 ft</title></rect>
+<rect x="714" y="42" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-12-25"><title>2024-12-25
+1 workout
+Distance: 19.07 mi
+Duration: 2h 33m
+Elevation: 1302 ft</title></rect>
+<rect x="714" y="56" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-12-26"><title>2024-12-26
+2 workouts
+Distance: 8.57 mi
+Duration: 1h 8m
+Elevation: 551 ft</title></rect>
+<rect x="714" y="70" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-12-27"><title>2024-12-27
+1 workout
+Distance: 10.53 mi
+Duration: 1h 27m
+Elevation: 820 ft</title></rect>
+<rect x="714" y="84" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-12-28"><title>2024-12-28
+1 workout
+Distance: 9.17 mi
+Duration: 1h 15m
+Elevation: 381 ft</title></rect>
+<rect x="728" y="0" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-12-29"><title>2024-12-29
+1 workout
+Distance: 11.03 mi
+Duration: 1h 30m
+Elevation: 633 ft</title></rect>
+<rect x="728" y="14" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-12-30"><title>2024-12-30
+1 workout
+Distance: 10.09 mi
+Duration: 1h 27m
+Elevation: 141 ft</title></rect>
+<rect x="728" y="28" width="12" height="12" rx="3" ry="3" fill="#01cdfe" data-date="2024-12-31"><title>2024-12-31
+1 workout
+Distance: 14.80 mi
+Duration: 2h 2m
+Elevation: 722 ft</title></rect>
+</g>
+</svg>
