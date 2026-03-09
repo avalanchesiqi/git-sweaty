@@ -26382,6 +26382,20 @@
       "subtype": "Run",
       "type": "Run",
       "year": 2026
+    },
+    {
+      "date": "2026-03-08",
+      "hour": 13,
+      "subtype": "Run",
+      "type": "Run",
+      "year": 2026
+    },
+    {
+      "date": "2026-03-09",
+      "hour": 10,
+      "subtype": "Run",
+      "type": "Run",
+      "year": 2026
     }
   ],
   "aggregates": {
@@ -57095,11 +57109,29 @@
           "distance": 25835.0,
           "elevation_gain": 124.0,
           "moving_time": 7245.0
+        },
+        "2026-03-08": {
+          "activity_ids": [
+            17652615319
+          ],
+          "count": 1,
+          "distance": 14241.0,
+          "elevation_gain": 168.0,
+          "moving_time": 4400.0
+        },
+        "2026-03-09": {
+          "activity_ids": [
+            17661008166
+          ],
+          "count": 1,
+          "distance": 15323.0,
+          "elevation_gain": 188.0,
+          "moving_time": 4735.0
         }
       }
     }
   },
-  "generated_at": "2026-03-08T15:22:39.479280+00:00",
+  "generated_at": "2026-03-09T15:57:41.378678+00:00",
   "other_bucket": "OtherSports",
   "type_meta": {
     "GymCardio": {
