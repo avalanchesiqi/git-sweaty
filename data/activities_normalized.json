@@ -49294,5 +49294,18 @@
     "start_date_local": "2026-03-27T10:48:39Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-03-28",
+    "distance": 44366.0,
+    "elevation_gain": 1072.0,
+    "id": "17894762505",
+    "moving_time": 28012.0,
+    "name": "Conquer the Crossroads Rogaine",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-03-28T09:00:15Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
