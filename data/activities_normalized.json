@@ -49489,5 +49489,18 @@
     "start_date_local": "2026-04-10T17:03:23Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-04-11",
+    "distance": 84047.0,
+    "elevation_gain": 3210.0,
+    "id": "18071865963",
+    "moving_time": 35915.0,
+    "name": "Knobstone 50M, 2nd",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-04-11T06:00:01Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
