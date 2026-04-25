@@ -49697,5 +49697,18 @@
     "start_date_local": "2026-04-24T06:36:57Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-04-25",
+    "distance": 42588.0,
+    "elevation_gain": 141.0,
+    "id": "18253355161",
+    "moving_time": 11301.0,
+    "name": "Kentucky Derby Marathon",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-04-25T07:00:22Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
