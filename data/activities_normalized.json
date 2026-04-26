@@ -49710,5 +49710,31 @@
     "start_date_local": "2026-04-25T07:00:22Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-04-25",
+    "distance": 9059.0,
+    "elevation_gain": 27.0,
+    "id": "18258054003",
+    "moving_time": 3691.0,
+    "name": "Louisville",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-04-25T17:38:33Z",
+    "type": "Run",
+    "year": 2026
+  },
+  {
+    "date": "2026-04-26",
+    "distance": 12793.0,
+    "elevation_gain": 42.0,
+    "id": "18266195601",
+    "moving_time": 4166.0,
+    "name": "Louisville",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-04-26T08:11:09Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
