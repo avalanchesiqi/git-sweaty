@@ -49788,5 +49788,57 @@
     "start_date_local": "2026-04-30T08:27:30Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-05-01",
+    "distance": 11357.0,
+    "elevation_gain": 221.0,
+    "id": "18339567431",
+    "moving_time": 3953.0,
+    "name": "Evening Run",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-05-01T19:08:11Z",
+    "type": "Run",
+    "year": 2026
+  },
+  {
+    "date": "2026-05-02",
+    "distance": 1955.0,
+    "elevation_gain": 13.0,
+    "id": "18346734710",
+    "moving_time": 638.0,
+    "name": "Morning Run",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-05-02T07:03:14Z",
+    "type": "Run",
+    "year": 2026
+  },
+  {
+    "date": "2026-05-02",
+    "distance": 21253.0,
+    "elevation_gain": 38.0,
+    "id": "18346738925",
+    "moving_time": 4878.0,
+    "name": "Indy 500 Mini Marathon",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-05-02T07:40:25Z",
+    "type": "Run",
+    "year": 2026
+  },
+  {
+    "date": "2026-05-02",
+    "distance": 1991.0,
+    "elevation_gain": 7.0,
+    "id": "18346742455",
+    "moving_time": 1299.0,
+    "name": "Morning Run",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-05-02T09:30:35Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
