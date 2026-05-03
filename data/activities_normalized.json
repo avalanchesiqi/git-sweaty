@@ -49840,5 +49840,18 @@
     "start_date_local": "2026-05-02T09:30:35Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-05-03",
+    "distance": 42537.0,
+    "elevation_gain": 324.0,
+    "id": "18360535729",
+    "moving_time": 11687.0,
+    "name": "Flying Pig Marathon",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-05-03T06:30:31Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
