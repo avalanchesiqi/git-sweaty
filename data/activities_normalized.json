@@ -49853,5 +49853,44 @@
     "start_date_local": "2026-05-03T06:30:31Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-05-04",
+    "distance": 11938.0,
+    "elevation_gain": 24.0,
+    "id": "18375082070",
+    "moving_time": 3921.0,
+    "name": "Columbus",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-05-04T12:35:38Z",
+    "type": "Run",
+    "year": 2026
+  },
+  {
+    "date": "2026-05-04",
+    "distance": 8067.0,
+    "elevation_gain": 166.0,
+    "id": "18378677989",
+    "moving_time": 2970.0,
+    "name": "Evening Run",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-05-04T18:46:11Z",
+    "type": "Run",
+    "year": 2026
+  },
+  {
+    "date": "2026-05-05",
+    "distance": 14047.0,
+    "elevation_gain": 160.0,
+    "id": "18385555227",
+    "moving_time": 4481.0,
+    "name": "Morning Run",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-05-05T08:27:02Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
