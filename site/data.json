@@ -26921,6 +26921,13 @@
       "subtype": "Run",
       "type": "Run",
       "year": 2026
+    },
+    {
+      "date": "2026-05-11",
+      "hour": 15,
+      "subtype": "Run",
+      "type": "Run",
+      "year": 2026
     }
   ],
   "aggregates": {
@@ -58229,11 +58236,20 @@
           "distance": 22489.0,
           "elevation_gain": 158.0,
           "moving_time": 6313.0
+        },
+        "2026-05-11": {
+          "activity_ids": [
+            "18469055340"
+          ],
+          "count": 1,
+          "distance": 13306.0,
+          "elevation_gain": 206.0,
+          "moving_time": 4645.0
         }
       }
     }
   },
-  "generated_at": "2026-05-11T17:23:47.718763+00:00",
+  "generated_at": "2026-05-12T17:09:41.997648+00:00",
   "other_bucket": "OtherSports",
   "repo": "avalanchesiqi/git-sweaty",
   "source": "strava",
