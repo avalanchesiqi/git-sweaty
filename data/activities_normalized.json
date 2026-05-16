@@ -50061,5 +50061,44 @@
     "start_date_local": "2026-05-14T20:17:50Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-05-15",
+    "distance": 12589.0,
+    "elevation_gain": 54.0,
+    "id": "18520997735",
+    "moving_time": 4413.0,
+    "name": "Flushing Corona Park",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-05-15T15:15:10Z",
+    "type": "Run",
+    "year": 2026
+  },
+  {
+    "date": "2026-05-16",
+    "distance": 21309.0,
+    "elevation_gain": 77.0,
+    "id": "18528773442",
+    "moving_time": 4657.0,
+    "name": "Brooklyn Half Marathon",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-05-16T07:00:45Z",
+    "type": "Run",
+    "year": 2026
+  },
+  {
+    "date": "2026-05-16",
+    "distance": 13559.0,
+    "elevation_gain": 45.0,
+    "id": "18531456865",
+    "moving_time": 5833.0,
+    "name": "Brooklyn",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-05-16T09:56:58Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
