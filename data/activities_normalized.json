@@ -50100,5 +50100,31 @@
     "start_date_local": "2026-05-16T09:56:58Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-05-16",
+    "distance": 2001.0,
+    "elevation_gain": 6.0,
+    "id": "18535837329",
+    "moving_time": 1197.0,
+    "name": "Port Jefferson",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-05-16T18:11:01Z",
+    "type": "Run",
+    "year": 2026
+  },
+  {
+    "date": "2026-05-17",
+    "distance": 14056.0,
+    "elevation_gain": 165.0,
+    "id": "18543676682",
+    "moving_time": 4683.0,
+    "name": "SUNY Old Westbury",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-05-17T07:34:24Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
