@@ -50126,5 +50126,18 @@
     "start_date_local": "2026-05-17T07:34:24Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-05-18",
+    "distance": 12937.0,
+    "elevation_gain": 23.0,
+    "id": "18554406288",
+    "moving_time": 4368.0,
+    "name": "Jericho",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-05-18T07:43:16Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
