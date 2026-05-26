@@ -50191,5 +50191,44 @@
     "start_date_local": "2026-05-22T18:30:16Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-05-23",
+    "distance": 18014.0,
+    "elevation_gain": 1219.0,
+    "id": "18652408836",
+    "moving_time": 12477.0,
+    "name": "Kings Canyon Lookout Peak",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-05-23T15:26:32Z",
+    "type": "Run",
+    "year": 2026
+  },
+  {
+    "date": "2026-05-24",
+    "distance": 64014.0,
+    "elevation_gain": 2509.0,
+    "id": "18652409601",
+    "moving_time": 57364.0,
+    "name": "Kings Canyon Rae Lakes Loop",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-05-24T07:30:26Z",
+    "type": "Run",
+    "year": 2026
+  },
+  {
+    "date": "2026-05-25",
+    "distance": 10261.0,
+    "elevation_gain": 360.0,
+    "id": "18656646053",
+    "moving_time": 5374.0,
+    "name": "Vasquez Rocks",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-05-25T16:00:33Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
