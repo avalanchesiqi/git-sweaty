@@ -50230,5 +50230,31 @@
     "start_date_local": "2026-05-25T16:00:33Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-05-26",
+    "distance": 10059.0,
+    "elevation_gain": 57.0,
+    "id": "18669891951",
+    "moving_time": 3156.0,
+    "name": "LAX",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-05-26T18:09:50Z",
+    "type": "Run",
+    "year": 2026
+  },
+  {
+    "date": "2026-05-27",
+    "distance": 9825.0,
+    "elevation_gain": 29.0,
+    "id": "18676127301",
+    "moving_time": 2949.0,
+    "name": "LAX",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-05-27T07:04:33Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
