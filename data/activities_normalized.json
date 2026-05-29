@@ -50256,5 +50256,18 @@
     "start_date_local": "2026-05-27T07:04:33Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-05-28",
+    "distance": 18004.0,
+    "elevation_gain": 120.0,
+    "id": "18697170449",
+    "moving_time": 5936.0,
+    "name": "LAX",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-05-28T17:43:26Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
