@@ -50282,5 +50282,18 @@
     "start_date_local": "2026-05-29T18:25:12Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-05-30",
+    "distance": 8073.0,
+    "elevation_gain": 12.0,
+    "id": "18722378484",
+    "moving_time": 2562.0,
+    "name": "Lake Miramar",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-05-30T17:28:25Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
