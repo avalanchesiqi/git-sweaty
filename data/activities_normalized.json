@@ -50308,5 +50308,31 @@
     "start_date_local": "2026-05-31T06:25:01Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-06-01",
+    "distance": 17020.0,
+    "elevation_gain": 300.0,
+    "id": "18747014180",
+    "moving_time": 8283.0,
+    "name": "UCSD & Torrey Pines State Park",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-06-01T10:46:56Z",
+    "type": "Run",
+    "year": 2026
+  },
+  {
+    "date": "2026-06-02",
+    "distance": 14857.0,
+    "elevation_gain": 130.0,
+    "id": "18757914246",
+    "moving_time": 5504.0,
+    "name": "SD Black Mountain",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-06-02T07:51:58Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
