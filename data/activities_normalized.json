@@ -50360,5 +50360,18 @@
     "start_date_local": "2026-06-04T20:14:17Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-06-05",
+    "distance": 6846.0,
+    "elevation_gain": 21.0,
+    "id": "18803386773",
+    "moving_time": 2468.0,
+    "name": "Woodstock",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-06-05T20:04:25Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
