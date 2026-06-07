@@ -50373,5 +50373,18 @@
     "start_date_local": "2026-06-05T20:04:25Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-06-06",
+    "distance": 160644.0,
+    "elevation_gain": 4072.0,
+    "id": "18825709497",
+    "moving_time": 61631.0,
+    "name": "Old Dominion 100M, 2nd",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-06-06T04:00:01Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
