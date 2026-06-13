@@ -50438,5 +50438,44 @@
     "start_date_local": "2026-06-10T19:59:38Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-06-11",
+    "distance": 12627.0,
+    "elevation_gain": 179.0,
+    "id": "18884683112",
+    "moving_time": 4161.0,
+    "name": "Evening Run",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-06-11T18:56:17Z",
+    "type": "Run",
+    "year": 2026
+  },
+  {
+    "date": "2026-06-12",
+    "distance": 12717.0,
+    "elevation_gain": 166.0,
+    "id": "18897098490",
+    "moving_time": 4232.0,
+    "name": "Evening Run",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-06-12T19:59:08Z",
+    "type": "Run",
+    "year": 2026
+  },
+  {
+    "date": "2026-06-13",
+    "distance": 23920.0,
+    "elevation_gain": 57.0,
+    "id": "18903709082",
+    "moving_time": 7902.0,
+    "name": "Carmel",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-06-13T07:06:41Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
