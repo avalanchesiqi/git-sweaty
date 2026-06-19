@@ -50555,5 +50555,18 @@
     "start_date_local": "2026-06-17T17:38:05Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-06-18",
+    "distance": 17554.0,
+    "elevation_gain": 722.0,
+    "id": "18978639273",
+    "moving_time": 7056.0,
+    "name": "Santa Teresa County Park",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-06-18T15:55:41Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
