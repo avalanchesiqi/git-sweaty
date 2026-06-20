@@ -50568,5 +50568,18 @@
     "start_date_local": "2026-06-18T15:55:41Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-06-19",
+    "distance": 12748.0,
+    "elevation_gain": 32.0,
+    "id": "18990234014",
+    "moving_time": 4168.0,
+    "name": "Coyote Creek Trail",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-06-19T16:01:54Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
