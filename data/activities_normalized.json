@@ -50581,5 +50581,18 @@
     "start_date_local": "2026-06-19T16:01:54Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-06-20",
+    "distance": 7492.0,
+    "elevation_gain": 215.0,
+    "id": "19004267029",
+    "moving_time": 4014.0,
+    "name": "Emerald Bay State Park",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-06-20T18:13:40Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
