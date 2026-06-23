@@ -50620,5 +50620,31 @@
     "start_date_local": "2026-06-21T17:31:54Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-06-22",
+    "distance": 1886.0,
+    "elevation_gain": 100.0,
+    "id": "19027186847",
+    "moving_time": 1387.0,
+    "name": "Emerald Bay State Park",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-06-22T07:09:56Z",
+    "type": "Run",
+    "year": 2026
+  },
+  {
+    "date": "2026-06-22",
+    "distance": 15835.0,
+    "elevation_gain": 976.0,
+    "id": "19027204912",
+    "moving_time": 16280.0,
+    "name": "Tahoe Mount Tallac",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-06-22T08:10:18Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
