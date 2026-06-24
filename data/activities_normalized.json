@@ -50646,5 +50646,18 @@
     "start_date_local": "2026-06-22T08:10:18Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-06-23",
+    "distance": 10826.0,
+    "elevation_gain": 63.0,
+    "id": "19039781306",
+    "moving_time": 3160.0,
+    "name": "Olympic Valley",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-06-23T10:37:44Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
