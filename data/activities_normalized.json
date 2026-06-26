@@ -50672,5 +50672,18 @@
     "start_date_local": "2026-06-24T09:43:15Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-06-25",
+    "distance": 1760.0,
+    "elevation_gain": 33.0,
+    "id": "19065491525",
+    "moving_time": 1346.0,
+    "name": "Tahoe East Shore Trail",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-06-25T11:47:52Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
