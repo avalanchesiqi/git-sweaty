@@ -50685,5 +50685,18 @@
     "start_date_local": "2026-06-25T11:47:52Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-06-26",
+    "distance": 7288.0,
+    "elevation_gain": 121.0,
+    "id": "19078867051",
+    "moving_time": 2522.0,
+    "name": "Tahoe City",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-06-26T15:39:46Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
