@@ -50698,5 +50698,18 @@
     "start_date_local": "2026-06-26T15:39:46Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-06-27",
+    "distance": 162456.0,
+    "elevation_gain": 5175.0,
+    "id": "19100389312",
+    "moving_time": 71624.0,
+    "name": "Western States 100M",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-06-27T04:59:59Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
