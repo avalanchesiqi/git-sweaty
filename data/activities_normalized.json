@@ -50763,5 +50763,18 @@
     "start_date_local": "2026-07-01T16:45:46Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-07-02",
+    "distance": 8742.0,
+    "elevation_gain": 8.0,
+    "id": "19157349193",
+    "moving_time": 2842.0,
+    "name": "Apple Park",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-07-02T16:19:53Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
