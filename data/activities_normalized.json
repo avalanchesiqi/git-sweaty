@@ -50789,5 +50789,31 @@
     "start_date_local": "2026-07-03T08:42:26Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-07-04",
+    "distance": 4199.0,
+    "elevation_gain": 254.0,
+    "id": "19183559928",
+    "moving_time": 3086.0,
+    "name": "Sherman",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-07-04T19:56:23Z",
+    "type": "Run",
+    "year": 2026
+  },
+  {
+    "date": "2026-07-05",
+    "distance": 12898.0,
+    "elevation_gain": 303.0,
+    "id": "19190406140",
+    "moving_time": 6735.0,
+    "name": "Sherman <-> Burrows Peak",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-07-05T05:54:58Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
