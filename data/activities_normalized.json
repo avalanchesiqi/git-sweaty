@@ -50815,5 +50815,44 @@
     "start_date_local": "2026-07-05T05:54:58Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-07-05",
+    "distance": 3684.0,
+    "elevation_gain": 184.0,
+    "id": "19193184154",
+    "moving_time": 2653.0,
+    "name": "Black Canyon Gunnison Oak Flat Loop",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-07-05T11:30:19Z",
+    "type": "Run",
+    "year": 2026
+  },
+  {
+    "date": "2026-07-05",
+    "distance": 11394.0,
+    "elevation_gain": 511.0,
+    "id": "19196233685",
+    "moving_time": 5819.0,
+    "name": "Ouray Perimeter Loop",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-07-05T18:59:06Z",
+    "type": "Run",
+    "year": 2026
+  },
+  {
+    "date": "2026-07-06",
+    "distance": 6470.0,
+    "elevation_gain": 256.0,
+    "id": "19203406837",
+    "moving_time": 3153.0,
+    "name": "Camp Bird Rd",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-07-06T09:10:38Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
