@@ -50854,5 +50854,31 @@
     "start_date_local": "2026-07-06T09:10:38Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-07-06",
+    "distance": 12882.0,
+    "elevation_gain": 1178.0,
+    "id": "19206520846",
+    "moving_time": 7797.0,
+    "name": "Telluride",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-07-06T12:51:28Z",
+    "type": "Run",
+    "year": 2026
+  },
+  {
+    "date": "2026-07-07",
+    "distance": 8947.0,
+    "elevation_gain": 723.0,
+    "id": "19216958715",
+    "moving_time": 4387.0,
+    "name": "Telluride Coonskin Mountain",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-07-07T09:07:44Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
