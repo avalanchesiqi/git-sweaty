@@ -50880,5 +50880,18 @@
     "start_date_local": "2026-07-07T09:07:44Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-07-07",
+    "distance": 12579.0,
+    "elevation_gain": 1056.0,
+    "id": "19221665756",
+    "moving_time": 9519.0,
+    "name": "Island Lake & Grant Swamp Pass",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-07-07T13:20:48Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
