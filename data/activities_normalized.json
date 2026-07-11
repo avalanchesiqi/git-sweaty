@@ -50848,7 +50848,7 @@
     "elevation_gain": 256.0,
     "id": "19203406837",
     "moving_time": 3153.0,
-    "name": "Camp Bird Rd",
+    "name": "Governor Basin",
     "raw_activity_type": "Run",
     "raw_type": "Run",
     "start_date_local": "2026-07-06T09:10:38Z",
@@ -50930,6 +50930,19 @@
     "raw_activity_type": "Run",
     "raw_type": "Run",
     "start_date_local": "2026-07-09T16:28:50Z",
+    "type": "Run",
+    "year": 2026
+  },
+  {
+    "date": "2026-07-10",
+    "distance": 4557.0,
+    "elevation_gain": 29.0,
+    "id": "19261558772",
+    "moving_time": 1560.0,
+    "name": "Ouray",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-07-10T16:57:12Z",
     "type": "Run",
     "year": 2026
   }
