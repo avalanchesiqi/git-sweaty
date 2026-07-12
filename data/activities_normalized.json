@@ -50945,5 +50945,44 @@
     "start_date_local": "2026-07-10T16:57:12Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-07-10",
+    "distance": 76820.0,
+    "elevation_gain": 4863.0,
+    "id": "19279894684",
+    "moving_time": 51362.0,
+    "name": "Hardrock: Ouray to Cunningham",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-07-10T21:04:47Z",
+    "type": "Run",
+    "year": 2026
+  },
+  {
+    "date": "2026-07-11",
+    "distance": 883.1,
+    "elevation_gain": 4.8,
+    "id": "19276910949",
+    "moving_time": 681.0,
+    "name": "Silverton",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-07-11T23:03:01Z",
+    "type": "Run",
+    "year": 2026
+  },
+  {
+    "date": "2026-07-12",
+    "distance": 1620.0,
+    "elevation_gain": 0.0,
+    "id": "19282082834",
+    "moving_time": 424.0,
+    "name": "Hardrock Depletion Mile",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-07-12T07:05:23Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
