@@ -51010,5 +51010,31 @@
     "start_date_local": "2026-07-14T19:24:14Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-07-15",
+    "distance": 7063.0,
+    "elevation_gain": 11.0,
+    "id": "19328969736",
+    "moving_time": 2329.0,
+    "name": "Jericho",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-07-15T17:08:39Z",
+    "type": "Run",
+    "year": 2026
+  },
+  {
+    "date": "2026-07-16",
+    "distance": 12434.0,
+    "elevation_gain": 22.0,
+    "id": "19338156176",
+    "moving_time": 4098.0,
+    "name": "Jericho",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-07-16T10:19:52Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
