@@ -51049,5 +51049,18 @@
     "start_date_local": "2026-07-17T19:25:53Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-07-18",
+    "distance": 158649.0,
+    "elevation_gain": 4602.0,
+    "id": "19370137772",
+    "moving_time": 59132.0,
+    "name": "Vermont 100M",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-07-18T04:00:02Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
