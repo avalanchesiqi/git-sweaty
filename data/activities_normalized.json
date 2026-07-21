@@ -51075,5 +51075,31 @@
     "start_date_local": "2026-07-19T22:22:33Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-07-20",
+    "distance": 8069.0,
+    "elevation_gain": 11.0,
+    "id": "19395963804",
+    "moving_time": 2900.0,
+    "name": "Jericho",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-07-20T19:15:12Z",
+    "type": "Run",
+    "year": 2026
+  },
+  {
+    "date": "2026-07-21",
+    "distance": 14116.0,
+    "elevation_gain": 104.0,
+    "id": "19404339019",
+    "moving_time": 4706.0,
+    "name": "SUNY Old Westbury",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-07-21T09:38:35Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
