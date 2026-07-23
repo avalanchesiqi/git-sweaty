@@ -51101,5 +51101,31 @@
     "start_date_local": "2026-07-21T09:38:35Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-07-22",
+    "distance": 11136.0,
+    "elevation_gain": 3.0,
+    "id": "19425146632",
+    "moving_time": 3816.0,
+    "name": "Jones Beach State Park",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-07-22T18:52:14Z",
+    "type": "Run",
+    "year": 2026
+  },
+  {
+    "date": "2026-07-23",
+    "distance": 12069.0,
+    "elevation_gain": 63.0,
+    "id": "19432994335",
+    "moving_time": 3720.0,
+    "name": "SUNY Old Westbury",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-07-23T09:30:03Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
