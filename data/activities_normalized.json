@@ -51205,5 +51205,18 @@
     "start_date_local": "2026-07-27T10:10:48Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-07-28",
+    "distance": 1833.0,
+    "elevation_gain": 0.0,
+    "id": "19502059899",
+    "moving_time": 1068.0,
+    "name": "BTV",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-07-28T11:42:09Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
