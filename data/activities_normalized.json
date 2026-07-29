@@ -51218,5 +51218,18 @@
     "start_date_local": "2026-07-28T11:42:09Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-07-28",
+    "distance": 26185.0,
+    "elevation_gain": 69.0,
+    "id": "19505373571",
+    "moving_time": 8832.0,
+    "name": "Burlington Island Line Trail",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-07-28T13:07:14Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
