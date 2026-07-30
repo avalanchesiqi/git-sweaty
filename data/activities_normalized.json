@@ -51231,5 +51231,44 @@
     "start_date_local": "2026-07-28T13:07:14Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-07-29",
+    "distance": 4631.0,
+    "elevation_gain": 54.0,
+    "id": "19522691845",
+    "moving_time": 2872.0,
+    "name": "Burlington",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-07-29T20:10:49Z",
+    "type": "Run",
+    "year": 2026
+  },
+  {
+    "date": "2026-07-30",
+    "distance": 10319.0,
+    "elevation_gain": 103.0,
+    "id": "19528205018",
+    "moving_time": 3319.0,
+    "name": "UVM",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-07-30T07:18:19Z",
+    "type": "Run",
+    "year": 2026
+  },
+  {
+    "date": "2026-07-30",
+    "distance": 1614.0,
+    "elevation_gain": 25.0,
+    "id": "19528981131",
+    "moving_time": 1000.0,
+    "name": "Burlington",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-07-30T09:00:05Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
