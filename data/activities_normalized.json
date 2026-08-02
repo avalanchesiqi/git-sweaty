@@ -51283,5 +51283,18 @@
     "start_date_local": "2026-07-31T08:49:56Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-08-01",
+    "distance": 57978.0,
+    "elevation_gain": 1618.0,
+    "id": "19560883183",
+    "moving_time": 22272.0,
+    "name": "Moosalamoo Ultra 36M, 2nd",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-08-01T08:00:01Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
