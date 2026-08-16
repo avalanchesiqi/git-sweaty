@@ -51530,5 +51530,18 @@
     "start_date_local": "2026-08-14T20:37:56Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-08-15",
+    "distance": 5821.0,
+    "elevation_gain": 65.0,
+    "id": "19757504510",
+    "moving_time": 2402.0,
+    "name": "Yellow Birch Ravine",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-08-15T15:22:07Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
