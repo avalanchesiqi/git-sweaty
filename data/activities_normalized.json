@@ -51699,5 +51699,18 @@
     "start_date_local": "2026-08-24T18:37:47Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-08-25",
+    "distance": 11785.0,
+    "elevation_gain": 5.0,
+    "id": "19898861792",
+    "moving_time": 3884.0,
+    "name": "Plainfield",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-08-25T15:20:32Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
