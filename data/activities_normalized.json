@@ -51907,5 +51907,18 @@
     "start_date_local": "2026-09-05T11:33:11Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-09-06",
+    "distance": 8551.0,
+    "elevation_gain": 578.0,
+    "id": "20066828896",
+    "moving_time": 5277.0,
+    "name": "Kesler Peak Trail",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-09-06T13:16:52Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
