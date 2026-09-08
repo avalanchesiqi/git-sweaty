@@ -51920,5 +51920,18 @@
     "start_date_local": "2026-09-06T13:16:52Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-09-07",
+    "distance": 16290.0,
+    "elevation_gain": 1147.0,
+    "id": "20078973673",
+    "moving_time": 12293.0,
+    "name": "Brighton <-> Ant Knolls",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-09-07T09:34:51Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
