@@ -51933,5 +51933,31 @@
     "start_date_local": "2026-09-07T09:34:51Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-09-08",
+    "distance": 12763.0,
+    "elevation_gain": 724.0,
+    "id": "20093121889",
+    "moving_time": 8745.0,
+    "name": "Brighton Seven Lakes Loop",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-09-08T10:35:27Z",
+    "type": "Run",
+    "year": 2026
+  },
+  {
+    "date": "2026-09-08",
+    "distance": 5826.0,
+    "elevation_gain": 273.0,
+    "id": "20097086299",
+    "moving_time": 3298.0,
+    "name": "Jupiter Peak",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-09-08T19:11:37Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
