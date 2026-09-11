@@ -51972,5 +51972,18 @@
     "start_date_local": "2026-09-09T18:12:10Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-09-10",
+    "distance": 7420.0,
+    "elevation_gain": 21.0,
+    "id": "20124915764",
+    "moving_time": 2657.0,
+    "name": "Salt Lake City",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-09-10T19:37:47Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
