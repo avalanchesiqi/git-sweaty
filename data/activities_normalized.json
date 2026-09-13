@@ -51985,5 +51985,44 @@
     "start_date_local": "2026-09-10T19:37:47Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-09-11",
+    "distance": 161883.0,
+    "elevation_gain": 7080.8,
+    "id": "20148841751",
+    "moving_time": 89308.0,
+    "name": "Wasatch Front 100M",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-09-11T05:00:04Z",
+    "type": "Run",
+    "year": 2026
+  },
+  {
+    "date": "2026-09-12",
+    "distance": 3197.0,
+    "elevation_gain": 13.4,
+    "id": "20152397274",
+    "moving_time": 1226.0,
+    "name": "Salt Lake City",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-09-12T22:26:10Z",
+    "type": "Run",
+    "year": 2026
+  },
+  {
+    "date": "2026-09-13",
+    "distance": 8149.0,
+    "elevation_gain": 95.0,
+    "id": "20159097425",
+    "moving_time": 3525.0,
+    "name": "U of U",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-09-13T07:05:05Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
