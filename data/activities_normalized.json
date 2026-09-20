@@ -52102,5 +52102,31 @@
     "start_date_local": "2026-09-19T09:34:21Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-09-19",
+    "distance": 6937.0,
+    "elevation_gain": 54.0,
+    "id": "20248871551",
+    "moving_time": 2267.0,
+    "name": "Night Run",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-09-19T23:28:19Z",
+    "type": "Run",
+    "year": 2026
+  },
+  {
+    "date": "2026-09-20",
+    "distance": 22783.0,
+    "elevation_gain": 238.0,
+    "id": "20257767384",
+    "moving_time": 7505.0,
+    "name": "Morning Run",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-09-20T10:08:13Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
