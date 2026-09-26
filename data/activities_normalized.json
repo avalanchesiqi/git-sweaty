@@ -52193,5 +52193,18 @@
     "start_date_local": "2026-09-24T09:49:34Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-09-25",
+    "distance": 14627.0,
+    "elevation_gain": 146.0,
+    "id": "20329311539",
+    "moving_time": 4559.0,
+    "name": "Falls Church",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-09-25T17:12:01Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
