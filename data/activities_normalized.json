@@ -52206,5 +52206,31 @@
     "start_date_local": "2026-09-25T17:12:01Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-09-26",
+    "distance": 52939.0,
+    "elevation_gain": 1950.0,
+    "id": "20343179010",
+    "moving_time": 22369.0,
+    "name": "The Big Schloss",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-09-26T07:30:46Z",
+    "type": "Run",
+    "year": 2026
+  },
+  {
+    "date": "2026-09-27",
+    "distance": 13452.0,
+    "elevation_gain": 154.0,
+    "id": "20352927200",
+    "moving_time": 4408.0,
+    "name": "Falls Church",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-09-27T09:24:02Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
