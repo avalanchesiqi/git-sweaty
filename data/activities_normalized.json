@@ -52232,5 +52232,18 @@
     "start_date_local": "2026-09-27T09:24:02Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-09-28",
+    "distance": 11008.0,
+    "elevation_gain": 49.0,
+    "id": "20363720057",
+    "moving_time": 3471.0,
+    "name": "Alexandria",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-09-28T07:51:38Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
