@@ -52258,5 +52258,18 @@
     "start_date_local": "2026-09-29T07:15:39Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-09-30",
+    "distance": 6493.0,
+    "elevation_gain": 18.0,
+    "id": "20392276536",
+    "moving_time": 2038.0,
+    "name": "National Landing",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-09-30T08:03:50Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
