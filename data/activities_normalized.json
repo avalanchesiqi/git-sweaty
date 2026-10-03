@@ -52297,5 +52297,31 @@
     "start_date_local": "2026-10-01T09:43:03Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-10-02",
+    "distance": 10024.0,
+    "elevation_gain": 73.0,
+    "id": "20425631755",
+    "moving_time": 3052.0,
+    "name": "Fort Harrison State Park",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-10-02T18:12:32Z",
+    "type": "Run",
+    "year": 2026
+  },
+  {
+    "date": "2026-10-03",
+    "distance": 21278.0,
+    "elevation_gain": 121.0,
+    "id": "20433564898",
+    "moving_time": 5385.0,
+    "name": "Indy Half Marathon at Fort Ben",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-10-03T08:00:53Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
