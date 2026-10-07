@@ -52349,5 +52349,44 @@
     "start_date_local": "2026-10-05T08:00:58Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-10-06",
+    "distance": 13027.0,
+    "elevation_gain": 65.0,
+    "id": "20481817086",
+    "moving_time": 4268.0,
+    "name": "Illinois State University",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-10-06T17:10:35Z",
+    "type": "Run",
+    "year": 2026
+  },
+  {
+    "date": "2026-10-07",
+    "distance": 7636.0,
+    "elevation_gain": 34.0,
+    "id": "20488513333",
+    "moving_time": 2419.0,
+    "name": "Normal",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-10-07T07:20:22Z",
+    "type": "Run",
+    "year": 2026
+  },
+  {
+    "date": "2026-10-07",
+    "distance": 8561.0,
+    "elevation_gain": 35.0,
+    "id": "20489085277",
+    "moving_time": 1986.0,
+    "name": "Normal/Bloomington",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-10-07T08:18:16Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
