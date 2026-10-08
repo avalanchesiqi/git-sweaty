@@ -52388,5 +52388,18 @@
     "start_date_local": "2026-10-07T08:18:16Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-10-08",
+    "distance": 11868.0,
+    "elevation_gain": 62.0,
+    "id": "20502358504",
+    "moving_time": 3802.0,
+    "name": "Poplar Creek Forest Preserve",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-10-08T07:04:48Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
