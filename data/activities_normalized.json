@@ -52401,5 +52401,31 @@
     "start_date_local": "2026-10-08T07:04:48Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-10-08",
+    "distance": 4610.0,
+    "elevation_gain": 151.0,
+    "id": "20508263669",
+    "moving_time": 2096.0,
+    "name": "Holly Hill",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-10-08T16:25:49Z",
+    "type": "Run",
+    "year": 2026
+  },
+  {
+    "date": "2026-10-09",
+    "distance": 9998.0,
+    "elevation_gain": 9.0,
+    "id": "20515406924",
+    "moving_time": 3334.0,
+    "name": "Milwaukee",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-10-09T07:37:09Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
