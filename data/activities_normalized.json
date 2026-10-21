@@ -52583,5 +52583,31 @@
     "start_date_local": "2026-10-19T18:13:56Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-10-20",
+    "distance": 5163.0,
+    "elevation_gain": 63.0,
+    "id": "20667233293",
+    "moving_time": 1702.0,
+    "name": "Afternoon Run",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-10-20T15:44:44Z",
+    "type": "Run",
+    "year": 2026
+  },
+  {
+    "date": "2026-10-20",
+    "distance": 11445.0,
+    "elevation_gain": 0.0,
+    "id": "20667235215",
+    "moving_time": 2879.0,
+    "name": "Plainfield",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-10-20T17:26:36Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
