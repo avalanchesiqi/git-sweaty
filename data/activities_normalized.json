@@ -52635,5 +52635,44 @@
     "start_date_local": "2026-10-22T16:18:21Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-10-23",
+    "distance": 13086.0,
+    "elevation_gain": 88.0,
+    "id": "20706616379",
+    "moving_time": 4147.0,
+    "name": "Nashville",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-10-23T17:56:59Z",
+    "type": "Run",
+    "year": 2026
+  },
+  {
+    "date": "2026-10-24",
+    "distance": 1171.0,
+    "elevation_gain": 3.0,
+    "id": "20713606723",
+    "moving_time": 491.0,
+    "name": "Morning Run",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-10-24T06:38:32Z",
+    "type": "Run",
+    "year": 2026
+  },
+  {
+    "date": "2026-10-24",
+    "distance": 21545.0,
+    "elevation_gain": 182.0,
+    "id": "20713613282",
+    "moving_time": 5362.0,
+    "name": "Nashville Half Marathon",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-10-24T07:07:02Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
