@@ -52700,5 +52700,44 @@
     "start_date_local": "2026-10-26T17:43:19Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-10-27",
+    "distance": 11637.0,
+    "elevation_gain": 358.0,
+    "id": "20757431264",
+    "moving_time": 4205.0,
+    "name": "Afternoon Run",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-10-27T16:57:34Z",
+    "type": "Run",
+    "year": 2026
+  },
+  {
+    "date": "2026-10-28",
+    "distance": 5443.0,
+    "elevation_gain": 63.0,
+    "id": "20769655124",
+    "moving_time": 1830.0,
+    "name": "Afternoon Run",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-10-28T14:09:20Z",
+    "type": "Run",
+    "year": 2026
+  },
+  {
+    "date": "2026-10-28",
+    "distance": 10233.0,
+    "elevation_gain": 32.0,
+    "id": "20769657413",
+    "moving_time": 2452.0,
+    "name": "Afternoon Run",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-10-28T14:56:42Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
