@@ -52804,5 +52804,31 @@
     "start_date_local": "2026-11-02T22:15:36Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-11-03",
+    "distance": 4527.0,
+    "elevation_gain": 14.2,
+    "id": "20849051649",
+    "moving_time": 1479.0,
+    "name": "Plainfield",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-11-03T16:49:59Z",
+    "type": "Run",
+    "year": 2026
+  },
+  {
+    "date": "2026-11-03",
+    "distance": 5709.0,
+    "elevation_gain": 0.0,
+    "id": "20849506731",
+    "moving_time": 1392.0,
+    "name": "Plainfield",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-11-03T17:34:19Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
