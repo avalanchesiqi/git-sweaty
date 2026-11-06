@@ -52843,5 +52843,18 @@
     "start_date_local": "2026-11-04T16:44:20Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-11-05",
+    "distance": 10128.0,
+    "elevation_gain": 24.0,
+    "id": "20875428521",
+    "moving_time": 3066.0,
+    "name": "Indianapolis",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-11-05T15:51:34Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
