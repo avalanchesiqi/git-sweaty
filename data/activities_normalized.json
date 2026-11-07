@@ -52856,5 +52856,44 @@
     "start_date_local": "2026-11-05T15:51:34Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-11-06",
+    "distance": 8059.0,
+    "elevation_gain": 62.0,
+    "id": "20888762898",
+    "moving_time": 2641.0,
+    "name": "Evening Run",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-11-06T18:47:42Z",
+    "type": "Run",
+    "year": 2026
+  },
+  {
+    "date": "2026-11-07",
+    "distance": 1795.0,
+    "elevation_gain": 11.0,
+    "id": "20897969186",
+    "moving_time": 588.0,
+    "name": "Morning Run",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-11-07T07:35:19Z",
+    "type": "Run",
+    "year": 2026
+  },
+  {
+    "date": "2026-11-07",
+    "distance": 42414.0,
+    "elevation_gain": 102.0,
+    "id": "20897978595",
+    "moving_time": 10396.0,
+    "name": "Indianapolis Monumental Marathon",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-11-07T08:02:59Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
