@@ -53038,5 +53038,31 @@
     "start_date_local": "2026-11-17T11:37:03Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-11-18",
+    "distance": 8061.0,
+    "elevation_gain": 82.0,
+    "id": "21040453304",
+    "moving_time": 2874.0,
+    "name": "Afternoon Run",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-11-18T16:53:19Z",
+    "type": "Run",
+    "year": 2026
+  },
+  {
+    "date": "2026-11-19",
+    "distance": 6468.0,
+    "elevation_gain": 20.0,
+    "id": "21051344807",
+    "moving_time": 1868.0,
+    "name": "Aurora <-> Lawrenceburg",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-11-19T15:12:16Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
