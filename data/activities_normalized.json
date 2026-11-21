@@ -53064,5 +53064,18 @@
     "start_date_local": "2026-11-19T15:12:16Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-11-20",
+    "distance": 7146.0,
+    "elevation_gain": 74.0,
+    "id": "21063569260",
+    "moving_time": 2164.0,
+    "name": "Hagerstown",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-11-20T16:39:35Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
