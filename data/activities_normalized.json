@@ -53077,5 +53077,31 @@
     "start_date_local": "2026-11-20T16:39:35Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-11-21",
+    "distance": 81985.0,
+    "elevation_gain": 890.0,
+    "id": "21075730323",
+    "moving_time": 25419.0,
+    "name": "JFK 50M",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-11-21T06:30:27Z",
+    "type": "Run",
+    "year": 2026
+  },
+  {
+    "date": "2026-11-22",
+    "distance": 8990.0,
+    "elevation_gain": 27.0,
+    "id": "21085554774",
+    "moving_time": 3252.0,
+    "name": "C&O Canal Towpath",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-11-22T09:46:33Z",
+    "type": "Run",
+    "year": 2026
   }
 ]

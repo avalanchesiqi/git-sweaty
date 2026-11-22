@@ -28580,6 +28580,20 @@
       "subtype": "Run",
       "type": "Run",
       "year": 2026
+    },
+    {
+      "date": "2026-11-21",
+      "hour": 6,
+      "subtype": "Run",
+      "type": "Run",
+      "year": 2026
+    },
+    {
+      "date": "2026-11-22",
+      "hour": 9,
+      "subtype": "Run",
+      "type": "Run",
+      "year": 2026
     }
   ],
   "aggregates": {
@@ -61677,11 +61691,29 @@
           "distance": 7146.0,
           "elevation_gain": 74.0,
           "moving_time": 2164.0
+        },
+        "2026-11-21": {
+          "activity_ids": [
+            "21075730323"
+          ],
+          "count": 1,
+          "distance": 81985.0,
+          "elevation_gain": 890.0,
+          "moving_time": 25419.0
+        },
+        "2026-11-22": {
+          "activity_ids": [
+            "21085554774"
+          ],
+          "count": 1,
+          "distance": 8990.0,
+          "elevation_gain": 27.0,
+          "moving_time": 3252.0
         }
       }
     }
   },
-  "generated_at": "2026-11-21T20:46:10.631615+00:00",
+  "generated_at": "2026-11-22T20:55:47.763933+00:00",
   "other_bucket": "OtherSports",
   "repo": "avalanchesiqi/git-sweaty",
   "source": "strava",
