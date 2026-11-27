@@ -53142,5 +53142,31 @@
     "start_date_local": "2026-11-25T12:56:34Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-11-26",
+    "distance": 8204.0,
+    "elevation_gain": 103.0,
+    "id": "21139045430",
+    "moving_time": 2508.0,
+    "name": "Night Run",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-11-26T21:57:42Z",
+    "type": "Run",
+    "year": 2026
+  },
+  {
+    "date": "2026-11-27",
+    "distance": 5058.0,
+    "elevation_gain": 32.0,
+    "id": "21147553920",
+    "moving_time": 1788.0,
+    "name": "Westfield",
+    "raw_activity_type": "Run",
+    "raw_type": "Run",
+    "start_date_local": "2026-11-27T17:04:52Z",
+    "type": "Run",
+    "year": 2026
   }
 ]
